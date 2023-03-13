@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: 0ccd472cba226de41b565ef0ab256ed8
+timeCreated: 1455134640
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Drawer005
+    100002: Drawer006
+    100004: Drawer007
+    100006: Drawer008
+    100008: Drawer_Big003
+    100010: Drawer_Big004
+    100012: Drawer_Med004
+    100014: Drawer_Med005
+    100016: Drawer_Med006
+    100018: Drawer_Med1_Handle005
+    100020: Drawer_Med1_Handle006
+    100022: Drawer_Med1_Handle007
+    100024: Drawer_Med1_Handle008
+    100026: Drawer_Med1_Handle009
+    100028: //RootNode
+    100030: furniture001
+    100032: Chest of drawers
+    100034: Drawer1
+    100036: Drawer2
+    100038: Drawer3
+    100040: Drawer4
+    100042: Drawer_Big1
+    100044: Drawer_Big1_Handle
+    100046: Drawer_Big2
+    100048: Drawer_Big2_Handle
+    100050: Drawer_Med1
+    100052: Drawer_Med1_Handle
+    100054: Drawer_Med2
+    100056: Drawer_Med2 1
+    100058: Drawer_Med2_Handle
+    100060: Drawer_Med3_Handle
+    400000: Drawer005
+    400002: Drawer006
+    400004: Drawer007
+    400006: Drawer008
+    400008: Drawer_Big003
+    400010: Drawer_Big004
+    400012: Drawer_Med004
+    400014: Drawer_Med005
+    400016: Drawer_Med006
+    400018: Drawer_Med1_Handle005
+    400020: Drawer_Med1_Handle006
+    400022: Drawer_Med1_Handle007
+    400024: Drawer_Med1_Handle008
+    400026: Drawer_Med1_Handle009
+    400028: //RootNode
+    400030: furniture001
+    400032: Chest of drawers
+    400034: Drawer1
+    400036: Drawer2
+    400038: Drawer3
+    400040: Drawer4
+    400042: Drawer_Big1
+    400044: Drawer_Big1_Handle
+    400046: Drawer_Big2
+    400048: Drawer_Big2_Handle
+    400050: Drawer_Med1
+    400052: Drawer_Med1_Handle
+    400054: Drawer_Med2
+    400056: Drawer_Med2 1
+    400058: Drawer_Med2_Handle
+    400060: Drawer_Med3_Handle
+    2300000: Drawer005
+    2300002: Drawer006
+    2300004: Drawer007
+    2300006: Drawer008
+    2300008: Drawer_Big003
+    2300010: Drawer_Big004
+    2300012: Drawer_Med004
+    2300014: Drawer_Med005
+    2300016: Drawer_Med006
+    2300018: Drawer_Med1_Handle005
+    2300020: Drawer_Med1_Handle006
+    2300022: Drawer_Med1_Handle007
+    2300024: Drawer_Med1_Handle008
+    2300026: Drawer_Med1_Handle009
+    2300028: furniture001
+    2300030: Chest of drawers
+    2300032: Drawer1
+    2300034: Drawer2
+    2300036: Drawer3
+    2300038: Drawer4
+    2300040: Drawer_Big1
+    2300042: Drawer_Big1_Handle
+    2300044: Drawer_Big2
+    2300046: Drawer_Big2_Handle
+    2300048: Drawer_Med1
+    2300050: Drawer_Med1_Handle
+    2300052: Drawer_Med2
+    2300054: Drawer_Med2 1
+    2300056: Drawer_Med2_Handle
+    2300058: Drawer_Med3_Handle
+    3300000: Drawer005
+    3300002: Drawer006
+    3300004: Drawer007
+    3300006: Drawer008
+    3300008: Drawer_Big003
+    3300010: Drawer_Big004
+    3300012: Drawer_Med004
+    3300014: Drawer_Med005
+    3300016: Drawer_Med006
+    3300018: Drawer_Med1_Handle005
+    3300020: Drawer_Med1_Handle006
+    3300022: Drawer_Med1_Handle007
+    3300024: Drawer_Med1_Handle008
+    3300026: Drawer_Med1_Handle009
+    3300028: furniture001
+    3300030: Chest of drawers
+    3300032: Drawer1
+    3300034: Drawer2
+    3300036: Drawer3
+    3300038: Drawer4
+    3300040: Drawer_Big1
+    3300042: Drawer_Big1_Handle
+    3300044: Drawer_Big2
+    3300046: Drawer_Big2_Handle
+    3300048: Drawer_Med1
+    3300050: Drawer_Med1_Handle
+    3300052: Drawer_Med2
+    3300054: Drawer_Med2 1
+    3300056: Drawer_Med2_Handle
+    3300058: Drawer_Med3_Handle
+    4300000: Drawer_Med1_Handle005
+    4300002: Drawer_Big003
+    4300004: Drawer_Med004
+    4300006: Drawer005
+    4300008: Drawer006
+    4300010: Drawer007
+    4300012: Drawer_Med005
+    4300014: Drawer_Med1_Handle006
+    4300016: Drawer_Med1_Handle007
+    4300018: Drawer_Med006
+    4300020: Drawer_Med1_Handle008
+    4300022: Drawer_Med1_Handle009
+    4300024: Drawer_Big004
+    4300026: furniture001
+    4300028: Drawer008
+    4300030: Drawer_Med3_Handle
+    4300032: Drawer_Big1
+    4300034: Drawer_Med2
+    4300036: Drawer2
+    4300038: Drawer4
+    4300040: Drawer3
+    4300042: Drawer_Med2
+    4300044: Drawer_Med2_Handle
+    4300046: Drawer_Big2_Handle
+    4300048: Drawer_Med1
+    4300050: Drawer_Med1_Handle
+    4300052: Drawer_Big1_Handle
+    4300054: Drawer_Big2
+    4300056: Chest of drawers
+    4300058: Drawer1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
