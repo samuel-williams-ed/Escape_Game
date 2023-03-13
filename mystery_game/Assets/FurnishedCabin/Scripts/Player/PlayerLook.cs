@@ -20,7 +20,7 @@ public class PlayerLook : MonoBehaviour
 
     private void LockCursor()
     {
-       
+
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             m_cursorIsLocked = false;
@@ -43,9 +43,20 @@ public class PlayerLook : MonoBehaviour
         
     }
 
+    
+    // private float horizontalInput;
+    // private float verticalInput;
+
+
     private void Update()
     {
         CameraRotation();
+
+        // horizontalInput = Input.GetAxis("Horizontal");
+        // transform.Rotate(Vector3.up, Time.deltaTime * 10.0f * horizontalInput);
+
+        // verticalInput = Input.GetAxis("Vertical");
+        // transform.Rotate(Vector3.up, Time.deltaTime * 10.0f * verticalInput);
     }
 
     private void CameraRotation()
@@ -70,6 +81,7 @@ public class PlayerLook : MonoBehaviour
 
         transform.Rotate(Vector3.left * mouseY);
         playerBody.Rotate(Vector3.up * mouseX);
+
     }
 
     private void ClampXAxisRotationToValue(float value)
