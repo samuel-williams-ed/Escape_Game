@@ -1,0 +1,23 @@
+Universal Rendering Pipeline (URP). 
+
+--------
+
+Old Cabinet it's a lowpoly model with unwrapped UVs and PBR textures.
+
+All doors and drawers are separate objects that can be moved.
+
+--------
+
+Number of Unique Meshes: 1
+Number of Prefabs: 1
+Number of Materials: 2
+Number of Textures: 8
+UVs: channel 0: overlapping (for Albedo, Normal, Metallic, AO); channel 1: non-overlapping (for baking lightmaps).
+Polycount: 1871 polys, 3672 tris
+Textures resolution: 2048x2048px (AlbedoTransparency, AO, Normal, MetallicSmoothness).
+Textures format: TGA.
+
+--------
+
+If you have any questions, please write me on e-mail.
+My e-mail: gladkaya.3d@gmail.com
