@@ -10,7 +10,7 @@ public class PlayerLook : MonoBehaviour
 
     [SerializeField] private Transform playerBody;
     private float xAxisClamp;
-    private bool m_cursorIsLocked = true;
+    // private bool m_cursorIsLocked = true;
 
     private void Awake()
     {
