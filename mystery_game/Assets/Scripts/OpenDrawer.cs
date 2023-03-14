@@ -5,7 +5,6 @@ using UnityEngine;
 public class OpenDrawer : MonoBehaviour
 {
     private bool drawerOpen;
-    // public float test;
 
     // Start is called before the first frame update
     void Start()
