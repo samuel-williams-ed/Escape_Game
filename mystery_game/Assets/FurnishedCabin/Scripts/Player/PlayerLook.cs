@@ -18,29 +18,37 @@ public class PlayerLook : MonoBehaviour
         xAxisClamp = 0.0f;
     }
 
-    private void LockCursor()
-    {
-       
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            m_cursorIsLocked = false;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            m_cursorIsLocked = true;
-        }
+    // Tested in GameMode and this function works as expected 
+    // private void LockCursor()
+    // {
+    //    // When escape button is released unlock cursor:
+    //     if (Input.GetKeyUp(KeyCode.Escape))
+    //     {
+    //         m_cursorIsLocked = false;
+    //     }
+    //     // When left mouse button (0) is released lock cursor:
+    //     else if (Input.GetMouseButtonUp(0))
+    //     {
+    //         m_cursorIsLocked = true;
+    //     }
 
-        if (m_cursorIsLocked)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        else if (!m_cursorIsLocked)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+    //     if (m_cursorIsLocked)
+    //     {
+    //         Cursor.lockState = CursorLockMode.Locked;
+    //         Cursor.visible = false;
+    //     }
+    //     else if (!m_cursorIsLocked)
+    //     {
+    //         Cursor.lockState = CursorLockMode.None;
+    //         Cursor.visible = true;
+    //     }
         
+    // }
+
+    // Rewriting LockCursor() to keep cursor permanently locked during Scene:
+    private void LockCursor() {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void Update()
