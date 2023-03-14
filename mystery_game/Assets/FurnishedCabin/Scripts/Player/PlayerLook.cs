@@ -6,7 +6,7 @@ public class PlayerLook : MonoBehaviour
 {
     [SerializeField] private string mouseXInputName = "Mouse X";
     [SerializeField] private string mouseYInputName = "Mouse Y";
-    [SerializeField] private float mouseSensitivity = 150f;
+    [SerializeField] private float mouseSensitivity = 1f;
 
     [SerializeField] private Transform playerBody;
     private float xAxisClamp;

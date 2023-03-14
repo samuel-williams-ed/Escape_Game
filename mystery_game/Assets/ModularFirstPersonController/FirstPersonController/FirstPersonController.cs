@@ -25,7 +25,7 @@ public class FirstPersonController : MonoBehaviour
     public float fov = 60f;
     public bool invertCamera = false;
     public bool cameraCanMove = true;
-    public float mouseSensitivity = 2f;
+    public float mouseSensitivity = 1f;
     public float maxLookAngle = 50f;
 
     // Crosshair
