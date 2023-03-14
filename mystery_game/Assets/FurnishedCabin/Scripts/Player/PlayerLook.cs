@@ -14,15 +14,15 @@ public class PlayerLook : MonoBehaviour
 
     private void Awake()
     {
-        LockCursor();
+        // LockCursor();
+        Cursor.lockState = CursorLockMode.Locked;
         xAxisClamp = 0.0f;
     }
 
-    // Tested in GameMode and this function works as expected 
     // private void LockCursor()
     // {
     //    // When escape button is released unlock cursor:
-    //     if (Input.GetKeyUp(KeyCode.Escape))
+    //     if (Input.GetKeyUp(KeyCode.Space))
     //     {
     //         m_cursorIsLocked = false;
     //     }
@@ -44,12 +44,6 @@ public class PlayerLook : MonoBehaviour
     //     }
         
     // }
-
-    // Rewriting LockCursor() to keep cursor permanently locked during Scene:
-    private void LockCursor() {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
 
     private void Update()
     {
