@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
     public TextMeshProUGUI dialogueText;
-    private List<string> lines = new List<string>();
+    private List<string> lines;
     private int index; // to track where we are within the dialogue
     private float textSpeed = 0.02f;
     // public void UpdateDialogue(string newDialogue){
@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
+        index = 0;
+        lines = new List<string>();
+        Debug.Log("start function running");
         // UpdateDialogue("...");
         List<string> startingText = getStartingText();
         UpdateDialogue(startingText);
@@ -36,7 +39,7 @@ public class GameManager : MonoBehaviour
     
     public void UpdateDialogue(List<string> newListOfStrings){
         lines.AddRange(newListOfStrings);
-        index = 0;
+        Debug.Log("current line =" + lines.Count);
         StartCoroutine(TypeLine());
     }
     //creating a co-routine

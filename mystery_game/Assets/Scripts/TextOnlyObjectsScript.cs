@@ -20,10 +20,12 @@ public class TextOnlyObjectsScript : MonoBehaviour
     }
 
 
-    // private void OnMouseDown()
-    // {
-    //     gameManager.UpdateDialogue("It doesn't look like I need to go in here");
-    // }
+    private void OnMouseDown()
+    {
+        List<string> bathroomDoorText = new List<string>();
+        bathroomDoorText.Add("It doesn't look like I need to go in here");
+        gameManager.UpdateDialogue(bathroomDoorText);
+    }
 
 }
 
