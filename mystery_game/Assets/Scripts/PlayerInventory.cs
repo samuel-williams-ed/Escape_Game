@@ -51,11 +51,6 @@ public class PlayerInventory : MonoBehaviour
     public void addToInventory (GameObject item) {
         Debug.Log("adding to inventory" + item.name + item.GetInstanceID());
 
-        // Don't allow duplicate items:
-        if (allItems.Contains(item)) {
-            return;
-        }
-
         // Don't allow more items than there are inventory slots:
         if (allItems.Count() > 4) {
             return;
