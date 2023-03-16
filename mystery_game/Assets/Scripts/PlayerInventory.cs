@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
+using System;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -50,14 +52,17 @@ public class PlayerInventory : MonoBehaviour
         Debug.Log("adding to inventory" + item.name + item.GetInstanceID());
 
         // Don't allow duplicate items:
-        // if (allItems.Contains(item)) {
-
-        // }
+        if (allItems.Contains(item)) {
+            return;
+        }
 
         // Don't allow more items than there are inventory slots:
-        // if (allItems.Count() > ) {
+        if (allItems.Count() > 4) {
+            return;
+        }
 
-        // }
+        // Add item to list of game objects in inventory:
+        allItems.Append(item);
 
         if (item.name == "RedKey") {
             hasRedKey = true;
