@@ -27,30 +27,23 @@ public class PlayerLook : MonoBehaviour
             }
         }
 
-        LockCursor();
-        xAxisClamp = 0.0f;
+
 
     }
 
-    private void LockCursor()
-    {
+    private void LockCursor() {
     
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
+        if (Input.GetKeyUp(KeyCode.Escape)){
             m_cursorIsLocked = false;
         }
-        else if (Input.GetMouseButtonUp(0))
-        {
+        else if (Input.GetMouseButtonUp(0)){
             m_cursorIsLocked = true;
         }
-
-        if (m_cursorIsLocked)
-        {
+        if (m_cursorIsLocked){
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        else if (!m_cursorIsLocked)
-        {
+        else if (!m_cursorIsLocked){
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -59,8 +52,14 @@ public class PlayerLook : MonoBehaviour
 
     private void Update()
     {
+        // when player roaming can look around and mouse is stuck to reticle
         if (playerCanMoveCamera){
+            LockCursor();
+            xAxisClamp = 0.0f;
             CameraRotation();
+        } else {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         
     }
