@@ -5,6 +5,9 @@ using TMPro;
 public class GameManager : MonoBehaviour
 
 {
+    private bool bookcaseUnlocked = false;
+    private GameObject bookcase;
+    // public Vector3 bookcaseEndPosition;
     private ScenesManager scenesManager;
     public static GameManager manager;
     public TextMeshProUGUI dialogueText;
@@ -36,6 +39,7 @@ public class GameManager : MonoBehaviour
         }
 
         scenesManager = GameObject.Find("ScenesManager").GetComponent<ScenesManager>();
+        bookcase = GameObject.Find("SecretBookcaseGroup").gameObject;
     }
 
     // Start is called before the first frame update
@@ -56,7 +60,6 @@ public class GameManager : MonoBehaviour
     public void UpdateDialogue(List<string> newListOfStrings){
         // lines.AddRange(newListOfStrings);
         lines = newListOfStrings;
-        Debug.Log("current line =" + lines.Count);
         // StartCoroutine(TypeLine());
         StartCoroutine(OutputDialogue());
     }
@@ -118,9 +121,12 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        if ( scenesManager == null){
-            Debug.Log("I have no scenesManager");
-        }
+        // if (bookcaseUnlocked){
+        //     bookcase.transform.position.x += 1.5f;
+            // bookcaseEndPosition = new Vector3(bookcaseStartPosition.x +1.5f, bookcaseStartPosition.y, bookcaseStartPosition.z);
+            
+
+    
 
         // USING MOUSE CLICK TO COMPLETE TEXT APPEARING FASTER WON'T WORK ALONGSIDE HAVING TEXT APPEAR ONCLICK - 
         // AS CLICKING ON OBJECT WILL ALSO DOUBLE UP AS MAKING TEXT FULLY APPEAR SO NO TYPEWRITER EFFECT?
@@ -138,5 +144,14 @@ public class GameManager : MonoBehaviour
         //     }
         // }
     }
+
+    public bool getBookcaseUnlocked(){
+        return bookcaseUnlocked;
+    }
+
+    public void setBookcaseUnlocked( bool true_or_false){
+        bookcaseUnlocked = true_or_false;
+    }
 }
+
 

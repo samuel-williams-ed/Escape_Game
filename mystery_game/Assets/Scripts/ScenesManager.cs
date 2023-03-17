@@ -10,6 +10,7 @@ public class ScenesManager : MonoBehaviour
 
 
     public Button backButton;
+    private GameObject bookcase;
 
     //  make me a singlton
     void Awake() {
@@ -21,6 +22,8 @@ public class ScenesManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+
     }
 
 
@@ -29,12 +32,16 @@ public class ScenesManager : MonoBehaviour
         addBackButton();
     }
 
+
     public void LoadMainRoom(){
-        Debug.Log("loading main scene");
         SceneManager.LoadScene("EscapeRoom");
         removeBackButton();
+        // bookcase = GameObject.Find("SecretBookcaseGroup").gameObject;
         PlayerMove.manager.setPlayerMoveable(true);
         PlayerLook.manager.setPlayerCanMoveCamera(true);
+        // if(GameManager.manager.getBookcaseUnlocked()){
+        //     bookcase.transform.position = GameManager.manager.bookcaseEndPosition;
+        // }
     }
 
      // Two returns deal with the player coming to the cabinet from different sides (finds the objects x position and the players x position and calculate the angle of rotation to do this)
