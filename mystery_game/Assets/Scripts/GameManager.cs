@@ -43,6 +43,9 @@ public class GameManager : MonoBehaviour
         // UpdateDialogue("...");
         List<string> startingText = getStartingText();
         UpdateDialogue(startingText);
+
+        PlayerMove.manager.setPlayerMoveable(true);
+        PlayerLook.manager.setPlayerCanMoveCamera(true);
     }
     
     public void UpdateDialogue(List<string> newListOfStrings){

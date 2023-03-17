@@ -12,6 +12,7 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] private Transform playerBody;
     private float xAxisClamp;
     private bool m_cursorIsLocked = true;
+    private bool playerCanMoveCamera = false;
 
     private void Awake()
     {
@@ -58,7 +59,10 @@ public class PlayerLook : MonoBehaviour
 
     private void Update()
     {
-        CameraRotation();
+        if (playerCanMoveCamera){
+            CameraRotation();
+        }
+        
     }
 
     private void CameraRotation()
@@ -90,5 +94,12 @@ public class PlayerLook : MonoBehaviour
         Vector3 eulerRotation = transform.eulerAngles;
         eulerRotation.x = value;
         transform.eulerAngles = eulerRotation;
+    }
+
+    public void setPlayerCanMoveCamera(bool true_or_false){
+        playerCanMoveCamera = true_or_false;
+    }
+    public bool getPlayerCanMoveCamera(){
+        return playerCanMoveCamera;
     }
 }
