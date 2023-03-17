@@ -5,7 +5,6 @@ using UnityEngine;
 public class OpenBookcase : MonoBehaviour
 {
     private Vector3 bookStartPosition;
-    
     private Vector3 bookEndPosition;
     private bool bookSliding;
     private GameObject bookcase;
@@ -27,7 +26,6 @@ public class OpenBookcase : MonoBehaviour
 
     private void OnMouseDown() {
         bookSliding = true;
-        // bookcaseSliding = true;
     }
 
     // Update is called once per frame
@@ -52,11 +50,10 @@ public class OpenBookcase : MonoBehaviour
             } else {
                 bookcaseSliding = false;
                 GameManager.manager.setBookcaseUnlocked(true);
-                // GameManager.manager.bookcaseEndPosition = bookcaseEndPosition;
             }
         }
 
-        if (GameManager.manager.getBookcaseUnlocked()&& bookcase.transform.position != bookcaseEndPosition){
+        if (GameManager.manager.getBookcaseUnlocked() && bookcase.transform.position != bookcaseEndPosition){
             Debug.Log("function running");
             bookcase.transform.position = bookcaseEndPosition;
         }

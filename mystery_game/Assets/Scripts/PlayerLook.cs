@@ -8,15 +8,12 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] private string mouseXInputName = "Mouse X";
     [SerializeField] private string mouseYInputName = "Mouse Y";
     [SerializeField] private float mouseSensitivity = 1f;
-
     [SerializeField] private Transform playerBody;
     private float xAxisClamp;
     private bool m_cursorIsLocked = true;
     private bool playerCanMoveCamera = false;
 
-    private void Awake()
-    {
-
+    private void Awake() {
         // make a singleton
         if (manager == null) {
             DontDestroyOnLoad(gameObject);
@@ -47,8 +44,7 @@ public class PlayerLook : MonoBehaviour
         
     }
 
-    private void Update()
-    {
+    private void Update() {
         // when player roaming can look around and mouse is stuck to reticle
         if (playerCanMoveCamera){
             LockCursor();
@@ -58,24 +54,20 @@ public class PlayerLook : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        
     }
 
-    private void CameraRotation()
-    {
+    private void CameraRotation() {
         float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis(mouseYInputName) * mouseSensitivity * Time.deltaTime;
 
         xAxisClamp += mouseY;
 
-        if (xAxisClamp > 90.0f)
-        {
+        if (xAxisClamp > 90.0f) {
             xAxisClamp = 90.0f;
             mouseY = 0.0f;
             ClampXAxisRotationToValue(270.0f);
-        }
-        else if (xAxisClamp < -90.0f)
-        {
+
+        } else if (xAxisClamp < -90.0f) {
             xAxisClamp = -90.0f;
             mouseY = 0.0f;
             ClampXAxisRotationToValue(90.0f);
@@ -85,8 +77,7 @@ public class PlayerLook : MonoBehaviour
         playerBody.Rotate(Vector3.up * mouseX);
     }
 
-    private void ClampXAxisRotationToValue(float value)
-    {
+    private void ClampXAxisRotationToValue(float value) {
         Vector3 eulerRotation = transform.eulerAngles;
         eulerRotation.x = value;
         transform.eulerAngles = eulerRotation;
