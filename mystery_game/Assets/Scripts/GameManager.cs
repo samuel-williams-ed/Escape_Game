@@ -5,6 +5,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 
 {
+    private GameObject player;
     private bool bookcaseUnlocked = false;
     private GameObject bookcase;
     // public Vector3 bookcaseEndPosition;
@@ -36,6 +37,9 @@ public class GameManager : MonoBehaviour
             if (manager != this) {
                 Destroy(gameObject);
             }
+        player = GameObject.Find("Player");
+        player.transform.position = new Vector3(0f,1f, 0f);
+
         }
 
         scenesManager = GameObject.Find("ScenesManager").GetComponent<ScenesManager>();
