@@ -26,9 +26,6 @@ public class PlayerLook : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-
-
     }
 
     private void LockCursor() {
