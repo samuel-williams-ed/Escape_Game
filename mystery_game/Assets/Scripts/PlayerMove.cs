@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour
 {
+    public static PlayerMove manager;
     [SerializeField] private string horizontalInputName = "Horizontal";
     [SerializeField] private string verticalInputName = "Vertical";
 
@@ -15,6 +16,16 @@ public class PlayerMove : MonoBehaviour
 
     private void Awake()
     {
+        // make a singleton
+        if (manager == null) {
+            DontDestroyOnLoad(gameObject);
+            manager = this;
+        } else {
+            if (manager != this) {
+                Destroy(gameObject);
+            }
+        }
+
         charController = GetComponent<CharacterController>();
     }
 

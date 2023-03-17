@@ -12,7 +12,7 @@ public class ScenesManager : MonoBehaviour
 
      // Two returns deal with the player coming to the cabinet from different sides (finds the objects x position and the players x position and calculate the angle of rotation to do this)
     public Quaternion FindPlayerEndRotation(Vector3 objectPosition, Vector3 playerPosition) {
-        if (objectPosition.x > playerPosition.x) {
+        if (objectPosition.x >= playerPosition.x) {
             return Quaternion.FromToRotation(new Vector3(objectPosition.x, 0, 0), new Vector3(playerPosition.x, 0, 0));
         } else {
             return Quaternion.FromToRotation(new Vector3(objectPosition.x, 0, 0), new Vector3(-playerPosition.x, 0, 0));

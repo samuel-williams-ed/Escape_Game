@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
+    public static PlayerLook manager;
     [SerializeField] private string mouseXInputName = "Mouse X";
     [SerializeField] private string mouseYInputName = "Mouse Y";
     [SerializeField] private float mouseSensitivity = 1f;
@@ -14,13 +15,25 @@ public class PlayerLook : MonoBehaviour
 
     private void Awake()
     {
+
+        // make a singleton
+        if (manager == null) {
+            DontDestroyOnLoad(gameObject);
+            manager = this;
+        } else {
+            if (manager != this) {
+                Destroy(gameObject);
+            }
+        }
+
         LockCursor();
         xAxisClamp = 0.0f;
+
     }
 
     private void LockCursor()
     {
-       
+    
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             m_cursorIsLocked = false;

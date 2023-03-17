@@ -5,7 +5,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 
 {
-
+    public static GameManager manager;
     public TextMeshProUGUI dialogueText;
     private List<string> lines;
     // private int index; // to track where we are within the dialogue
@@ -24,6 +24,16 @@ public class GameManager : MonoBehaviour
         return startingText;
     }
     
+    void Awake() {
+        if (manager == null) {
+            DontDestroyOnLoad(gameObject);
+            manager = this;
+        } else {
+            if (manager != this) {
+                Destroy(gameObject);
+            }
+        }
+    }
 
     // Start is called before the first frame update
     void Start(){
