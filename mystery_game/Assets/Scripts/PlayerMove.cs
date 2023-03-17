@@ -3,24 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerMove : MonoBehaviour
-{
+public class PlayerMove : MonoBehaviour {
+    public static PlayerMove manager;
     [SerializeField] private string horizontalInputName = "Horizontal";
     [SerializeField] private string verticalInputName = "Vertical";
 
     [SerializeField] private float movementSpeed = 2f;
 
     private CharacterController charController;
+    private bool playerMoveAllowed = false;
 
 
     private void Awake()
     {
+        // make a singleton
+        if (manager == null) {
+            DontDestroyOnLoad(gameObject);
+            manager = this;
+        } else {
+            if (manager != this) {
+                Destroy(gameObject);
+            }
+        }
+
         charController = GetComponent<CharacterController>();
     }
 
     private void Update()
     {
-        PlayerMovement();
+        if (playerMoveAllowed) {
+            PlayerMovement();
+        }
+        
     }
 
 
@@ -29,8 +43,7 @@ public class PlayerMove : MonoBehaviour
 
 private float yVelocity = 0f;
 
-private void PlayerMovement()
-{
+private void PlayerMovement() {
     float vertInput = Input.GetAxis(verticalInputName) * movementSpeed;
     float horizInput = Input.GetAxis(horizontalInputName) * movementSpeed;
 
@@ -55,22 +68,15 @@ private void PlayerMovement()
     charController.Move((forwardMovement + rightMovement + jumpMovement + gravityMovement) * Time.deltaTime);
 }
 
+    // able / diable player movement setters & getters
 
-
-    // private void PlayerMovement()
-    // {
-    //     float vertInput = Input.GetAxis(verticalInputName) * movementSpeed;     //CharacterController.SimpleMove() applies deltaTime
-    //     float horizInput = Input.GetAxis(horizontalInputName) * movementSpeed;
-
-    //     Vector3 forwardMovement = transform.forward * vertInput;
-    //     Vector3 rightMovement = transform.right * horizInput;
-
-    //     //simple move applies delta time automatically
-    //     charController.SimpleMove(forwardMovement + rightMovement);
-
-
-        
+    public void setPlayerMoveable(bool true_or_false){
+        playerMoveAllowed = true_or_false;
     }
-
+    public bool getIfPlayerMoveable(){
+        return playerMoveAllowed;
+    }
     
 
+
+}

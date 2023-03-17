@@ -20,6 +20,7 @@ public class FocusOnSecretDoor : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
+
         scenesManager = GameObject.Find("ScenesManager").GetComponent<ScenesManager>();
         player = GameObject.Find("Player");
         leftDoor = transform.Find("TopLeftDoor").gameObject; // Think about if attaching to actual cabinet door
@@ -29,6 +30,9 @@ public class FocusOnSecretDoor : MonoBehaviour
     }
 
     private void OnMouseDown() {
+        PlayerMove.manager.setPlayerMoveable(false);
+        PlayerLook.manager.setPlayerCanMoveCamera(false);
+
         playerStartPosition = player.transform.position;
         playerStartRotation = player.transform.rotation;
         playerEndRotation = scenesManager.FindPlayerEndRotation(transform.position, playerStartPosition);

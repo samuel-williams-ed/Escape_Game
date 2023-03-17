@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
+    public static PlayerLook manager;
     [SerializeField] private string mouseXInputName = "Mouse X";
     [SerializeField] private string mouseYInputName = "Mouse Y";
     [SerializeField] private float mouseSensitivity = 1f;
@@ -11,32 +12,35 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] private Transform playerBody;
     private float xAxisClamp;
     private bool m_cursorIsLocked = true;
+    private bool playerCanMoveCamera = false;
 
     private void Awake()
     {
-        LockCursor();
-        xAxisClamp = 0.0f;
+
+        // make a singleton
+        if (manager == null) {
+            DontDestroyOnLoad(gameObject);
+            manager = this;
+        } else {
+            if (manager != this) {
+                Destroy(gameObject);
+            }
+        }
     }
 
-    private void LockCursor()
-    {
-       
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
+    private void LockCursor() {
+    
+        if (Input.GetKeyUp(KeyCode.Escape)){
             m_cursorIsLocked = false;
         }
-        else if (Input.GetMouseButtonUp(0))
-        {
+        else if (Input.GetMouseButtonUp(0)){
             m_cursorIsLocked = true;
         }
-
-        if (m_cursorIsLocked)
-        {
+        if (m_cursorIsLocked){
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        else if (!m_cursorIsLocked)
-        {
+        else if (!m_cursorIsLocked){
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -45,7 +49,16 @@ public class PlayerLook : MonoBehaviour
 
     private void Update()
     {
-        CameraRotation();
+        // when player roaming can look around and mouse is stuck to reticle
+        if (playerCanMoveCamera){
+            LockCursor();
+            xAxisClamp = 0.0f;
+            CameraRotation();
+        } else {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        
     }
 
     private void CameraRotation()
@@ -77,5 +90,12 @@ public class PlayerLook : MonoBehaviour
         Vector3 eulerRotation = transform.eulerAngles;
         eulerRotation.x = value;
         transform.eulerAngles = eulerRotation;
+    }
+
+    public void setPlayerCanMoveCamera(bool true_or_false){
+        playerCanMoveCamera = true_or_false;
+    }
+    public bool getPlayerCanMoveCamera(){
+        return playerCanMoveCamera;
     }
 }

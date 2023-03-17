@@ -5,7 +5,8 @@ using TMPro;
 public class GameManager : MonoBehaviour
 
 {
-
+    private ScenesManager scenesManager;
+    public static GameManager manager;
     public TextMeshProUGUI dialogueText;
     private List<string> lines;
     // private int index; // to track where we are within the dialogue
@@ -24,6 +25,18 @@ public class GameManager : MonoBehaviour
         return startingText;
     }
     
+    void Awake() {
+        if (manager == null) {
+            DontDestroyOnLoad(gameObject);
+            manager = this;
+        } else {
+            if (manager != this) {
+                Destroy(gameObject);
+            }
+        }
+
+        scenesManager = GameObject.Find("ScenesManager").GetComponent<ScenesManager>();
+    }
 
     // Start is called before the first frame update
     void Start(){
@@ -33,6 +46,11 @@ public class GameManager : MonoBehaviour
         // UpdateDialogue("...");
         List<string> startingText = getStartingText();
         UpdateDialogue(startingText);
+
+        PlayerMove.manager.setPlayerMoveable(true);
+        PlayerLook.manager.setPlayerCanMoveCamera(true);
+
+        scenesManager.removeBackButton();
     }
     
     public void UpdateDialogue(List<string> newListOfStrings){
@@ -100,6 +118,9 @@ public class GameManager : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        if ( scenesManager == null){
+            Debug.Log("I have no scenesManager");
+        }
 
         // USING MOUSE CLICK TO COMPLETE TEXT APPEARING FASTER WON'T WORK ALONGSIDE HAVING TEXT APPEAR ONCLICK - 
         // AS CLICKING ON OBJECT WILL ALSO DOUBLE UP AS MAKING TEXT FULLY APPEAR SO NO TYPEWRITER EFFECT?
