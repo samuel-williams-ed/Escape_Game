@@ -2662,7 +2662,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 197166, guid: 1b6f5d3a81a4c8345a49046252843fa9, type: 3}
       propertyPath: m_Name
-      value: MiddleLeftDrawer
+      value: DrawerFive
       objectReference: {fileID: 0}
     - target: {fileID: 417992, guid: 1b6f5d3a81a4c8345a49046252843fa9, type: 3}
       propertyPath: m_RootOrder
@@ -8190,27 +8190,36 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 197166, guid: 1b6f5d3a81a4c8345a49046252843fa9, type: 3}
   m_PrefabInstance: {fileID: 267649963}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &803181358
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 803181354}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &803181359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 436586, guid: 1b6f5d3a81a4c8345a49046252843fa9, type: 3}
   m_PrefabInstance: {fileID: 267649963}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &803181362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803181354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5082366142c74e7da8189232a16394b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &803181363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803181354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49822244, y: 0.4074003, z: 0.14740004}
+  m_Center: {x: -0.118194595, y: -0.000013075769, z: -0.000001270324}
 --- !u!1001 &810990872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14606,8 +14615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65dc7b0fb74be4996bfdcf9ec298f377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!64 &1465749757
-MeshCollider:
+--- !u!65 &1465749757
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -14616,10 +14625,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300058, guid: 0ccd472cba226de41b565ef0ab256ed8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.5023641, y: 0.29739994, z: 0.117400035}
+  m_Center: {x: -0.11819463, y: 0.000013113022, z: -0.0000061970204}
 --- !u!1001 &1482049024
 PrefabInstance:
   m_ObjectHideFlags: 0
