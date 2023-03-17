@@ -22,10 +22,7 @@ public class ScenesManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-
     }
-
 
     public void LoadScene() {
         SceneManager.LoadScene("SecretDoor");
