@@ -8208,7 +8208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drawerFiveOpen: 0
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 0
 --- !u!65 &803181363
 BoxCollider:
   m_ObjectHideFlags: 0
