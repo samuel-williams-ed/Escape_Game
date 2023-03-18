@@ -27,11 +27,19 @@ public class TextOnlyObjectsScript : MonoBehaviour
         string pictureColour2 = "It doesn't fit with the decor though, I wonder if it serves another purpose...";
         pictureColourText.Add(pictureColour1);
         pictureColourText.Add(pictureColour2);
+
+        List<string> teamPictureText = new List<string>();
+        string teamPicture1 = "mmh... this portrait reminds me of someone..";
+        string teamPicture2 = "Oh! I know. Captain Hook.";
+        teamPictureText.Add(teamPicture1);
+        teamPictureText.Add(teamPicture2);
+
     
         dialogueDictionary = new Dictionary<string, List<string>>() {
             {"BathroomDoor", bathroomDoorText},
             {"Radio", radioText},
-            {"PictureColour", pictureColourText}
+            {"PictureColour", pictureColourText},
+            {"TeamPicture", teamPictureText}
         };
 
     }
