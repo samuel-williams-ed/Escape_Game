@@ -13,7 +13,8 @@ public class ScenesManager : MonoBehaviour
         {"SecretBookcaseGroup", "SecretDoor"},
         {"Radio", "Radio"},
         {"PictureColour", "PictureColour"},
-        {"Desk", "Desk"}
+        {"Desk", "Desk"},
+        {"ChestOfDrawersFocus", "ChestOfDrawers"}
     };
     private GameObject bookcase;
 
