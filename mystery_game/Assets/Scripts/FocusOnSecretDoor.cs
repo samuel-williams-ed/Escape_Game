@@ -52,7 +52,7 @@ public class FocusOnSecretDoor : MonoBehaviour
                 timeElapsed += Time.deltaTime;
             } else {
                 movingToBookcase = false;
-                scenesManager.LoadScene();
+                scenesManager.LoadScene("SecretDoor");
             }
         }
     }

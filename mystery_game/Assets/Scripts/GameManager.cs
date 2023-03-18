@@ -5,17 +5,16 @@ using TMPro;
 public class GameManager : MonoBehaviour
 
 {
-    private GameObject player;
-    private bool bookcaseUnlocked = false;
-    private GameObject bookcase;
-    // public Vector3 bookcaseEndPosition;
-    private ScenesManager scenesManager;
     public static GameManager manager;
+    private ScenesManager scenesManager;
+    private GameObject player;
     public TextMeshProUGUI dialogueText;
-    private List<string> lines;
+    private List<string> dialogueList;
     // private int index; // to track where we are within the dialogue
     private float textSpeed = 0.15f;
     // private bool dialogueInProgress;
+    private GameObject bookcase;
+    private bool bookcaseUnlocked = false;
 
     private List<string> getStartingText(){
         string string1 = "Where am I?";
@@ -37,21 +36,17 @@ public class GameManager : MonoBehaviour
             if (manager != this) {
                 Destroy(gameObject);
             }
-        player = GameObject.Find("Player");
-        player.transform.position = new Vector3(0f,1f, 0f);
-
         }
 
         scenesManager = GameObject.Find("ScenesManager").GetComponent<ScenesManager>();
+        player = GameObject.Find("Player");
         bookcase = GameObject.Find("SecretBookcaseGroup").gameObject;
     }
 
     // Start is called before the first frame update
     void Start(){
         // index = 0;
-        lines = new List<string>();
-        Debug.Log("start function running");
-        // UpdateDialogue("...");
+        dialogueList = new List<string>();
         List<string> startingText = getStartingText();
         UpdateDialogue(startingText);
 
@@ -63,8 +58,8 @@ public class GameManager : MonoBehaviour
     
     public void UpdateDialogue(List<string> newListOfStrings){
         // lines.AddRange(newListOfStrings);
-        lines = newListOfStrings;
         // StartCoroutine(TypeLine());
+        dialogueList = newListOfStrings;
         StartCoroutine(OutputDialogue());
     }
     //creating a co-routine
@@ -85,7 +80,7 @@ public class GameManager : MonoBehaviour
         dialogueText.text = string.Empty;
 
         // Loop through each string in the lines array:
-        foreach (string line in lines) {
+        foreach (string line in dialogueList) {
             // Loop through each character in the string and print to dialogue box at given textSpeed:
             foreach (char character in line.ToCharArray()) {
                 dialogueText.text += character;
@@ -101,7 +96,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Reset lines variable to an empty array and add holding dialogue text:
-        lines = new List<string>();
+        dialogueList = new List<string>();
         dialogueText.text = "...";
 
         // dialogueInProgress = false;

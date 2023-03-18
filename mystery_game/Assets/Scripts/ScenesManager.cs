@@ -6,10 +6,15 @@ using UnityEngine.UI;
 
 public class ScenesManager : MonoBehaviour
 {
-    public ScenesManager manager;
-
-
+    public static ScenesManager manager;
     public Button backButton;
+
+    public Dictionary<string, string> scenes = new Dictionary<string, string>() {
+        {"SecretBookcaseGroup", "SecretDoor"},
+        {"Radio", "Radio"},
+        {"PictureColour", "PictureColour"},
+        {"Desk", "Desk"}
+    };
     private GameObject bookcase;
 
     //  make me a singlton
@@ -24,21 +29,16 @@ public class ScenesManager : MonoBehaviour
         }
     }
 
-    public void LoadScene() {
-        SceneManager.LoadScene("SecretDoor");
+    public void LoadScene(string sceneName) {
+        SceneManager.LoadScene(sceneName);
         addBackButton();
     }
-
 
     public void LoadMainRoom(){
         SceneManager.LoadScene("EscapeRoom");
         removeBackButton();
-        // bookcase = GameObject.Find("SecretBookcaseGroup").gameObject;
         PlayerMove.manager.setPlayerMoveable(true);
         PlayerLook.manager.setPlayerCanMoveCamera(true);
-        // if(GameManager.manager.getBookcaseUnlocked()){
-        //     bookcase.transform.position = GameManager.manager.bookcaseEndPosition;
-        // }
     }
 
      // Two returns deal with the player coming to the cabinet from different sides (finds the objects x position and the players x position and calculate the angle of rotation to do this)
