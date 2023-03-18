@@ -6,9 +6,6 @@ using TMPro;
 public class TextOnlyObjectsScript : MonoBehaviour
 
 {
-    // private List<string> bathroomDoorText = new List<string>();
-    // private List<string> radioText = new List<string>();
-    // private List<string> pictureColourText = new List<string>();
     private Dictionary <string, List<string>> dialogueDictionary;
 
     void Awake() {
@@ -44,7 +41,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
         List<string> drawersDuckText = new List<string>();
         drawersDuckText.Add(" 'QUACK!!' ");
         
-         List<string> teamPictureText = new List<string>();
+        List<string> teamPictureText = new List<string>();
         string teamPicture1 = "mmh... this portrait reminds me of someone..";
         string teamPicture2 = "Oh! I know. Captain Hook.";
         teamPictureText.Add(teamPicture1);
