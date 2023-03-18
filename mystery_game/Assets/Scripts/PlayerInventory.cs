@@ -13,10 +13,19 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI slot2;
     public TextMeshProUGUI slot3;
     public TextMeshProUGUI slot4;
+    
+    // chest of drawers (red)
     public bool hasRedKey = false;
+    // location unknown (blue)
     public bool hasBlueKey = false;
+    // behing Agatha Christie (Christkey?) book (green)
     public bool hasGreenKey = false;
+    // check for monster/lever book to move bookcase
     public bool hasAllKeys = false;
+    // Agatha Christie clue (green key)
+    public bool hasFoundAuthor = false;
+    public bool hasFoundTitle = false;
+    public bool hasFoundMonster = false;
     private GameObject[] allItems = new GameObject[]{};
 
     void Awake() {
