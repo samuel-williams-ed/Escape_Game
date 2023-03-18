@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     // private bool dialogueInProgress;
     private GameObject bookcase;
     private bool bookcaseUnlocked = false;
+    private bool secretRoomUnlocked = false;
+    public bool secretDrawerUnlocked = false;
 
     private List<string> getStartingText(){
         string string1 = "Where am I?";
@@ -150,6 +152,16 @@ public class GameManager : MonoBehaviour
 
     public void setBookcaseUnlocked( bool true_or_false){
         bookcaseUnlocked = true_or_false;
+    }
+    public bool getSecretRoomUnlocked(){
+        return secretRoomUnlocked;
+    }
+    public void setSecretRoomUnlocked(bool true_or_false) {
+        secretRoomUnlocked = true_or_false;
+    }
+
+    public void setSecretDrawerUnlocked(bool true_or_false){
+        secretDrawerUnlocked = true_or_false;
     }
 }
 

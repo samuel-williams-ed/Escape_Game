@@ -27,13 +27,42 @@ public class TextOnlyObjectsScript : MonoBehaviour
         string pictureColour2 = "It doesn't fit with the decor though, I wonder if it serves another purpose...";
         pictureColourText.Add(pictureColour1);
         pictureColourText.Add(pictureColour2);
-    
+
+        List<string> drawersBookText = new List<string>();
+        drawersBookText.Add("This doesn't look useful");
+
+        List<string> drawersCandleText = new List<string>();
+        drawersCandleText.Add("This is just a candle");
+
+        List<string> drawersCutleryText = new List<string>();
+        drawersCutleryText.Add("What a load of old junk");
+
+        List<string> drawersBinocularsText = new List<string>();
+        drawersBinocularsText.Add("I wonder who these belong too?");
+
+
+        List<string> drawersDuckText = new List<string>();
+        drawersDuckText.Add(" 'QUACK!!' ");
+        
+         List<string> teamPictureText = new List<string>();
+        string teamPicture1 = "mmh... this portrait reminds me of someone..";
+        string teamPicture2 = "Oh! I know. Captain Hook.";
+        teamPictureText.Add(teamPicture1);
+        teamPictureText.Add(teamPicture2);
+
+        // Key = object name, Value = list name
         dialogueDictionary = new Dictionary<string, List<string>>() {
             {"BathroomDoor", bathroomDoorText},
             {"Radio", radioText},
-            {"PictureColour", pictureColourText}
+            {"PictureColour", pictureColourText}, 
+            {"CODBook", drawersBookText},
+            {"CODCandle", drawersCandleText},
+            {"CODCutlery", drawersCutleryText},
+            {"CODBinoculars", drawersBinocularsText},
+            {"CODDuck", drawersDuckText},
+            {"TeamPicture", teamPictureText}
+            
         };
-
     }
 
     private void OnMouseDown() {

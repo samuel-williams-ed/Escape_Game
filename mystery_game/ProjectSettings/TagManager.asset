@@ -7,6 +7,7 @@ TagManager:
   - Collectable
   - Chest
   - Desk
+  - SecretDrawer
   layers:
   - Default
   - TransparentFX
