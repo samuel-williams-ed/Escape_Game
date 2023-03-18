@@ -18,12 +18,13 @@ public class PlayerInventory : MonoBehaviour
     public bool hasRedKey = false;
     // location unknown (blue)
     public bool hasBlueKey = false;
-    // behing Agatha Christie (Christkey?) book (green)
+    // behind Agatha Christie (Christkey?) book (green)
     public bool hasGreenKey = false;
     // check for monster/lever book to move bookcase
     public bool hasAllKeys = false;
     // Agatha Christie clue (green key)
     public bool hasFoundAuthor = false;
+    // Finds clue for Moby Dick
     public bool hasFoundTitle = false;
     public bool hasFoundMonster = false;
     private GameObject[] allItems = new GameObject[]{};
@@ -46,15 +47,6 @@ public class PlayerInventory : MonoBehaviour
         slot3.text = "empty";
         slot4.text = "empty";
         // Might need to do conditional logic for scene changes to load in inventory
-    }
-
-    // Update is called once per frame
-    void Update() {
-        
-    }
-
-    public void addToSlot(TextMeshProUGUI slot, string newItemName) {
-        slot.text = newItemName;
     }
 
     public void addToInventory (GameObject item) {
@@ -126,6 +118,10 @@ public class PlayerInventory : MonoBehaviour
             addToSlot(slot4, item.name);
             return;
         }
+    }
+
+        public void addToSlot(TextMeshProUGUI slot, string newItemName) {
+        slot.text = newItemName;
     }
 
     public void checkIfAllKeysCollected() {
