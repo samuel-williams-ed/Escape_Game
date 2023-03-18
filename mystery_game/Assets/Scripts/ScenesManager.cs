@@ -10,10 +10,12 @@ public class ScenesManager : MonoBehaviour
     public Button backButton;
 
     public Dictionary<string, string> scenes = new Dictionary<string, string>() {
+        {"ExitDoorFocus", "ExitDoor"},
         {"SecretBookcaseGroup", "SecretDoor"},
         {"Radio", "Radio"},
         {"PictureColour", "PictureColour"},
-        {"Desk", "Desk"}
+        {"Desk", "Desk"},
+        {"ChestOfDrawersFocus", "ChestOfDrawers"}
     };
     private GameObject bookcase;
 

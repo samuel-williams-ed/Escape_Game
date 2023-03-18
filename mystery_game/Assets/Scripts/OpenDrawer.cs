@@ -11,12 +11,6 @@ public class OpenDrawer : MonoBehaviour
     private float timeElapsed;
     private float adjustment;
 
-    // Start is called before the first frame update
-    void Start() {
-        // drawerStartPosition = transform.position;
-        // drawerEndPosition = new Vector3(drawerStartPosition.x + 0.5f, drawerStartPosition.y, drawerStartPosition.z);
-    }
-
     private void OnMouseDown() {
         drawerStartPosition = transform.position;
         if (gameObject.tag == "Desk") {
@@ -33,7 +27,6 @@ public class OpenDrawer : MonoBehaviour
         }
         drawerSliding = true;        
     }
-
 
     // Update is called once per frame
     void Update() {
