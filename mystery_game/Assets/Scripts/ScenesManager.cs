@@ -12,7 +12,8 @@ public class ScenesManager : MonoBehaviour
     public Dictionary<string, string> scenes = new Dictionary<string, string>() {
         {"SecretBookcaseGroup", "SecretDoor"},
         {"Radio", "Radio"},
-        {"PictureColour", "PictureColour"}
+        {"PictureColour", "PictureColour"},
+        {"Desk", "Desk"}
     };
     private GameObject bookcase;
 
