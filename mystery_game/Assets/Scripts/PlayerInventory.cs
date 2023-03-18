@@ -22,7 +22,7 @@ public class PlayerInventory : MonoBehaviour
     public bool hasGreenKey = false;
     // check for monster/lever book to move bookcase
     public bool hasAllKeys = false;
-    // Agatha Christie clue (green key)
+    // Agatha Christie clue found (green key)
     public bool hasFoundAuthor = false;
     // Finds clue for Moby Dick
     public bool hasFoundTitle = false;
