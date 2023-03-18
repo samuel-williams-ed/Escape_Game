@@ -68,19 +68,45 @@ public class PlayerInventory : MonoBehaviour
         // Add item to list of game objects in inventory:
         allItems.Append(item);
 
-        if (item.name == "RedKey") {
-            hasRedKey = true;
-            checkIfAllKeysCollected();
-        }
+        // refactored to switch block below
+        // if (item.name == "RedKey") {
+        //     hasRedKey = true;
+        //     checkIfAllKeysCollected();
+        // }
 
-        if (item.name == "BlueKey") {
-            hasBlueKey = true;
-            checkIfAllKeysCollected();
-        }
+        // if (item.name == "BlueKey") {
+        //     hasBlueKey = true;
+        //     checkIfAllKeysCollected();
+        // }
 
-        if (item.name == "GreenKey") {
-            hasGreenKey = true;
-            checkIfAllKeysCollected();
+        // if (item.name == "GreenKey") {
+        //     hasGreenKey = true;
+        //     checkIfAllKeysCollected();
+        // }
+
+        // check for keys & clues
+        switch(item.name){
+            case "RedKey":
+                hasRedKey = true;
+                checkIfAllKeysCollected();
+                break;
+            case "BlueKey":
+                hasBlueKey = true;
+                checkIfAllKeysCollected();
+                break;
+            case "GreenKey":
+                hasGreenKey = true;
+                checkIfAllKeysCollected();
+                break;
+            case "AuthorClue":
+                hasFoundAuthor = true;
+                break;
+            case "TitleClue":
+                hasFoundTitle = true;
+                break;
+            case "MonsterClue":
+                hasFoundMonster = true;
+                break;
         }
 
         // Find the inventory slot that is empty:
