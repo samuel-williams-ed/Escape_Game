@@ -43,6 +43,12 @@ public class TextOnlyObjectsScript : MonoBehaviour
 
         List<string> drawersDuckText = new List<string>();
         drawersDuckText.Add(" 'QUACK!!' ");
+        
+         List<string> teamPictureText = new List<string>();
+        string teamPicture1 = "mmh... this portrait reminds me of someone..";
+        string teamPicture2 = "Oh! I know. Captain Hook.";
+        teamPictureText.Add(teamPicture1);
+        teamPictureText.Add(teamPicture2);
 
         // Key = object name, Value = list name
         dialogueDictionary = new Dictionary<string, List<string>>() {
@@ -53,7 +59,9 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"CODCandle", drawersCandleText},
             {"CODCutlery", drawersCutleryText},
             {"CODBinoculars", drawersBinocularsText},
-            {"CODDuck", drawersDuckText}
+            {"CODDuck", drawersDuckText},
+            {"TeamPicture", teamPictureText}
+            
         };
     }
 
