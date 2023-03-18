@@ -13803,6 +13803,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0f176ae462e410f94bdb8df166b831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawerStartPosition: {x: 0, y: 0, z: 0}
+  drawerEndPosition: {x: 0, y: 0, z: 0}
+  drawerOpen: 0
+  drawerSliding: 0
+  timeElapsed: 0
 --- !u!114 &1395600696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13815,6 +13820,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0f176ae462e410f94bdb8df166b831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawerStartPosition: {x: 0, y: 0, z: 0}
+  drawerEndPosition: {x: 0, y: 0, z: 0}
+  drawerOpen: 0
+  drawerSliding: 0
+  timeElapsed: 0
 --- !u!114 &1395600697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13827,6 +13837,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0f176ae462e410f94bdb8df166b831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawerStartPosition: {x: 0, y: 0, z: 0}
+  drawerEndPosition: {x: 0, y: 0, z: 0}
+  drawerOpen: 0
+  drawerSliding: 0
+  timeElapsed: 0
 --- !u!1 &1395860176
 GameObject:
   m_ObjectHideFlags: 0
