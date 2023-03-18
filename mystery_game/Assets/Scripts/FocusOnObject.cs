@@ -6,7 +6,8 @@ public class FocusOnObject : MonoBehaviour
 {
     private Dictionary<string, Vector3> playerEndPositions = new Dictionary<string, Vector3>() {
         {"Radio", new Vector3(-3.75f, 0.9f, -3.5f)},
-        {"PictureColour", new Vector3(-4f, 1.2f, 2.7f)}
+        {"PictureColour", new Vector3(-4f, 1.2f, 2.7f)},
+        {"Desk", new Vector3(-3f, 1.6f, 2.8f)}
     };
 
 
