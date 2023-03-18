@@ -13,7 +13,6 @@ public class FocusOnObject : MonoBehaviour
         {"ChestOfDrawers", new Vector3(1f, 1.9f, 2.8f)}
     };
 
-
     private void OnMouseDown() {
         if (gameObject.name == "ChestOfDrawers") {
             objectToFocusOn = transform.Find("ChestOfDrawersFocus").gameObject;

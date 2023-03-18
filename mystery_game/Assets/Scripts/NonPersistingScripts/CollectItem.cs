@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CollectItem : MonoBehaviour
 {
-
     public void OnMouseDown() {
         Debug.Log("item selected" + gameObject.name);
         PlayerInventory.manager.addToInventory(this.gameObject);

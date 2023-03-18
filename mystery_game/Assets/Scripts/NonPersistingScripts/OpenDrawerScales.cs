@@ -6,9 +6,7 @@ public class OpenDrawerScales : MonoBehaviour
 {
     private Vector3 drawerStartPosition;
     private Vector3 drawerEndPosition;
-    // private bool drawerOpen;
     private float timeElapsed;
-    //private GameObject chestOfDrawers;
     private GameObject topDrawerTwo;
     private bool drawerSliding;
 
