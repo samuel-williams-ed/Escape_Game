@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3322148}
   - component: {fileID: 2340348}
   m_Layer: 0
-  m_Name: Drawer_Big1
+  m_Name: BottomDrawer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3361550}
   - component: {fileID: 2312082}
   m_Layer: 0
-  m_Name: Drawer1
+  m_Name: TopDrawer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 3349260}
   - component: {fileID: 2342476}
   m_Layer: 0
-  m_Name: Drawer_Big2
+  m_Name: BottomDrawer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 3318316}
   - component: {fileID: 2391076}
   m_Layer: 0
-  m_Name: Drawer_Med2
+  m_Name: MidDrawer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 3315284}
   - component: {fileID: 2337894}
   m_Layer: 0
-  m_Name: Drawer4
+  m_Name: TopDrawer4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 3337930}
   - component: {fileID: 2313436}
   m_Layer: 0
-  m_Name: Drawer2
+  m_Name: TopDrawer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 3360758}
   - component: {fileID: 2350604}
   m_Layer: 0
-  m_Name: Drawer3
+  m_Name: TopDrawer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 3370768}
   - component: {fileID: 2312002}
   m_Layer: 0
-  m_Name: Drawer_Med3
+  m_Name: MidDrawer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1248,7 +1248,7 @@ GameObject:
   - component: {fileID: 3353406}
   - component: {fileID: 2350676}
   m_Layer: 0
-  m_Name: Drawer_Med1
+  m_Name: MidDrawer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
