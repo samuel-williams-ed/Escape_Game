@@ -8,6 +8,12 @@ public class ScenesManager : MonoBehaviour
 {
     public static ScenesManager manager;
     public Button backButton;
+
+    public Dictionary<string, string> scenes = new Dictionary<string, string>() {
+        {"SecretBookcaseGroup", "SecretDoor"},
+        {"Radio", "Radio"},
+        {"PictureColour", "PictureColour"}
+    };
     private GameObject bookcase;
 
     //  make me a singlton

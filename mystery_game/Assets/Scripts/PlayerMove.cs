@@ -63,11 +63,11 @@ public class PlayerMove : MonoBehaviour {
         return playerMoveAllowed;
     }
 
-    public void FocusPlayer(Transform objectToFocusOn, Vector3 playerEndPosition, string sceneName) {
-        StartCoroutine(Focus(objectToFocusOn, playerEndPosition, sceneName));
+    public void FocusPlayer(GameObject objectToFocusOn, Vector3 playerEndPosition) {
+        StartCoroutine(Focus(objectToFocusOn, playerEndPosition));
     }
 
-    private IEnumerator Focus(Transform objectToFocusOn, Vector3 playerEndPosition, string sceneName) {
+    private IEnumerator Focus(GameObject objectToFocusOn, Vector3 playerEndPosition) {
         // Remove player controls:
         PlayerMove.manager.setPlayerMoveable(false);
         PlayerLook.manager.setPlayerCanMoveCamera(false);
@@ -81,15 +81,16 @@ public class PlayerMove : MonoBehaviour {
             // Moves position of player object:
             transform.position = Vector3.Lerp(playerStartPosition, playerEndPosition, timeElapsed);
             // Focuses player object rotation to look at object to be focused on:
-            transform.LookAt(objectToFocusOn);
+            transform.LookAt(objectToFocusOn.transform);
             // Focuses camera object rotation to look at object to be focused on:
-            Camera.main.transform.LookAt(objectToFocusOn);
+            Camera.main.transform.LookAt(objectToFocusOn.transform);
             // Update timeElapsed variable:
             timeElapsed += Time.deltaTime;
             yield return null;
         }
 
         // Load the required scene:
+        string sceneName = ScenesManager.manager.scenes[objectToFocusOn.name];
         ScenesManager.manager.LoadScene(sceneName);
     }
 
