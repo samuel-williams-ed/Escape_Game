@@ -16,7 +16,8 @@ public class ScenesManager : MonoBehaviour
         {"PictureColour", "PictureColour"},
         {"Desk", "Desk"},
         {"ChestOfDrawersFocus", "ChestOfDrawers"},
-        {"Padlock", "Padlock"}
+        {"Padlock", "Padlock"},
+        {"SRChest", "Chest"}
     };
     private GameObject bookcase;
 

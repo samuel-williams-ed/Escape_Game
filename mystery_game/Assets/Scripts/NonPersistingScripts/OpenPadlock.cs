@@ -10,12 +10,16 @@ public class OpenPadlock : MonoBehaviour
         {"Dial3", 4},
         {"Dial4", 0}
     };
+    private string correctCode = "2951";
     private List<string> padlockUnlockedText = new List<string>() {
         "*CLICK*",
         "Got it! Now let's see what's in here..."
     };
+    private GameObject chest;
 
-    private string correctCode = "2951";
+    void Awake() {
+        chest = GameObject.Find("SRChest").gameObject;
+    }
 
     // Update is called once per frame
     void Update() {
@@ -26,6 +30,7 @@ public class OpenPadlock : MonoBehaviour
             // ANIMATION OF PADLOCK UNLOCKING
             // ANIMATION OF CHEST OPENING
             // LOAD SCENE THAT ZOOMS TO CHEST
+            PlayerMove.manager.FocusPlayer(chest, new Vector3(3.5f, 1f, -7.9f));
             // SETS PADLOCK FOCUS SCRIPT TO FALSE / INACTIVE OR NOW LOADS CHEST SCENE?
         }
     }
