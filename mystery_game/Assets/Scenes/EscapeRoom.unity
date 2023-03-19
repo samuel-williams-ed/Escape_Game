@@ -209,6 +209,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pen green
       objectReference: {fileID: 0}
+    - target: {fileID: 7576404032510074757, guid: fb3e220f766859947b81df91ed527f96, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576404032510074757, guid: fb3e220f766859947b81df91ed527f96, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7889252507155606644, guid: fb3e220f766859947b81df91ed527f96, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -644,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54864856047126584, guid: 6a77368dc5b8f33458b9723a087286e5, type: 3}
       propertyPath: m_Constraints
-      value: 126
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 54864856047126584, guid: 6a77368dc5b8f33458b9723a087286e5, type: 3}
       propertyPath: m_IsKinematic
@@ -4888,7 +4896,7 @@ Transform:
   - {fileID: 1662656092}
   - {fileID: 1253120631}
   m_Father: {fileID: 973422772}
-  m_RootOrder: 33
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484374916 stripped
 GameObject:
@@ -5647,7 +5655,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &542016573
@@ -7012,6 +7020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenKey
       objectReference: {fileID: 0}
+    - target: {fileID: 6287817490465569587, guid: 9d4494b8b100519479f9699c5a7390a9, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8387792330663407722, guid: 9d4494b8b100519479f9699c5a7390a9, type: 3}
       propertyPath: m_Name
       value: SRWardrobe
@@ -7489,11 +7501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54864856047126584, guid: 6a77368dc5b8f33458b9723a087286e5, type: 3}
       propertyPath: m_Constraints
-      value: 126
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 54864856047126584, guid: 6a77368dc5b8f33458b9723a087286e5, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a77368dc5b8f33458b9723a087286e5, type: 3}
@@ -9324,6 +9336,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7302555634527748851, guid: 83042a5eb5c40da4197716921b77d573, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7302555634527748851, guid: 83042a5eb5c40da4197716921b77d573, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8758348418127908040, guid: 83042a5eb5c40da4197716921b77d573, type: 3}
       propertyPath: m_Name
       value: Pen black
@@ -9921,6 +9941,7 @@ Transform:
   - {fileID: 1523567135}
   - {fileID: 1771370930}
   - {fileID: 1756695000}
+  - {fileID: 480745560}
   - {fileID: 1208562990}
   - {fileID: 1514873369}
   - {fileID: 2088669241}
@@ -9938,7 +9959,6 @@ Transform:
   - {fileID: 1706640733}
   - {fileID: 712622270}
   - {fileID: 1249764062}
-  - {fileID: 480745560}
   m_Father: {fileID: 1610530137}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13046,11 +13066,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54864856047126584, guid: 6a77368dc5b8f33458b9723a087286e5, type: 3}
       propertyPath: m_Constraints
-      value: 126
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 54864856047126584, guid: 6a77368dc5b8f33458b9723a087286e5, type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a77368dc5b8f33458b9723a087286e5, type: 3}
@@ -16618,6 +16638,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6204051434897261051, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6204051434897261051, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7242734902216313324, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
       propertyPath: m_Name
       value: Pen blue
@@ -17561,6 +17589,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 904777227}
     m_Modifications:
+    - target: {fileID: 4917387778864392607, guid: f7d49d5d637949741803377a17232282, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917387778864392607, guid: f7d49d5d637949741803377a17232282, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5978910447518482905, guid: f7d49d5d637949741803377a17232282, type: 3}
       propertyPath: m_Name
       value: Pen red
