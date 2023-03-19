@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -16,11 +17,12 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI slot2;
     public TextMeshProUGUI slot3;
     public TextMeshProUGUI slot4; 
-    private GameObject[] allItems = new GameObject[]{};
+    // TODO set to private!
+    public string[] allItems; // should be string reference as GameObjects won't persist!
     private GameObject inventoryCurrentlySelected;
 
     // #####
-    // ##### conditionals for recording current game state 
+    // ##### conditional properties for recording current game state 
     // #####
 
     public bool deskDrawerUnlocked = false; // contains blue key
@@ -38,6 +40,12 @@ public class PlayerInventory : MonoBehaviour
     public bool hasBlueKey = false; // in desk drawer - needs to be unlocked by scales
     public bool hasGreenKey = false; // behind Agatha Christie (Christkey?) book
     public bool hasAllKeys = false; // allows player to try to open secret door locks
+
+    // #####
+    // ##### objects that need to be positioned / hidden on scene changes
+    // #####
+    // public GameObject AuthorBook;
+    // private GameObject TitleBook;
     
     // #####
     // ##### Unity Instance Methods
@@ -53,6 +61,11 @@ public class PlayerInventory : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        
+        // Trialling this in the function after checkign if it has been found!
+        // find objects that are collectable and will need to be hidden later
+        // AuthorBook = GameObject.Find("AgathaBook").gameObject;
+        // TitleBook = GameObject.Find("MobyBook").gameObject;
     }
 
     // Start is called before the first frame update
@@ -62,21 +75,31 @@ public class PlayerInventory : MonoBehaviour
         slot3.text = "empty";
         slot4.text = "empty";
         inventoryCurrentlySelected = new GameObject(){};
+        allItems = new String[4]{"empty", "empty", "empty", "empty"};
     }
 
     // #####
     // ##### setters, getters & adders
     // #####
-
     public void addToInventory (GameObject item) {
-        Debug.Log("adding to inventory" + item.name + item.GetInstanceID());
+        Debug.Log("Prepping add to inventory" + item.name + item.GetInstanceID());
         
-        // guard clauses
-        if (allItems.Count() >= 4) { return; } // Don't allow more items than there are inventory slots:
-        if (allItems.Contains(item)) { return; } // Can't add exact same object multiple times!
+        // Don't allow add same object multiple times!
+        // Check against items currently in inventory
+        foreach (string obj in allItems) {
+            if (obj != "empty") {
+                if ( obj == item.name ) {
+                    Debug.Log("Err, This item is already in our inventory! " + item.name);
+                    return;
+                } else {
+                    Debug.Log( obj + " doesn't match: " + item.name + " and can be added");
+                }
+            }
+        }
         
-        // Add item to list of game objects in inventory:
-        allItems.Append(item); 
+        // Add item to allItems
+        int index = Array.IndexOf(allItems, "empty"); // find blank space in fixed array
+        allItems[index] = item.name; // add item to found space
 
         // check for keys & clues
         switch(item.name){
@@ -102,11 +125,11 @@ public class PlayerInventory : MonoBehaviour
                 hasFoundMonster = true;
                 checkIfCanOpenBookcase();
                 break;
-            case "AuthorBook":
-                hasFoundAuthor = true;
+            case "AgathaBook":
+                hasFoundAuthorBook = true;
                 checkIfCanOpenBookcase();
                 break;
-            case "TitleBook":
+            case "MobyBook":
                 hasFoundTitleBook = true;
                 checkIfCanOpenBookcase();
                 break;
@@ -123,34 +146,24 @@ public class PlayerInventory : MonoBehaviour
         slot.text = newItemName;
     }
 
-    // set selected inventory item by directly passing in
-    // or use overloaded method that searches through 'allItems' using name of the item we want to select
-    public void setSelectedItem(GameObject selected_item){
-        if (allItems.Contains(selected_item)){ // can't assign an item we don't have!
+    // set selected inventory item by directly passing in an object
+    // or use overloaded method that searches through 'allItems' in inventory using name of the item
+    public void setInventoryCurrentlySelected(GameObject selected_item){
             inventoryCurrentlySelected = selected_item;
-        } else {
-            Debug.Log("Err: Item - " + selected_item.name + " - tried to be selected but is not in players inventory!");
-        }
     }
-    public void setSelectedItem(string item_name){
-        foreach(GameObject item in allItems){
-            if (item.name == item_name){ 
-                inventoryCurrentlySelected = item;
-                Debug.Log(item_name + " selected");
-                break;
-            }
-        }
+    public void setInventoryCurrentlySelected(string item_name){
+        GameObject found = GameObject.Find(item_name).gameObject;
+        inventoryCurrentlySelected = found;
     }
-    public void chooseThisItem(TextMeshProUGUI item_textMesh){
-        Debug.Log("Selecting " + item_textMesh.text + " for inventory.");
-        string item_text = item_textMesh.text;
-        setSelectedItem(item_text);
+    
+    // when player clicks an item from inventory UI
+    // inventory slot contains item name - pass to setSelectFunction to find whole object
+    public void playerSelectFromInventory(TextMeshProUGUI inventory_slot){
+        Debug.Log("Selecting " + inventory_slot.text + " from inventory.");
+        string item_text = inventory_slot.text;
+        setInventoryCurrentlySelected(item_text);
     }
-    public GameObject getSelectedItem() {
-        if ( allItems.Count() == 0 ) { 
-            Debug.Log("Err: Tried to get the Selected Item from inventory but inventory list is empty!");
-            return null; 
-            }
+    public GameObject getInventoryCurrentlySelected() {
         return inventoryCurrentlySelected;
     }
 
@@ -173,6 +186,11 @@ public class PlayerInventory : MonoBehaviour
             canOpenBookcase = true;
             Debug.Log("Has found both books! Bookcase can now be opened...");
         }
+    }
+
+
+    public void deactivateObject(GameObject itself){
+        itself.SetActive(false);
     }
 
 }

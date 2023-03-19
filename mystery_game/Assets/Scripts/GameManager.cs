@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     private List<string> dialogueList;
     private float textSpeed = 0.15f;
     // private bool dialogueInProgress;
+
+
     private GameObject bookcase;
     private bool bookcaseUnlocked = false;
     private bool secretRoomUnlocked = false;
