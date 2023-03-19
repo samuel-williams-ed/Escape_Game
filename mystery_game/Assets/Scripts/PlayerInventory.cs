@@ -141,9 +141,10 @@ public class PlayerInventory : MonoBehaviour
             }
         }
     }
-    public void setSelectedItem(TextMeshProUGUI item_textMesh){
+    public void chooseThisItem(TextMeshProUGUI item_textMesh){
         Debug.Log("Selecting " + item_textMesh.text + " for inventory.");
-        setSelectedItem(item_textMesh.text);
+        string item_text = item_textMesh.text;
+        setSelectedItem(item_text);
     }
     public GameObject getSelectedItem() {
         if ( allItems.Count() == 0 ) { 
