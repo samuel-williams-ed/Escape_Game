@@ -5209,7 +5209,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1374655738}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -8.406, z: 0}
 --- !u!23 &493583294
 MeshRenderer:
@@ -9772,6 +9772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 267013271}
+  secretDrawerUnlocked: 0
 --- !u!4 &966883384
 Transform:
   m_ObjectHideFlags: 0
@@ -13009,15 +13010,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cb277aaf0f7af05428fee50e65948bac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: -10.809
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cb277aaf0f7af05428fee50e65948bac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7510772
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cb277aaf0f7af05428fee50e65948bac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.8357496
+      value: -7.836
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: cb277aaf0f7af05428fee50e65948bac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13829,9 +13830,9 @@ Transform:
   - {fileID: 1753838532}
   - {fileID: 1021579029}
   - {fileID: 1395600689}
+  - {fileID: 493583293}
   - {fileID: 1166524271}
   - {fileID: 1511552973}
-  - {fileID: 493583293}
   - {fileID: 1644361281}
   - {fileID: 1789552032}
   m_Father: {fileID: 0}
