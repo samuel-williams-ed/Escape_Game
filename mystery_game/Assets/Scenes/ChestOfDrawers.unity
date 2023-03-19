@@ -13300,6 +13300,7 @@ GameObject:
   - component: {fileID: 1274829626}
   - component: {fileID: 1274829627}
   - component: {fileID: 1274829629}
+  - component: {fileID: 1274829630}
   m_Layer: 0
   m_Name: CODChessPieces
   m_TagString: Untagged
@@ -13357,6 +13358,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49152749a1e794a3ab48f82f501153b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1274829630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274829625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.26176453, y: 0.072105415, z: 0.25742915}
+  m_Center: {x: -40.45289, y: 33.428513, z: -20.260649}
 --- !u!1001 &1301798300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21150,8 +21164,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.06878197, y: 0.29739994, z: 0.117400035}
-  m_Center: {x: 0.098606944, y: 2.7914177e-14, z: -0.00000011708055}
+  m_Size: {x: 0.050176498, y: 0.29739994, z: 0.117400035}
+  m_Center: {x: 0.107909694, y: 2.7914177e-14, z: -0.00000011708055}
 --- !u!4 &2009948552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 473292, guid: 1b6f5d3a81a4c8345a49046252843fa9, type: 3}
