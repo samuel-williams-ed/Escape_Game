@@ -19,7 +19,7 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI slot4; 
     // TODO set to private!
     public string[] allItems; // should be string reference as GameObjects won't persist!
-    private GameObject inventoryCurrentlySelected;
+    private string inventoryCurrentlySelected;
 
     // #####
     // ##### conditional properties for recording current game state 
@@ -34,12 +34,12 @@ public class PlayerInventory : MonoBehaviour
     public bool hasFoundAuthorBook = false; // reveals green key behind the book
     public bool hasFoundTitleBook = false; // feedback to player: "I could swear I heard a click - like a break being released..."
     public bool canOpenBookcase = false; //can only open bookcase after ^two books are found
-
+// TODO - make private (public for testing)
 
     public bool hasRedKey = false;  // in chest of drawers
     public bool hasBlueKey = false; // in desk drawer - needs to be unlocked by scales
     public bool hasGreenKey = false; // behind Agatha Christie (Christkey?) book
-    public bool hasAllKeys = false; // allows player to try to open secret door locks
+    private bool hasAllKeys = false; // allows player to try to open secret door locks
 
     // #####
     // ##### objects that need to be positioned / hidden on scene changes
@@ -70,22 +70,40 @@ public class PlayerInventory : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        slot1.text = "empty";
-        slot2.text = "empty";
-        slot3.text = "empty";
-        slot4.text = "empty";
-        inventoryCurrentlySelected = new GameObject(){};
         allItems = new String[4]{"empty", "empty", "empty", "empty"};
+        slot1.text = allItems[0];
+        slot2.text = allItems[1];
+        slot3.text = allItems[2];
+        slot4.text = allItems[3];
+        inventoryCurrentlySelected = slot1.text;
     }
 
     // #####
-    // ##### setters, getters & adders
+    // ##### setters, getters
     // #####
+    public void setInventoryCurrentlySelected(string item_name){
+        inventoryCurrentlySelected = item_name;
+    }
+    public string getInventoryCurrentlySelected(){
+        return inventoryCurrentlySelected;
+    }
+
+    // #####
+    // ##### adders & askers
+    // #####
+    public bool askIfCanOpenBookcase(){ return canOpenBookcase; }
+    public bool askIfHasAllKeys(){ return hasAllKeys; }
+    public void addToSlot(TextMeshProUGUI slot, string newItemName) {
+        slot.text = newItemName;
+    }
+    
+    
     public void addToInventory (GameObject item) {
         Debug.Log("Prepping add to inventory" + item.name + item.GetInstanceID());
         
         // Don't allow add same object multiple times!
         // Check against items currently in inventory
+        // shouldn't need this as objects will be set to inactive after selected...
         foreach (string obj in allItems) {
             if (obj != "empty") {
                 if ( obj == item.name ) {
@@ -101,19 +119,24 @@ public class PlayerInventory : MonoBehaviour
         int index = Array.IndexOf(allItems, "empty"); // find blank space in fixed array
         allItems[index] = item.name; // add item to found space
 
+        bool itemAddableToUI = false;
         // check for keys & clues
         switch(item.name){
             case "RedKey":
                 hasRedKey = true;
+                itemAddableToUI = true;
                 checkIfAllKeysCollected();
                 break;
             case "BlueKey":
                 hasBlueKey = true;
+                itemAddableToUI = true;
                 checkIfAllKeysCollected();
                 break;
             case "GreenKey":
                 hasGreenKey = true;
+                itemAddableToUI = true;
                 checkIfAllKeysCollected();
+                checkIfCanOpenBookcase();
                 break;
             case "AuthorClue":
                 hasFoundAuthor = true;
@@ -127,44 +150,22 @@ public class PlayerInventory : MonoBehaviour
                 break;
             case "AgathaBook":
                 hasFoundAuthorBook = true;
+                itemAddableToUI = true;
                 checkIfCanOpenBookcase();
                 break;
             case "MobyBook":
                 hasFoundTitleBook = true;
+                itemAddableToUI = true;
                 checkIfCanOpenBookcase();
                 break;
         }
-
+        if (itemAddableToUI){
         // Find & add to inventory slot that is empty:
-        if (slot1.text == "empty") { addToSlot(slot1, item.name); return; }
-        if (slot2.text == "empty") { addToSlot(slot2, item.name); return; }
-        if (slot3.text == "empty") { addToSlot(slot3, item.name); return; }
-        if (slot4.text == "empty") { addToSlot(slot4, item.name); return; }
-    }
-
-    public void addToSlot(TextMeshProUGUI slot, string newItemName) {
-        slot.text = newItemName;
-    }
-
-    // set selected inventory item by directly passing in an object
-    // or use overloaded method that searches through 'allItems' in inventory using name of the item
-    public void setInventoryCurrentlySelected(GameObject selected_item){
-            inventoryCurrentlySelected = selected_item;
-    }
-    public void setInventoryCurrentlySelected(string item_name){
-        GameObject found = GameObject.Find(item_name).gameObject;
-        inventoryCurrentlySelected = found;
-    }
-    
-    // when player clicks an item from inventory UI
-    // inventory slot contains item name - pass to setSelectFunction to find whole object
-    public void playerSelectFromInventory(TextMeshProUGUI inventory_slot){
-        Debug.Log("Selecting " + inventory_slot.text + " from inventory.");
-        string item_text = inventory_slot.text;
-        setInventoryCurrentlySelected(item_text);
-    }
-    public GameObject getInventoryCurrentlySelected() {
-        return inventoryCurrentlySelected;
+            if (slot1.text == "empty") { addToSlot(slot1, item.name); return; }
+            if (slot2.text == "empty") { addToSlot(slot2, item.name); return; }
+            if (slot3.text == "empty") { addToSlot(slot3, item.name); return; }
+            if (slot4.text == "empty") { addToSlot(slot4, item.name); return; }
+        }
     }
 
 
@@ -179,18 +180,13 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
-    // if two other books and the monster image is found
+    // if both two other books and the green key are collected & the monster image is found
     // the bookcase is now openable by clicking on the Monster book
     public void checkIfCanOpenBookcase(){
-        if (hasFoundAuthorBook && hasFoundTitleBook && hasFoundMonster){
+        if (hasFoundAuthorBook && hasFoundTitleBook && hasGreenKey && hasFoundMonster){
             canOpenBookcase = true;
-            Debug.Log("Has found both books! Bookcase can now be opened...");
+            Debug.Log("Bookcase can now be opened...");
         }
-    }
-
-
-    public void deactivateObject(GameObject itself){
-        itself.SetActive(false);
     }
 
 }

@@ -22151,6 +22151,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
       objectReference: {fileID: 0}
+    - target: {fileID: 3869658358034040381, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176493, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Name
       value: PlayerInventory
@@ -22259,6 +22263,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3869658359003648930, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658359069066290, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -22299,6 +22307,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 634777105}
+    - target: {fileID: 3869658359201630863, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359217804024, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
 --- !u!1001 &6213846162633207407
