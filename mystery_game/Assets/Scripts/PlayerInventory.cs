@@ -17,6 +17,7 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI slot2;
     public TextMeshProUGUI slot3;
     public TextMeshProUGUI slot4; 
+    public TextMeshProUGUI slot5;
     // TODO set to private!
     public string[] allItems; // should be string reference as GameObjects won't persist!
     private string inventoryCurrentlySelected;
@@ -33,7 +34,7 @@ public class PlayerInventory : MonoBehaviour
 
     public bool hasFoundAuthorBook = false; // reveals green key behind the book
     public bool hasFoundTitleBook = false; // feedback to player: "I could swear I heard a click - like a break being released..."
-    public bool canOpenBookcase = false; //can only open bookcase after ^two books are found
+    public bool canOpenBookcase = true; //can only open bookcase after ^two books are found
 // TODO - make private (public for testing)
 
     public bool hasRedKey = false;  // in chest of drawers
@@ -70,11 +71,12 @@ public class PlayerInventory : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        allItems = new String[4]{"empty", "empty", "empty", "empty"};
+        allItems = new String[5]{"empty", "empty", "empty", "empty", "empty"};
         slot1.text = allItems[0];
         slot2.text = allItems[1];
         slot3.text = allItems[2];
         slot4.text = allItems[3];
+        slot5.text = allItems[4];
         inventoryCurrentlySelected = slot1.text;
     }
 
@@ -165,6 +167,7 @@ public class PlayerInventory : MonoBehaviour
             if (slot2.text == "empty") { addToSlot(slot2, item.name); return; }
             if (slot3.text == "empty") { addToSlot(slot3, item.name); return; }
             if (slot4.text == "empty") { addToSlot(slot4, item.name); return; }
+            if (slot5.text == "empty") { addToSlot(slot5, item.name); return; }
         }
     }
 
