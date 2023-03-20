@@ -10,7 +10,9 @@ public class FocusOnObject : MonoBehaviour
         {"Radio", new Vector3(-3.75f, 0.9f, -3.5f)},
         {"PictureColour", new Vector3(-4f, 1.2f, 2.7f)},
         {"Desk", new Vector3(-3f, 1.6f, 2.8f)},
-        {"ChestOfDrawers", new Vector3(1f, 1.9f, 2.8f)}
+        {"ChestOfDrawers", new Vector3(1f, 1.9f, 2.8f)},
+        {"TopCrate", new Vector3(3.3f, 1.1f, -4.8f)},
+        {"Padlock", new Vector3(3.5f, 0.45f, -7.9f)}
     };
 
     private void OnMouseDown() {
