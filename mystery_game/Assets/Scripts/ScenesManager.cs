@@ -7,10 +7,14 @@ using UnityEngine.UI;
 public class ScenesManager : MonoBehaviour
 {
     public static ScenesManager manager;
+    public GameObject gameUICanvas;
     public Button backButton;
-    public Button startGameButton;
-
-
+    public GameObject player;
+    // public Button startGameButton;
+    private List<string> introText = new List<string>() {
+        "Where am I?",
+        "I need to get out of here..."
+    };
     public Dictionary<string, string> scenes = new Dictionary<string, string>() {
         {"ExitDoorFocus", "ExitDoor"},
         {"SecretBookcaseGroup", "SecretDoor"},
@@ -22,7 +26,7 @@ public class ScenesManager : MonoBehaviour
         {"SRChest", "Chest"},
         {"CrateFocus", "Crate"}
     };
-    private GameObject bookcase;
+    // private GameObject bookcase;
 
     //  make me a singlton
     void Awake() {
@@ -44,6 +48,29 @@ public class ScenesManager : MonoBehaviour
     public void LoadMainRoom(){
         SceneManager.LoadScene("EscapeRoom");
         removeBackButton();
+    }
+
+    public void StartGame() {
+        StartCoroutine(SetupGame());
+    }
+
+    IEnumerator SetupGame() {
+        SceneManager.LoadScene("EscapeRoom");
+        player.SetActive(true);
+
+        // yield return new WaitForSeconds(2);
+
+        while (SceneManager.GetActiveScene().buildIndex != 1) {
+            yield return null;
+        }
+
+        gameUICanvas.SetActive(true);
+        removeBackButton();
+        GameManager.manager.UpdateDialogue(introText);
+
+        PlayerMove.manager.setPlayerMoveable(true);
+        PlayerLook.manager.setPlayerCanMoveCamera(true);
+        yield return null;
     }
 
      // Two returns deal with the player coming to the cabinet from different sides (finds the objects x position and the players x position and calculate the angle of rotation to do this)

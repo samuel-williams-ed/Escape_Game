@@ -18,7 +18,6 @@ public class OpenExitDoor : MonoBehaviour
 
 
     private void OnMouseDown() {
-        Debug.Log(GameManager.manager.getExitDoorUnlocked());
         if (GameManager.manager.getExitDoorUnlocked()) {
             doorStartRotation = transform.rotation;
             doorEndRotation = Quaternion.FromToRotation(Vector3.forward, Vector3.right * 0.5f);

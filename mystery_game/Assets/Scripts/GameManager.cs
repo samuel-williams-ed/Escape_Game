@@ -10,11 +10,13 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     public TextMeshProUGUI dialogueText;
     private List<string> dialogueList;
+    private List<string> introText = new List<string>() {
+        "Where am I?",
+        "I need to get out of here..."
+    };
     private float textSpeed = 0.15f;
     private bool dialogueInProgress = false;
-
-
-    private GameObject bookcase;
+    // private GameObject bookcase;
     private bool bookcaseUnlocked = false;
     private bool secretRoomUnlocked = false;
     private bool secretDrawerUnlocked = false;
@@ -22,17 +24,17 @@ public class GameManager : MonoBehaviour
     private bool chestOpened = false;
     private bool exitDoorUnlocked = false;
 
-    private List<string> getStartingText(){
-        string string1 = "Where am I?";
-        string string2 = "I'm in a room";
-        string string3 = "it's badly decorated and it smells funny";
-        List<string> startingText = new List<string>();
-        startingText.Add(string1);
-        startingText.Add(string2);
-        startingText.Add(string3);
+    // private List<string> getStartingText(){
+    //     string string1 = "Where am I?";
+    //     string string2 = "I'm in a room";
+    //     string string3 = "it's badly decorated and it smells funny";
+    //     List<string> startingText = new List<string>();
+    //     startingText.Add(string1);
+    //     startingText.Add(string2);
+    //     startingText.Add(string3);
 
-        return startingText;
-    }
+    //     return startingText;
+    // }
     
     void Awake() {
         if (manager == null) {
@@ -44,24 +46,22 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        scenesManager = GameObject.Find("ScenesManager").GetComponent<ScenesManager>();
         player = GameObject.Find("Player");
-        bookcase = GameObject.Find("SecretBookcaseGroup").gameObject;
+        // bookcase = GameObject.Find("SecretBookcaseGroup").gameObject;
     }
 
     // Start is called before the first frame update
     void Start(){
-        // index = 0;
-        dialogueList = new List<string>();
-        List<string> startingText = getStartingText();
-        UpdateDialogue(startingText);
+        // dialogueList = new List<string>();
+        // List<string> startingText = getStartingText();
+        // UpdateDialogue(startingText);
 
-        PlayerMove.manager.setPlayerMoveable(true);
-        PlayerLook.manager.setPlayerCanMoveCamera(true);
+        // PlayerMove.manager.setPlayerMoveable(true);
+        // PlayerLook.manager.setPlayerCanMoveCamera(true);
 
-        scenesManager.removeBackButton();
+        // scenesManager.removeBackButton();
     }
-    
+
     public void UpdateDialogue(List<string> newListOfStrings){
         dialogueList = newListOfStrings;
         if (!dialogueInProgress){
