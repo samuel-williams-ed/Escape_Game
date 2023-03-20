@@ -44,32 +44,43 @@ public class MoveRuller : MonoBehaviour
 
     void MoveRulles()
     {
-        if (Input.GetKeyDown(KeyCode.D)) {
+        if (Input.GetKeyDown(KeyCode.D)) 
+        {
             _isActveEmission = true;
             _changeRuller ++;
             _numberRuller += 1;
 
-            if (_numberRuller > 3) {
+            if (_numberRuller > 3)
+            {
                 _numberRuller = 0;
             }
-        } if (Input.GetKeyDown(KeyCode.A)) {
+        }
+        if (Input.GetKeyDown(KeyCode.A)) 
+        {
             _isActveEmission = true;
             _changeRuller --;
             _numberRuller -= 1;
 
-            if (_numberRuller < 0) {
+            if (_numberRuller < 0)
+            {
                 _numberRuller = 3;
             }
         }
         _changeRuller = (_changeRuller + _rullers.Count) % _rullers.Count;
 
 
-        for (int i = 0; i < _rullers.Count; i++) {
-            if (_isActveEmission) {
-                if (_changeRuller == i) {
+        for (int i = 0; i < _rullers.Count; i++)
+        {
+            if (_isActveEmission)
+            {
+                if (_changeRuller == i)
+                {
+
                     _rullers[i].GetComponent<PadLockEmissionColor>()._isSelect = true;
                     _rullers[i].GetComponent<PadLockEmissionColor>().BlinkingMaterial();
-                } else {
+                }
+                else
+                {
                     _rullers[i].GetComponent<PadLockEmissionColor>()._isSelect = false;
                     _rullers[i].GetComponent<PadLockEmissionColor>().BlinkingMaterial();
                 }
