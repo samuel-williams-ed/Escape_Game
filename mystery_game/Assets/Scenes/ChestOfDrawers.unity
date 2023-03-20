@@ -10284,7 +10284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 267013271}
-  secretDrawerUnlocked: 0
 --- !u!4 &966883384
 Transform:
   m_ObjectHideFlags: 0

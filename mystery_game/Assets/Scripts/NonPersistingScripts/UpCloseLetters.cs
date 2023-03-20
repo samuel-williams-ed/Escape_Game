@@ -9,7 +9,7 @@ public class UpCloseLetters : MonoBehaviour
     
     public void OnMouseDown() {
         if (gameObject.tag == "Letter") {
-            altLetter = transform.Find("AuthorNoteCloseUp").gameObject;
+            altLetter = transform.Find("LetterCloseUp").gameObject;
             altLetter.SetActive(true);
         } else if (gameObject.tag == "LetterClose") {
             gameObject.SetActive(false);
