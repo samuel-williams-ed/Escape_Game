@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 964a3b80ae06e41aa8b8dd2f2ecfd830
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Jellyka Saint-Andrew's Queen
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 71301bec2f2fd455797f02f63f1c7ad4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
