@@ -16,7 +16,7 @@ public class OpenDrawerScales : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        if (!GameManager.manager.secretDrawerUnlocked == true) {
+        if (GameManager.manager.getSecretDrawerUnlocked() == false) {
         drawerStartPosition = topDrawerTwo.transform.position;
         drawerEndPosition = new Vector3(drawerStartPosition.x - 0.5f, drawerStartPosition.y, drawerStartPosition.z);
         GameManager.manager.setSecretDrawerUnlocked(true);
