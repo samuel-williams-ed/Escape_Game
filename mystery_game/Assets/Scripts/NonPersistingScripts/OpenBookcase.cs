@@ -25,7 +25,12 @@ public class OpenBookcase : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        bookSliding = true;
+        if (PlayerInventory.manager.askIfCanOpenBookcase()){
+            bookSliding = true;
+        }
+        // else : maybe add some prompt for the user here 
+        // "This book won't budge! It's fixed in position.. odd..."
+        
     }
 
     // Update is called once per frame

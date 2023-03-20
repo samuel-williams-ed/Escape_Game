@@ -32,11 +32,13 @@ public class ScenesManager : MonoBehaviour
     }
 
     public void LoadScene(string sceneName) {
+        Debug.Log("Going into scene...");
         SceneManager.LoadScene(sceneName);
         addBackButton();
     }
 
     public void LoadMainRoom(){
+        Debug.Log("Going to Main Room");
         SceneManager.LoadScene("EscapeRoom");
         removeBackButton();
         PlayerMove.manager.setPlayerMoveable(true);
