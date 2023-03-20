@@ -110,6 +110,8 @@ public class PlayerMove : MonoBehaviour {
         ScenesManager.manager.LoadMainRoom();
 
         // Set end position for player:
+        // transform.forward = vector giving the forward direction of the object
+        // transform.position = vector giving the current position of the object?
         Vector3 playerEndPosition = new Vector3(transform.position.x - transform.forward.x, 1f, transform.position.z - transform.forward.z);
 
         // Rotate player first to ensure backward movement is on the level:
