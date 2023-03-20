@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     public TextMeshProUGUI dialogueText;
     private List<string> dialogueList;
-    // private int index; // to track where we are within the dialogue
     private float textSpeed = 0.15f;
     // private bool dialogueInProgress;
     private GameObject bookcase;
@@ -59,20 +58,9 @@ public class GameManager : MonoBehaviour
     }
     
     public void UpdateDialogue(List<string> newListOfStrings){
-        // lines.AddRange(newListOfStrings);
-        // StartCoroutine(TypeLine());
         dialogueList = newListOfStrings;
         StartCoroutine(OutputDialogue());
     }
-    //creating a co-routine
-    // IEnumerator TypeLine(){
-    //     //Type each character one by one
-    //     foreach (char character in lines[index].ToCharArray()){ // takes the string and breaks it down to a character array
-        
-    //         dialogueText.text += character;
-    //         yield return new WaitForSeconds(textSpeed);
-    //     }
-    // }
 
     IEnumerator OutputDialogue() {
         // Have a bool to track if dialogue already in progress?
@@ -104,47 +92,7 @@ public class GameManager : MonoBehaviour
         // dialogueInProgress = false;
     }
 
-    // void NextLine(){
-    //     if(index < lines.Count -1){
-    //         index++;
-    //         dialogueText.text = string.Empty;
-    //         StartCoroutine(TypeLine());
-    //     }
-    //     else{
-    //         // lines.Clear();
-    //         lines = new List<string>();
-    //         index = 0;
-    //         dialogueText.text = "...";
-    //         // gameObject.SetActive(false); // gameObject refers to panel. 
-
-    //     }
-    // }
-
     // Update is called once per frame
-    void Update(){
-        // if (bookcaseUnlocked){
-        //     bookcase.transform.position.x += 1.5f;
-            // bookcaseEndPosition = new Vector3(bookcaseStartPosition.x +1.5f, bookcaseStartPosition.y, bookcaseStartPosition.z);
-            
-
-    
-
-        // USING MOUSE CLICK TO COMPLETE TEXT APPEARING FASTER WON'T WORK ALONGSIDE HAVING TEXT APPEAR ONCLICK - 
-        // AS CLICKING ON OBJECT WILL ALSO DOUBLE UP AS MAKING TEXT FULLY APPEAR SO NO TYPEWRITER EFFECT?
-        // COULD WE USE ANOTHER KEY TO SKIP TEXT TO END?
-
-        // if(Input.GetMouseButtonDown(0)){ // 0 is the left button
-
-        //     if(dialogueText.text == lines[index]){
-        //         NextLine();
-        //     }
-        //     else{
-        //         StopAllCoroutines();
-
-        //         dialogueText.text = lines[index];   // this will get the current line and instantly fill it out
-        //     }
-        // }
-    }
 
     public bool getBookcaseUnlocked(){
         return bookcaseUnlocked;
