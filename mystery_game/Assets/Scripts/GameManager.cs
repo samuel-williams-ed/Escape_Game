@@ -99,6 +99,10 @@ public class GameManager : MonoBehaviour
         dialogueInProgress = false;
     }
 
+    public GameObject getPlayer(){
+        return player;
+    }
+
     public bool getBookcaseUnlocked(){
         return bookcaseUnlocked;
     }
