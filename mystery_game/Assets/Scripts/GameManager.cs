@@ -108,6 +108,9 @@ public class GameManager : MonoBehaviour
     public void setSecretRoomUnlocked(bool true_or_false) {
         secretRoomUnlocked = true_or_false;
     }
+    public bool getSecretDrawerUnlocked() {
+        return secretDrawerUnlocked;
+    }
     public void setSecretDrawerUnlocked(bool true_or_false){
         secretDrawerUnlocked = true_or_false;
     }
