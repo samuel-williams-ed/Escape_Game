@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private bool secretRoomUnlocked = false;
     private bool secretDrawerUnlocked = false;
     private bool padlockUnlocked = false;
+    private bool chestOpened = false;
     private bool exitDoorUnlocked = false;
 
     private List<string> getStartingText(){
@@ -102,26 +103,32 @@ public class GameManager : MonoBehaviour
     public bool getBookcaseUnlocked(){
         return bookcaseUnlocked;
     }
-    public void setBookcaseUnlocked( bool true_or_false){
-        bookcaseUnlocked = true_or_false;
+    public void setBookcaseUnlocked( bool trueFalse){
+        bookcaseUnlocked = trueFalse;
     }
     public bool getSecretRoomUnlocked(){
         return secretRoomUnlocked;
     }
-    public void setSecretRoomUnlocked(bool true_or_false) {
-        secretRoomUnlocked = true_or_false;
+    public void setSecretRoomUnlocked(bool trueFalse) {
+        secretRoomUnlocked = trueFalse;
     }
     public bool getSecretDrawerUnlocked() {
         return secretDrawerUnlocked;
     }
-    public void setSecretDrawerUnlocked(bool true_or_false){
-        secretDrawerUnlocked = true_or_false;
+    public void setSecretDrawerUnlocked(bool trueFalse){
+        secretDrawerUnlocked = trueFalse;
     }
     public bool getPadlockUnlocked() {
         return padlockUnlocked;
     }
     public void setPadlockUnlocked(bool trueFalse) {
         padlockUnlocked = trueFalse;
+    }
+    public bool getChestOpened() {
+        return chestOpened;
+    }
+    public void setChestOpened(bool trueFalse) {
+        chestOpened = trueFalse;
     }
     public bool getExitDoorUnlocked() {
         return exitDoorUnlocked;

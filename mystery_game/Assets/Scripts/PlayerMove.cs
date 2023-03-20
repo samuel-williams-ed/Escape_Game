@@ -89,26 +89,8 @@ public class PlayerMove : MonoBehaviour {
             yield return null;
         }
 
-        // Assign object's parent name where applicable:
-        string objectParentName;
-        if (objectToFocusOn.transform.parent != null) {
-            objectParentName = objectToFocusOn.transform.parent.name;
-        } else {
-            objectParentName = "";
-        }
-
-        // Get scene name:
-        string sceneName;
-        if (objectParentName == "SRChestGroup" && !GameManager.manager.getPadlockUnlocked()) {
-            sceneName = "Padlock";
-        } else if (objectParentName == "SRChestGroup" && GameManager.manager.getPadlockUnlocked()) {
-            sceneName = "Chest";
-        } else {
-            sceneName = ScenesManager.manager.scenes[objectToFocusOn.name];
-        }
-
         // Load the required scene:
-        Debug.Log("Load scene " + sceneName);
+        string sceneName = ScenesManager.manager.scenes[objectToFocusOn.name];
         ScenesManager.manager.LoadScene(sceneName);
     }
 

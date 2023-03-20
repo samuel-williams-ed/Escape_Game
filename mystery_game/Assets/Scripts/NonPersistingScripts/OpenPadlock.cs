@@ -36,6 +36,7 @@ public class OpenPadlock : MonoBehaviour
         if (GameManager.manager.getPadlockUnlocked() && chestLid.transform.eulerAngles.z != -90f){
             chestLid.transform.eulerAngles = new Vector3(chestLid.transform.eulerAngles.x, chestLid.transform.eulerAngles.y, -90f);
         }
+
     }
 
     public string getCurrentCode() {
@@ -69,7 +70,6 @@ public class OpenPadlock : MonoBehaviour
         }
 
         ScenesManager.manager.LoadScene("Chest");
-
         gameObject.SetActive(false);
     }
 
