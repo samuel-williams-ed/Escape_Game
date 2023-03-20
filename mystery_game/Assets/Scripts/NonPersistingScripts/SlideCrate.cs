@@ -19,13 +19,11 @@ public class SlideCrate : MonoBehaviour
     }
 
     private IEnumerator MoveCrate() {
-        Debug.Log(transform.position);
         float timeElapsed = 0;
         while(timeElapsed < 1) {
             transform.position = Vector3.Lerp(transform.position, crateEndPosition, timeElapsed);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        Debug.Log(transform.position);
     }
 }
