@@ -37,10 +37,21 @@ public class TextOnlyObjectsScript : MonoBehaviour
         List<string> drawersBinocularsText = new List<string>();
         drawersBinocularsText.Add("I wonder who these belong too?");
 
-
         List<string> drawersDuckText = new List<string>();
         drawersDuckText.Add(" 'QUACK!!' ");
+
+        List<string> drawersChessText = new List<string>();
+        drawersChessText.Add("Nothing useful in this drawer");
+
+        List<string> drawersHornText = new List<string>();
+        drawersHornText.Add("Woah, an antique drinking horn!");
+
+        List<string> drawersCoffeeText = new List<string>();
+        drawersCoffeeText.Add("They have a coffee grinder... I wonder if they have coffee here too?");
         
+        List<string> drawersRedKeyCollection = new List<string>();
+        drawersRedKeyCollection.Add("I better keep hold of this, this will be useful");
+
         List<string> teamPictureText = new List<string>();
         string teamPicture1 = "mmh... this portrait reminds me of someone..";
         string teamPicture2 = "Oh! I know. Captain Hook.";
@@ -57,8 +68,11 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"CODCutlery", drawersCutleryText},
             {"CODBinoculars", drawersBinocularsText},
             {"CODDuck", drawersDuckText},
+            {"CODChessPieces", drawersChessText},
+            {"CODHorn", drawersHornText},
+            {"CODCoffee", drawersCoffeeText},
+            {"RedKey", drawersRedKeyCollection},
             {"TeamPicture", teamPictureText}
-            
         };
     }
 
@@ -67,5 +81,4 @@ public class TextOnlyObjectsScript : MonoBehaviour
     }
 
 }
-
 
