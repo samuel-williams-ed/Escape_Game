@@ -20,7 +20,7 @@ public class ScenesManager : MonoBehaviour
         {"ChestOfDrawersFocus", "ChestOfDrawers"},
         {"Padlock", "Padlock"},
         {"SRChest", "Chest"},
-
+        {"CrateFocus", "Crate"}
     };
     private GameObject bookcase;
 
