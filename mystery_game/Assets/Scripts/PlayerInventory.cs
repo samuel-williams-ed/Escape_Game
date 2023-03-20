@@ -200,6 +200,7 @@ public class PlayerInventory : MonoBehaviour
         if (redLockOpened && greenLockOpened && blueLockOpened ){
             GameManager.manager.setSecretRoomUnlocked(true);
             secretDoorUnlocked = true;
+            // get secretDoor object & call open door script
         }
     }
 
