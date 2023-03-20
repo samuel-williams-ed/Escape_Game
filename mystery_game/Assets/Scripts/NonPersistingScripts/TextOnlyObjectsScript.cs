@@ -66,6 +66,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
         List<string> decoyBook1Text = new List<string>(){"The cover of this is really ornate,", "Judging by the dust on top it hasn't been used for many years..."};
         List<string> decoyBook2Text = new List<string>(){"This book has a really cool cover.", "Someone must have spent ages making this."};
         // List<string> leverBookText = new List<string>(){"This book won't budge!"};
+        List<string> monsterClueText = new List<string>(){"I feel like I've seen this before somewhere..."};
 
         // Key = object name, Value = list name
         dialogueDictionary = new Dictionary<string, List<string>>() {
@@ -87,7 +88,8 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"AgathaBook", authorBookText},
             {"MobyBook", titleBookText},
             {"DecoyBook1", decoyBook1Text},
-            {"DecoyBook2", decoyBook2Text}
+            {"DecoyBook2", decoyBook2Text},
+            {"MonsterClue", monsterClueText}
 
         };
     }
