@@ -87,7 +87,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"AgathaBook", authorBookText},
             {"MobyBook", titleBookText},
             {"DecoyBook1", decoyBook1Text},
-            {"DecoyBook2", decoyBook2Text},
+            {"DecoyBook2", decoyBook2Text}
 
         };
     }
