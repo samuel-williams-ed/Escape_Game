@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System;
+using System.Linq;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -37,6 +38,9 @@ public class PlayerInventory : MonoBehaviour
     public bool hasBlueKey = false; // in desk drawer - needs to be unlocked by scales
     public bool hasGreenKey = false; // behind Agatha Christie (Christkey?) book
     private bool hasAllKeys = false; // allows player to try to open secret door locks
+    public bool redLockOpened = false;
+    public bool greenLockOpened = false;
+    public bool blueLockOpened = false;
 
     // Make class a Singleton.
     void Awake() {
@@ -72,6 +76,7 @@ public class PlayerInventory : MonoBehaviour
     // #####
 
     public void setInventoryCurrentlySelected(string item_name){ inventoryCurrentlySelected = item_name; }
+    public void setInventoryCurrentlySelected(TextMeshProUGUI item_textMesh) { inventoryCurrentlySelected = item_textMesh.text; }
     public string getInventoryCurrentlySelected(){ return inventoryCurrentlySelected; }
 
     // #####
@@ -184,6 +189,36 @@ public class PlayerInventory : MonoBehaviour
             canOpenBookcase = true;
             Debug.Log("Bookcase can now be opened...");
         }
+    }
+
+    // helper function that finds the given argument in allItems and resets that value to "empty"
+    private void removeInventoryItem(string name_to_remove) {
+        // get this items position and set that position to "empty".
+        if (allItems.Contains(name_to_remove)){
+            int index = Array.IndexOf(allItems, name_to_remove); 
+            allItems[index] = "empty";
+            return;
+        }
+        Debug.Log("Err. Tried to remove " + name_to_remove + " from inventory but couldn't find it!");
+    }
+
+    // Called by 'lock' gameObjects, when clicked each calls to their respective color
+    // locks handle check for correct key selected
+    public void OpenRedLock(){
+        redLockOpened = true;
+        setInventoryCurrentlySelected("empty");
+        removeInventoryItem("RedKey");
+    }
+    public void OpenGreenLock(){
+        greenLockOpened = true;
+        setInventoryCurrentlySelected("empty");
+        removeInventoryItem("GreenKey");
+        Debug.Log("Green lock opened!");
+    }
+    public void OpenBlueLock(){
+        blueLockOpened = true;
+        setInventoryCurrentlySelected("empty");
+        removeInventoryItem("BlueKey");
     }
 
 }
