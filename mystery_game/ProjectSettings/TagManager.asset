@@ -8,6 +8,8 @@ TagManager:
   - Chest
   - Desk
   - SecretDrawer
+  - Letter
+  - LetterClose
   layers:
   - Default
   - TransparentFX
