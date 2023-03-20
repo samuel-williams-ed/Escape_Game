@@ -23,8 +23,6 @@ public class PlayerLook : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        xAxisClamp = 0.0f;
     }
 
     private void LockCursor() {
@@ -43,12 +41,14 @@ public class PlayerLook : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+        
     }
 
     private void Update() {
         // when player roaming can look around and mouse is stuck to reticle
         if (playerCanMoveCamera){
             LockCursor();
+            xAxisClamp = 0.0f;
             CameraRotation();
         } else {
             Cursor.lockState = CursorLockMode.None;

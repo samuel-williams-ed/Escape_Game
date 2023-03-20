@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PadLockEmissionColor : MonoBehaviour
 {
-    public float blinkingTime = 0.5f;
+    TimeBlinking tb;
 
     private GameObject _myRuller;
 
     [HideInInspector]
     public bool _isSelect;
 
+    //[SerializeField] private float _timeBlinking = 0.5f;
 
+    private void Awake()
+    {
+        tb = FindObjectOfType<TimeBlinking>();
+    }
     void Start()
     {
         _myRuller = gameObject;
@@ -24,7 +29,7 @@ public class PadLockEmissionColor : MonoBehaviour
         
         if (_isSelect)
         {
-            _myRuller.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.Lerp(Color.clear, Color.yellow, Mathf.PingPong(Time.time, blinkingTime)));
+            _myRuller.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.Lerp(Color.clear, Color.yellow, Mathf.PingPong(Time.time, tb.blinkingTime)));
         }
         if (_isSelect == false)
         {
