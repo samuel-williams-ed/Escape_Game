@@ -16,11 +16,14 @@ public class OpenDrawerScales : MonoBehaviour
     }
 
     private void OnMouseDown() {
+        if (!GameManager.manager.secretDrawerUnlocked == true) {
         drawerStartPosition = topDrawerTwo.transform.position;
-        drawerEndPosition = new Vector3(drawerStartPosition.x + 0.5f, drawerStartPosition.y, drawerStartPosition.z);
+        // drawerEndPosition = new Vector3(drawerStartPosition.x + 0.5f, drawerStartPosition.y, drawerStartPosition.z);
         drawerEndPosition = new Vector3(drawerStartPosition.x - 0.5f, drawerStartPosition.y, drawerStartPosition.z);
         GameManager.manager.setSecretDrawerUnlocked(true);
         drawerSliding = true;  
+        }
+        
     }
 
     // Update is called once per frame
@@ -33,6 +36,8 @@ public class OpenDrawerScales : MonoBehaviour
             drawerSliding = false;
             topDrawerTwo.transform.position = drawerEndPosition;
             }
-        }
+        } //if (GameManager.manager.secretDrawerUnlocked == true) {
+            // drawerSliding = false;
+        
     }
 }

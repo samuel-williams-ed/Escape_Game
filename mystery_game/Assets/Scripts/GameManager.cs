@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private GameObject bookcase;
     private bool bookcaseUnlocked = false;
     private bool secretRoomUnlocked = false;
-    private bool secretDrawerUnlocked = false;
+    public bool secretDrawerUnlocked = false;
     private bool padlockUnlocked = false;
     private bool exitDoorUnlocked = false;
 
