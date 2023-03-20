@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     private bool secretDrawerUnlocked = false;
     private bool padlockUnlocked = false;
     private bool exitDoorUnlocked = false;
+    private bool rugMoved = false;
 
     private List<string> getStartingText(){
         string string1 = "Where am I?";
@@ -132,6 +133,12 @@ public class GameManager : MonoBehaviour
     }
     public void setExitDoorUnlocked(bool trueFalse) {
         exitDoorUnlocked = trueFalse;
+    }
+    public bool getrugMoved(){
+        return rugMoved;
+    }
+    public void setRugMoved(bool true_or_false){
+        rugMoved = true_or_false;
     }
 }
 

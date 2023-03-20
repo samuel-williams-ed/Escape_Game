@@ -6,6 +6,15 @@ public class MoveRug : MonoBehaviour {
 
     public GameObject rug;
 
+    // if rug has already been moved when we load into this scene
+    // set position to moved coordinates
+    void Start() {
+        if(GameManager.manager.getrugMoved()){
+            gameObject.transform.Rotate(0, -25, 0);
+            gameObject.transform.position = new Vector3(-1.5f, 0.15f, 3f);
+        }
+    }
+
     void OnMouseDown() {
         moveRug(rug);
     }
@@ -21,6 +30,7 @@ public class MoveRug : MonoBehaviour {
             Debug.Log("Moving rug " + gameObject.name);
             GameManager.manager.UpdateDialogue(new List<string>(){"What's this image hidden under the rug... must be important..."});
 
+            GameManager.manager.setRugMoved(true);
         }
         
     }
