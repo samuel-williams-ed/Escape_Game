@@ -52,11 +52,20 @@ public class TextOnlyObjectsScript : MonoBehaviour
         List<string> drawersRedKeyCollection = new List<string>();
         drawersRedKeyCollection.Add("I better keep hold of this, this will be useful");
 
+        List<string> greenKeyText = new List<string>(){"Oh, well look at that!", "...someone wanted to keep this hidden"};
+        List<string> blueKeyText = new List<string>(){"This looks old but well used, might be useful."};
+
         List<string> teamPictureText = new List<string>();
         string teamPicture1 = "mmh... this portrait reminds me of someone..";
         string teamPicture2 = "Oh! I know. Captain Hook.";
         teamPictureText.Add(teamPicture1);
         teamPictureText.Add(teamPicture2);
+
+        List<string> authorBookText = new List<string>(){"Aha!", "This must be the book Agatha Christe gifted the owner of that note...", "And look at whats behind... an Agatha Christ-key you might say..."};
+        List<string> titleBookText = new List<string>(){"Moby Dick eh... looks like I found my white whale."};
+        List<string> decoyBook1Text = new List<string>(){"The cover of this is really ornate,", "Judging by the dust on top it hasn't been used for many years..."};
+        List<string> decoyBook2Text = new List<string>(){"This book has a really cool cover.", "Someone must have spent ages making this."};
+        // List<string> leverBookText = new List<string>(){"This book won't budge!"};
 
         // Key = object name, Value = list name
         dialogueDictionary = new Dictionary<string, List<string>>() {
@@ -72,7 +81,14 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"CODHorn", drawersHornText},
             {"CODCoffee", drawersCoffeeText},
             {"RedKey", drawersRedKeyCollection},
-            {"TeamPicture", teamPictureText}
+            {"BlueKey", blueKeyText},
+            {"GreenKey", greenKeyText},
+            {"TeamPicture", teamPictureText},
+            {"AgathaBook", authorBookText},
+            {"MobyBook", titleBookText},
+            {"DecoyBook1", decoyBook1Text},
+            {"DecoyBook2", decoyBook2Text}
+
         };
     }
 
