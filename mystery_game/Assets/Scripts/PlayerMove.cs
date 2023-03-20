@@ -90,46 +90,43 @@ public class PlayerMove : MonoBehaviour {
         }
 
         // Load the required scene:
-        string sceneName = ScenesManager.manager.scenes[objectToFocusOn.name];
+        string sceneName;
+        Debug.Log(objectToFocusOn.transform.parent.name);
+        Debug.Log(GameManager.manager.getPadlockUnlocked());
+        if (objectToFocusOn.transform.parent.name == "SRChestGroup" && !GameManager.manager.getPadlockUnlocked()) {
+            sceneName = "Padlock";
+        } else if (objectToFocusOn.transform.parent.name == "SRChestGroup" && GameManager.manager.getPadlockUnlocked()) {
+            sceneName = "Chest";
+        } else {
+            sceneName = ScenesManager.manager.scenes[objectToFocusOn.name];
+        }
         ScenesManager.manager.LoadScene(sceneName);
     }
 
-    public void StepBack () {
-        Debug.Log("StepBack is running!");
-        StartCoroutine(Unfocus());
+    public void StepBackPlayer () {
+        StartCoroutine(StepBack());
     }
 
-    private IEnumerator Unfocus() {
-        // Remove player controls:
-        // PlayerMove.manager.setPlayerMoveable(false);
-        // PlayerLook.manager.setPlayerCanMoveCamera(false);
+    private IEnumerator StepBack() {
+        // Load the required scene:
+        ScenesManager.manager.LoadMainRoom();
 
-        // Get start position for player:
-        Vector3 playerStartPosition = transform.position;
-        // Define player end position:
-        Vector3 playerEndPosition = new Vector3(playerStartPosition.x, 1f, playerStartPosition.z - 1f);
+        // Set end position for player:
+        Vector3 playerEndPosition = new Vector3(transform.position.x - transform.forward.x, 1f, transform.position.z - transform.forward.z);
 
-        // Player look target:
-        Vector3 playerLookTarget = new Vector3 (0f, 1f, playerStartPosition.z);
-
-        // Following moves player over time period of 1 second:
+        // Rotate player first to ensure backward movement is on the level:
         float timeElapsed = 0;
         while (timeElapsed < 1) {
-            // Focuses player object rotation to look at object to be focused on:
-            transform.LookAt(playerLookTarget);
-            // Focuses camera object rotation to look at object to be focused on:
-            Camera.main.transform.LookAt(playerLookTarget);
-            // Moves position of player object:
-            // transform.position = Vector3.Lerp(playerStartPosition, playerEndPosition, timeElapsed);
-            
-            // Update timeElapsed variable:
+            transform.position = Vector3.Lerp(transform.position, playerEndPosition, timeElapsed);
+            transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
+            Camera.main.transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        Debug.Log(playerEndPosition.z);
 
-        // Load the required scene:
-        ScenesManager.manager.LoadMainRoom();
+        // Turn player controls back on:
+        PlayerMove.manager.setPlayerMoveable(true); 
+        PlayerLook.manager.setPlayerCanMoveCamera(true);
     }
 
 
