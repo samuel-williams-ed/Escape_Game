@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     private List<string> dialogueList;
     private float textSpeed = 0.15f;
-    // private bool dialogueInProgress;
+    private bool dialogueInProgress = false;
 
 
     private GameObject bookcase;
@@ -63,12 +63,15 @@ public class GameManager : MonoBehaviour
     
     public void UpdateDialogue(List<string> newListOfStrings){
         dialogueList = newListOfStrings;
-        StartCoroutine(OutputDialogue());
+        if (!dialogueInProgress){
+            StartCoroutine(OutputDialogue());
+        }
+        
     }
 
     IEnumerator OutputDialogue() {
         // Have a bool to track if dialogue already in progress?
-        // dialogueInProgress = true;
+        dialogueInProgress = true;
 
         // Empty holding text from dialogue box:
         dialogueText.text = string.Empty;
@@ -93,7 +96,7 @@ public class GameManager : MonoBehaviour
         dialogueList = new List<string>();
         dialogueText.text = "...";
 
-        // dialogueInProgress = false;
+        dialogueInProgress = false;
     }
 
     public bool getBookcaseUnlocked(){
