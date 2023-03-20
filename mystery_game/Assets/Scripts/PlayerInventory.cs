@@ -64,10 +64,10 @@ public class PlayerInventory : MonoBehaviour
     // Initialise inventory slots
     void Start() {
         allItems = new String[5]{"empty", "empty", "empty", "empty", "empty"};
-        // slot1.text = allItems[0];
-        // slot2.text = allItems[1];
-        slot1.text = "RedKey";
-        slot2.text = "BlueKey";
+        slot1.text = allItems[0];
+        slot2.text = allItems[1];
+        // slot1.text = "RedKey"; // for testing
+        // slot2.text = "BlueKey"; // for testing
         slot3.text = allItems[2];
         slot4.text = allItems[3];
         slot5.text = allItems[4];

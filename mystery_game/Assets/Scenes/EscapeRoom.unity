@@ -22802,7 +22802,7 @@ PrefabInstance:
       objectReference: {fileID: 433983425}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasRedKey
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: AuthorBook
@@ -22810,7 +22810,7 @@ PrefabInstance:
       objectReference: {fileID: 1194971763}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasBlueKey
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasGreenKey
@@ -22822,7 +22822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasFoundMonster
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: secretDoorUnlocked
