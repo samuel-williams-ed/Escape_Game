@@ -8,6 +8,8 @@ public class ScenesManager : MonoBehaviour
 {
     public static ScenesManager manager;
     public Button backButton;
+    public Button startGameButton;
+
 
     public Dictionary<string, string> scenes = new Dictionary<string, string>() {
         {"ExitDoorFocus", "ExitDoor"},
@@ -17,7 +19,8 @@ public class ScenesManager : MonoBehaviour
         {"Desk", "Desk"},
         {"ChestOfDrawersFocus", "ChestOfDrawers"},
         {"Padlock", "Padlock"},
-        {"SRChest", "Chest"}
+        {"SRChest", "Chest"},
+
     };
     private GameObject bookcase;
 
