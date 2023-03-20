@@ -4340,15 +4340,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8551
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.212
+      value: 0.035
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9280,6 +9280,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4627126275717414, guid: 0c8fd08c36c84854791d5de97103b43c, type: 3}
   m_PrefabInstance: {fileID: 1395600688}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &906966707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3869658359201630863, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+  m_PrefabInstance: {fileID: 3869658358646876556}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &913073683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13074,15 +13085,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.199
+      value: -0.245
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8551
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.212
+      value: 0.035
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17385,15 +17396,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.78900003
+      value: 0.263
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8551
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.212
+      value: 0.035
       objectReference: {fileID: 0}
     - target: {fileID: 7173297206326680262, guid: 0bff3850fb8b0914ba97ae33a25041c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22790,12 +22801,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 433983425}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: hasRedKey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: AuthorBook
       value: 
       objectReference: {fileID: 1194971763}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
-      propertyPath: secretDoorUnlocked
+      propertyPath: hasBlueKey
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: hasGreenKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: canOpenBookcase
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: hasFoundMonster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: secretDoorUnlocked
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Colors.m_FadeDuration
@@ -22944,7 +22975,7 @@ PrefabInstance:
     - target: {fileID: 3869658359069066290, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 33986972}
+      objectReference: {fileID: 906966707}
     - target: {fileID: 3869658359069066290, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TextMeshProUGUI, Unity.TextMeshPro

@@ -14,6 +14,7 @@ public class UnlockRed : MonoBehaviour
         if ( PlayerInventory.manager.askIfHasAllKeys() ) {
             if ( PlayerInventory.manager.getInventoryCurrentlySelected() == "RedKey" ){
                 PlayerInventory.manager.OpenRedLock();
+                Debug.Log("Blue lock unlocked!");
             }
         }
     }

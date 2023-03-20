@@ -15,7 +15,7 @@ public class UnlockGreen : MonoBehaviour
         if ( PlayerInventory.manager.askIfHasAllKeys() ) {
             if ( PlayerInventory.manager.getInventoryCurrentlySelected() == "GreenKey" ){
                 PlayerInventory.manager.OpenGreenLock();
-                Debug.Log("Attempting to open green lock....");
+                Debug.Log("Unlocking green lock....");
             }
         }
     }

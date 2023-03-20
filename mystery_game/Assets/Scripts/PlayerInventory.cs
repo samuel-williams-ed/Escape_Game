@@ -64,8 +64,10 @@ public class PlayerInventory : MonoBehaviour
     // Initialise inventory slots
     void Start() {
         allItems = new String[5]{"empty", "empty", "empty", "empty", "empty"};
-        slot1.text = allItems[0];
-        slot2.text = allItems[1];
+        // slot1.text = allItems[0];
+        // slot2.text = allItems[1];
+        slot1.text = "RedKey";
+        slot2.text = "BlueKey";
         slot3.text = allItems[2];
         slot4.text = allItems[3];
         slot5.text = allItems[4];
@@ -155,12 +157,10 @@ public class PlayerInventory : MonoBehaviour
                 break;
             case "AgathaBook":
                 hasFoundAuthorBook = true;
-                displayOnGUI = true;
                 checkIfCanOpenBookcase();
                 break;
             case "MobyBook":
                 hasFoundTitleBook = true;
-                displayOnGUI = true;
                 checkIfCanOpenBookcase();
                 break;
         }
@@ -198,6 +198,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void checkIfSecretDoorUnlocked(){
         if (redLockOpened && greenLockOpened && blueLockOpened ){
+            GameManager.manager.setSecretRoomUnlocked(true);
             secretDoorUnlocked = true;
         }
     }
