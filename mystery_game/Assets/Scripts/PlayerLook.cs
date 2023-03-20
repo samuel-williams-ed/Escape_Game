@@ -48,7 +48,7 @@ public class PlayerLook : MonoBehaviour
         // when player roaming can look around and mouse is stuck to reticle
         if (playerCanMoveCamera){
             LockCursor();
-            xAxisClamp = 0.0f;
+            xAxisClamp = 0.0f; //TODO - check works
             CameraRotation();
         } else {
             Cursor.lockState = CursorLockMode.None;

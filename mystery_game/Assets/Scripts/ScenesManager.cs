@@ -15,7 +15,9 @@ public class ScenesManager : MonoBehaviour
         {"Radio", "Radio"},
         {"PictureColour", "PictureColour"},
         {"Desk", "Desk"},
-        {"ChestOfDrawersFocus", "ChestOfDrawers"}
+        {"ChestOfDrawersFocus", "ChestOfDrawers"},
+        {"Padlock", "Padlock"},
+        {"SRChest", "Chest"}
     };
     private GameObject bookcase;
 
@@ -32,17 +34,13 @@ public class ScenesManager : MonoBehaviour
     }
 
     public void LoadScene(string sceneName) {
-        Debug.Log("Going into scene...");
         SceneManager.LoadScene(sceneName);
         addBackButton();
     }
 
     public void LoadMainRoom(){
-        Debug.Log("Going to Main Room");
         SceneManager.LoadScene("EscapeRoom");
         removeBackButton();
-        PlayerMove.manager.setPlayerMoveable(true);
-        PlayerLook.manager.setPlayerCanMoveCamera(true);
     }
 
      // Two returns deal with the player coming to the cabinet from different sides (finds the objects x position and the players x position and calculate the angle of rotation to do this)

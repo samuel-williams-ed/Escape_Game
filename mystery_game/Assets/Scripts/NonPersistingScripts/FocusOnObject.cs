@@ -10,7 +10,10 @@ public class FocusOnObject : MonoBehaviour
         {"Radio", new Vector3(-3.75f, 0.9f, -3.5f)},
         {"PictureColour", new Vector3(-4f, 1.2f, 2.7f)},
         {"Desk", new Vector3(-3f, 1.6f, 2.8f)},
-        {"ChestOfDrawers", new Vector3(1f, 1.9f, 2.8f)}
+        {"ChestOfDrawers", new Vector3(1f, 1.9f, 2.8f)},
+        {"TopCrate", new Vector3(3.3f, 1.1f, -4.8f)},
+        {"Padlock", new Vector3(3.2f, 0.45f, -7.5f)},
+        {"SRChestGroup", new Vector3(3.2f, 0.45f, -7.5f)}
     };
 
     private void OnMouseDown() {
@@ -18,6 +21,8 @@ public class FocusOnObject : MonoBehaviour
             objectToFocusOn = transform.Find("ChestOfDrawersFocus").gameObject;
         } else if (gameObject.name == "ExitDoor") {
             objectToFocusOn = transform.Find("ExitDoorFocus").gameObject;
+        } else if (gameObject.name == "SRChestGroup") {
+            objectToFocusOn = transform.Find("Padlock").gameObject;
         } else {
             objectToFocusOn = gameObject;
         }
