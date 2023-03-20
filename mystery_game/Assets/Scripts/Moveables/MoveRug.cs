@@ -29,7 +29,11 @@ public class MoveRug : MonoBehaviour {
         // (closer than edge of rug)
         if (GameManager.manager.getPlayer().transform.position.z > 2.2 ){
 
-            // positions relative to 'RugClue' gameObject
+            // Don't allow rug to move more than once! 
+            // exit function if already moved.
+            if ( GameManager.manager.getrugMoved() ) { return; }
+
+            // position rug (positions relative to parent 'RugClue' gameObject)
             gameObject.transform.Rotate(0, -25, 0);
             gameObject.transform.position = new Vector3(-1.5f, 0.15f, 3f);
 
