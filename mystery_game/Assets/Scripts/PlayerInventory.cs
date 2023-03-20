@@ -41,6 +41,7 @@ public class PlayerInventory : MonoBehaviour
     public bool redLockOpened = false;
     public bool greenLockOpened = false;
     public bool blueLockOpened = false;
+    public bool secretDoorUnlocked = false; //TODO - set to private once finished testing
 
     // Make class a Singleton.
     void Awake() {
@@ -90,6 +91,10 @@ public class PlayerInventory : MonoBehaviour
     // gives public access to boolean if player has all keys
     // this is set privately to protect clauses that need to be met
     public bool askIfHasAllKeys(){ return hasAllKeys; }
+
+    public bool askIfSecretDoorOpened(){
+        return secretDoorUnlocked;
+    }
     
     // local helper function used by addToInventory()
     private void addToSlot(TextMeshProUGUI slot, string newItemName) { slot.text = newItemName; }
@@ -191,6 +196,12 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    public void checkIfSecretDoorUnlocked(){
+        if (redLockOpened && greenLockOpened && blueLockOpened ){
+            secretDoorUnlocked = true;
+        }
+    }
+
     // helper function that finds the given argument in allItems and resets that value to "empty"
     private void removeInventoryItem(string name_to_remove) {
         // get this items position and set that position to "empty".
@@ -208,17 +219,20 @@ public class PlayerInventory : MonoBehaviour
         redLockOpened = true;
         setInventoryCurrentlySelected("empty");
         removeInventoryItem("RedKey");
+        checkIfSecretDoorUnlocked();
     }
     public void OpenGreenLock(){
         greenLockOpened = true;
         setInventoryCurrentlySelected("empty");
         removeInventoryItem("GreenKey");
         Debug.Log("Green lock opened!");
+        checkIfSecretDoorUnlocked();
     }
     public void OpenBlueLock(){
         blueLockOpened = true;
         setInventoryCurrentlySelected("empty");
         removeInventoryItem("BlueKey");
+        checkIfSecretDoorUnlocked();
     }
 
 }
