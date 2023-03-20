@@ -5,19 +5,18 @@ using UnityEngine;
 public class UpCloseLetters : MonoBehaviour
 
 { 
-    
-    public GameObject letter; 
-    public GameObject closeupLetter; 
+    public GameObject altLetter; 
+    private bool hideLetter = false;
     
     public void OnMouseDown() {
-        if (gameObject == letter) { 
-            letter.SetActive(false); 
-            closeupLetter.SetActive(true); 
-            } else if (gameObject == closeupLetter) { 
-                letter.SetActive(true); 
-                closeupLetter.SetActive(false); 
-            } 
-        } 
+        if (gameObject.tag == "Letter") {
+            altLetter = transform.Find("AuthorNoteCloseUp").gameObject;
+            altLetter.SetActive(true);
+        } else if (gameObject.tag == "LetterClose") {
+            gameObject.SetActive(false);
+        }
+    } 
+
 }
 
 
