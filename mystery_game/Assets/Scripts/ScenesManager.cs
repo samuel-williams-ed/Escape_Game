@@ -58,8 +58,6 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene("EscapeRoom");
         player.SetActive(true);
 
-        // yield return new WaitForSeconds(2);
-
         while (SceneManager.GetActiveScene().buildIndex != 1) {
             yield return null;
         }
