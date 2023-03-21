@@ -17,4 +17,21 @@ public class TitleBook_ShowOrHide : MonoBehaviour
         }
     }
 
+        // 'addToInventory' will set booleans for having been found
+    public void OnMouseDown() {
+        if (PlayerInventory.manager.hasFoundTitle){
+            
+            PlayerInventory.manager.addToInventory(this.gameObject);
+            gameObject.SetActive(false);
+
+            GameManager.manager.UpdateDialogue(new List<string>(){
+                "Moby Dick eh... looks like I found my white whale."
+            });
+
+        }
+
+        GameManager.manager.UpdateDialogue(new List<string>(){"This looks interesting..."});
+
+    }
+
 }
