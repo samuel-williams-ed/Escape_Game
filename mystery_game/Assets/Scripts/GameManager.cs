@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
         "Where am I?",
         "I need to get out of here..."
     };
-    private float textSpeed = 0.15f;
+    private float textSpeed = 0.2f;
     private bool dialogueInProgress = false;
     // private GameObject bookcase;
     private bool bookcaseUnlocked = false;
