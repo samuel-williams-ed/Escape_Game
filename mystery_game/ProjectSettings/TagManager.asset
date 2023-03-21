@@ -15,11 +15,12 @@ TagManager:
   - RedKey
   - GreenKey
   - EscapeKey
+  - Fire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Post Processing
   - Water
   - UI
   - 
