@@ -13,16 +13,19 @@ public class OpenDrawerScales : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         topDrawerTwo = GameObject.FindGameObjectsWithTag("SecretDrawer")[0];
+        // if (GameManager.manager.getSecretDrawerUnlocked() == true) {
+        //     drawerEndPosition = new Vector3(drawerStartPosition.x - 0.5f, drawerStartPosition.y, drawerStartPosition.z);
+        // }
     }
 
     private void OnMouseDown() {
+        // If the secret drawer is unlocked it won't move when you click on the scales again:
         if (GameManager.manager.getSecretDrawerUnlocked() == false) {
-        drawerStartPosition = topDrawerTwo.transform.position;
-        drawerEndPosition = new Vector3(drawerStartPosition.x - 0.5f, drawerStartPosition.y, drawerStartPosition.z);
-        GameManager.manager.setSecretDrawerUnlocked(true);
-        drawerSliding = true;  
+            drawerStartPosition = topDrawerTwo.transform.position;
+            drawerEndPosition = new Vector3(drawerStartPosition.x - 0.5f, drawerStartPosition.y, drawerStartPosition.z);
+            GameManager.manager.setSecretDrawerUnlocked(true);
+            drawerSliding = true;  
         }
-        
     }
 
     // Update is called once per frame
