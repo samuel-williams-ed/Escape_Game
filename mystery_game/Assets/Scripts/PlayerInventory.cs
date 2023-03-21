@@ -79,7 +79,6 @@ public class PlayerInventory : MonoBehaviour
     // #####
 
     public void setInventoryCurrentlySelected(string item_name){ inventoryCurrentlySelected = item_name; }
-    public void setInventoryCurrentlySelected(TextMeshProUGUI item_textMesh) { inventoryCurrentlySelected = item_textMesh.text; }
     public string getInventoryCurrentlySelected(){ return inventoryCurrentlySelected; }
 
     // #####
