@@ -1591,7 +1591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: canOpenBookcase
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasFoundMonster
@@ -1599,7 +1599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: secretDoorOpened
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: secretDoorUnlocked
