@@ -13,7 +13,7 @@ public class TitleBook_ShowOrHide : MonoBehaviour
             
         } else {
             gameObject.SetActive(true);
-            Debug.Log("MobyBook is active");
+            // Debug.Log("MobyBook is active");
         }
     }
 

@@ -13,7 +13,7 @@ public class AuthorBook_ShowOrHide : MonoBehaviour
             
         } else {
             gameObject.SetActive(true);
-            Debug.Log("AgathaBook is active");
+            // Debug.Log("AgathaBook is active");
         }
     }
 

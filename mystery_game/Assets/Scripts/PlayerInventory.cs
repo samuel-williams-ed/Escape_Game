@@ -63,7 +63,7 @@ public class PlayerInventory : MonoBehaviour
     // Start is called before the first frame update
     // Initialise inventory slots
     void Start() {
-        allItems = new String[5]{"empty", "empty", "empty", "empty", "empty"};
+        allItems = new String[10]{"empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"};
         slot1.text = allItems[0];
         slot2.text = allItems[1];
         // slot1.text = "RedKey"; // for testing
