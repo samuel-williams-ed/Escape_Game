@@ -11585,6 +11585,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d39f7f3b021c04a34838fe17d52803d0, type: 2}
+    - target: {fileID: 6213846163230460271, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
 --- !u!4 &1082983691 stripped
@@ -11621,8 +11625,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.3721757, y: 0, z: 10}
-  m_Center: {x: 1.947043, y: 0, z: 0.000015344209}
+  m_Size: {x: 5.564243, y: 0, z: 10}
+  m_Center: {x: 2.3510094, y: 0, z: 0.000015292655}
 --- !u!1001 &1099806359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18720,14 +18724,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769336545}
-  m_LocalRotation: {x: 0.41248083, y: -0.5874179, z: 0.4994035, w: 0.48517618}
-  m_LocalPosition: {x: -7.9999986, y: 29.999998, z: -40.000015}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalRotation: {x: 0.37471938, y: -0.62168235, z: 0.43965852, w: 0.5289583}
+  m_LocalPosition: {x: -7.2, y: 24.2, z: -34.5}
+  m_LocalScale: {x: 3.8, y: 3.8, z: 3.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1082983691}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 80.74, y: -100.89, z: 0}
+  m_LocalEulerAnglesHint: {x: 70.575, y: -99.311, z: -0.136}
 --- !u!114 &1769336547
 MonoBehaviour:
   m_ObjectHideFlags: 0
