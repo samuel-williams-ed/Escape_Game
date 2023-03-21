@@ -18,7 +18,7 @@ public class AuthorBook_ShowOrHide : MonoBehaviour
         }
     }
 
-    // 'addToInventory' will set booleans for having been found
+    // 'addToInventory' will set boolean for 'hasFoundAuthorBook'
     public void OnMouseDown() {
         if (PlayerInventory.manager.hasFoundAuthor){
             

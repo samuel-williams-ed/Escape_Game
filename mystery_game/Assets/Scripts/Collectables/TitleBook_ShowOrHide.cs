@@ -17,7 +17,7 @@ public class TitleBook_ShowOrHide : MonoBehaviour
         }
     }
 
-        // 'addToInventory' will set booleans for having been found
+        // 'addToInventory' will set boolean for 'hasFoundTitleBook'
     public void OnMouseDown() {
         if (PlayerInventory.manager.hasFoundTitle){
             
