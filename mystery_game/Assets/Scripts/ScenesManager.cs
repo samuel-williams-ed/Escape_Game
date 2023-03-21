@@ -50,6 +50,7 @@ public class ScenesManager : MonoBehaviour
         removeBackButton();
     }
 
+
     public void StartGame() {
         StartCoroutine(SetupGame());
     }
@@ -68,6 +69,24 @@ public class ScenesManager : MonoBehaviour
 
         PlayerMove.manager.setPlayerMoveable(true);
         PlayerLook.manager.setPlayerCanMoveCamera(true);
+        yield return null;
+    }
+
+    public void EndGame(){
+        StartCoroutine(GoToCredits());
+    }
+
+    IEnumerator GoToCredits() {
+
+        // disable player actions & GUI
+        PlayerMove.manager.setPlayerMoveable(false);
+        PlayerLook.manager.setPlayerCanMoveCamera(false);
+        gameUICanvas.SetActive(false);
+        
+        // load credits scene and disable player
+        SceneManager.LoadScene("Credits"); // TODO - Indira please confirm credits scene name
+        player.SetActive(false);
+
         yield return null;
     }
 

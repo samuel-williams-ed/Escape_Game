@@ -20,6 +20,8 @@ public class PlayerInventory : MonoBehaviour
     public TextMeshProUGUI slot5;
 
     private string[] allItems; // should be name (string) of each item as GameObjects won't persist across scenes!
+    
+    // dictionary 'key' (from KeyGUIName) associated with inventory GUI item selected
     public string inventoryCurrentlySelected;
 
     // #####
@@ -41,12 +43,13 @@ public class PlayerInventory : MonoBehaviour
     public bool hasGreenKey = false; // behind Agatha Christie (Christkey?) book
     public bool hasBlueKey = false; // in desk drawer - needs to be unlocked by scales
     private bool hasAllKeys = false; // allows player to try to open secret door locks
+    public bool hasEscapeKey = false; // allows player to exit final door
     
     public Dictionary<string, string> KeyGUIName = new Dictionary<string, string>(){
         {"RedKey", "A red key"},
         {"GreenKey", "A green key"},
         {"BlueKey", "A blue key"},
-        {"ExitKey", "An old rusty key"}
+        {"EscapeKey", "An old rusty key"}
     };
     // public bool redLockOpened = false;
     // public bool greenLockOpened = false;
@@ -180,6 +183,10 @@ public class PlayerInventory : MonoBehaviour
                 displayOnGUI = true;
                 checkIfAllKeysCollected();
                 checkIfCanOpenBookcase();
+                break;
+            case "EscapeKey":
+                hasEscapeKey = true;
+                displayOnGUI = true;
                 break;
             case "AuthorClue":
                 hasFoundAuthor = true;

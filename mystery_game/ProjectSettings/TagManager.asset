@@ -14,6 +14,7 @@ TagManager:
   - BlueKey
   - RedKey
   - GreenKey
+  - EscapeKey
   layers:
   - Default
   - TransparentFX

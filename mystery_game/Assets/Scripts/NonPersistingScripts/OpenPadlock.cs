@@ -25,16 +25,20 @@ public class OpenPadlock : MonoBehaviour
         player = GameObject.Find("Player").gameObject;
     }
 
+    void Start() {
+        if ( GameManager.manager.getPadlockUnlocked() ) {
+            Debug.Log("Chest lid is open");
+            chestLid.transform.eulerAngles = new Vector3(chestLid.transform.eulerAngles.x, chestLid.transform.eulerAngles.y, -90f);
+            gameObject.SetActive(false);
+        }
+    }
+
     // Update is called once per frame
     void Update() {
         if (getCurrentCode() == correctCode && !GameManager.manager.getPadlockUnlocked()) {
             GameManager.manager.setPadlockUnlocked(true);
             GameManager.manager.UpdateDialogue(padlockUnlockedText);
             StartCoroutine(OpenChest());
-        }
-
-        if (GameManager.manager.getPadlockUnlocked() && chestLid.transform.eulerAngles.z != -90f){
-            chestLid.transform.eulerAngles = new Vector3(chestLid.transform.eulerAngles.x, chestLid.transform.eulerAngles.y, -90f);
         }
 
     }
