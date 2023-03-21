@@ -1240,16 +1240,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mrthenoronha - Piano Game Theme loop soundtrack\nAdamGoik - Gamepack vol.
-    1 soundtrack\nAleksn09 - Rust Key\nCaptainCatSparrow - Fantasy interior props
-    free\nCG Cell - Key and Lock\nday9 - Hall Anchor \ndevotid - Cigarette Lighter
-    PBR \nDEXSOFT - Furniture Set (FREE) \nDragan Maric Gale - Chests Fantasy PBR
-    - Mobile \nDvorniK - Old Chest \nKinetix Studio - Scale (PBR) \nMichele Marcelli
-    - Padlock with password \nreach the enD - Interior Props Pack \nRender Knight
-    - Fantasy Skybox FREETunnel Vision  \nSimon Pasi - Detailed ballpoint pens \nStudio
-    - Female Ankle Boots - Photoscanned \nTatiana Gladkaya - Old Wooden Cabinet \nVIS-Games
-    - Books \nVIS-Games - Clock \nViverna - School Globe \nVIVID Arts - Old Sea Port
-    - Environment \n3Dfrk - Picture frames with photos \n3D.BJ - Ashtrays "
+  m_text: "Mrthenoronha \nAdamGoik \nAleksn09 \nCaptainCatSparrow \nCG Cell \nday9
+    \ndevotid \nDEXSOFT \nDragan Maric Gale \nDvorniK \nKinetix Studio \nMichele
+    Marcelli \nreach the enD \nRender Knight  \nSimon Pasi \nStudio \nTatiana Gladkaya
+    \nVIS-Games \nVIS-Games \nViverna \nVIVID Arts  \n3Dfrk \n3D.BJ "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1566,7 +1560,10 @@ MonoBehaviour:
 
 
 
-    Capstone project 2022 - 2023'
+    Capstone project 2022 - 2023
+
+    Unity Engine
+    2021.3.19'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
