@@ -8,13 +8,11 @@ public class RotatePadlockDial : MonoBehaviour
 
     void Awake() {
         openPadlock = transform.parent.GetComponent<OpenPadlock>();
-        Debug.Log(openPadlock.getCurrentCode());
     }
 
     void OnMouseDown() {
         transform.Rotate(-36, 0, 0, Space.Self);
         openPadlock.updateDialValue(gameObject);
-        Debug.Log(openPadlock.getCurrentCode());
     }
 
 }

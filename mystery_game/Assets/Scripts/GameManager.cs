@@ -10,29 +10,32 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     public TextMeshProUGUI dialogueText;
     private List<string> dialogueList;
+    private List<string> introText = new List<string>() {
+        "Where am I?",
+        "I need to get out of here..."
+    };
     private float textSpeed = 0.15f;
     private bool dialogueInProgress = false;
-
-
-    private GameObject bookcase;
+    // private GameObject bookcase;
     private bool bookcaseUnlocked = false;
     private bool secretRoomUnlocked = false;
     private bool secretDrawerUnlocked = false;
     private bool padlockUnlocked = false;
+    private bool chestOpened = false;
     private bool exitDoorUnlocked = false;
     private bool rugMoved = false;
 
-    private List<string> getStartingText(){
-        string string1 = "Where am I?";
-        string string2 = "I'm in a room";
-        string string3 = "it's badly decorated and it smells funny";
-        List<string> startingText = new List<string>();
-        startingText.Add(string1);
-        startingText.Add(string2);
-        startingText.Add(string3);
+    // private List<string> getStartingText(){
+    //     string string1 = "Where am I?";
+    //     string string2 = "I'm in a room";
+    //     string string3 = "it's badly decorated and it smells funny";
+    //     List<string> startingText = new List<string>();
+    //     startingText.Add(string1);
+    //     startingText.Add(string2);
+    //     startingText.Add(string3);
 
-        return startingText;
-    }
+    //     return startingText;
+    // }
     
     void Awake() {
         if (manager == null) {
@@ -44,24 +47,22 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        scenesManager = GameObject.Find("ScenesManager").GetComponent<ScenesManager>();
         player = GameObject.Find("Player");
-        bookcase = GameObject.Find("SecretBookcaseGroup").gameObject;
+        // bookcase = GameObject.Find("SecretBookcaseGroup").gameObject;
     }
 
     // Start is called before the first frame update
     void Start(){
-        // index = 0;
-        dialogueList = new List<string>();
-        List<string> startingText = getStartingText();
-        UpdateDialogue(startingText);
+        // dialogueList = new List<string>();
+        // List<string> startingText = getStartingText();
+        // UpdateDialogue(startingText);
 
-        PlayerMove.manager.setPlayerMoveable(true);
-        PlayerLook.manager.setPlayerCanMoveCamera(true);
+        // PlayerMove.manager.setPlayerMoveable(true);
+        // PlayerLook.manager.setPlayerCanMoveCamera(true);
 
-        scenesManager.removeBackButton();
+        // scenesManager.removeBackButton();
     }
-    
+
     public void UpdateDialogue(List<string> newListOfStrings){
         dialogueList = newListOfStrings;
         if (!dialogueInProgress){
@@ -107,26 +108,32 @@ public class GameManager : MonoBehaviour
     public bool getBookcaseUnlocked(){
         return bookcaseUnlocked;
     }
-    public void setBookcaseUnlocked( bool true_or_false){
-        bookcaseUnlocked = true_or_false;
+    public void setBookcaseUnlocked( bool trueFalse){
+        bookcaseUnlocked = trueFalse;
     }
     public bool getSecretRoomUnlocked(){
         return secretRoomUnlocked;
     }
-    public void setSecretRoomUnlocked(bool true_or_false) {
-        secretRoomUnlocked = true_or_false;
+    public void setSecretRoomUnlocked(bool trueFalse) {
+        secretRoomUnlocked = trueFalse;
     }
     public bool getSecretDrawerUnlocked() {
         return secretDrawerUnlocked;
     }
-    public void setSecretDrawerUnlocked(bool true_or_false){
-        secretDrawerUnlocked = true_or_false;
+    public void setSecretDrawerUnlocked(bool trueFalse){
+        secretDrawerUnlocked = trueFalse;
     }
     public bool getPadlockUnlocked() {
         return padlockUnlocked;
     }
     public void setPadlockUnlocked(bool trueFalse) {
         padlockUnlocked = trueFalse;
+    }
+    public bool getChestOpened() {
+        return chestOpened;
+    }
+    public void setChestOpened(bool trueFalse) {
+        chestOpened = trueFalse;
     }
     public bool getExitDoorUnlocked() {
         return exitDoorUnlocked;

@@ -10,6 +10,7 @@ TagManager:
   - SecretDrawer
   - Letter
   - LetterClose
+  - BackButton
   layers:
   - Default
   - TransparentFX
