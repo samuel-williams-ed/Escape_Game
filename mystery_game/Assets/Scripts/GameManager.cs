@@ -102,7 +102,11 @@ public class GameManager : MonoBehaviour
     }
 
     public GameObject getPlayer(){
-        return player;
+        if (player != null) {
+            return player;
+        } else {
+            return GameObject.Find("Player");
+        }
     }
 
     public bool getBookcaseUnlocked(){
