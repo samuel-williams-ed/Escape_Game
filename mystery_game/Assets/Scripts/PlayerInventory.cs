@@ -41,7 +41,7 @@ public class PlayerInventory : MonoBehaviour
     public bool redLockOpened = false;
     public bool greenLockOpened = false;
     public bool blueLockOpened = false;
-    public bool secretDoorUnlocked = false; //TODO - set to private once finished testing
+    public bool secretDoorOpened = false; //TODO - set to private once finished testing
 
     // Make class a Singleton.
     void Awake() {
@@ -53,11 +53,6 @@ public class PlayerInventory : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        
-        // Trialling this in the function after checkign if it has been found!
-        // find objects that are collectable and will need to be hidden later
-        // AuthorBook = GameObject.Find("AgathaBook").gameObject;
-        // TitleBook = GameObject.Find("MobyBook").gameObject;
     }
 
     // Start is called before the first frame update
@@ -94,14 +89,14 @@ public class PlayerInventory : MonoBehaviour
     public bool askIfHasAllKeys(){ return hasAllKeys; }
 
     public bool askIfSecretDoorOpened(){
-        return secretDoorUnlocked;
+        return secretDoorOpened;
     }
     
     // local helper function used by addToInventory()
     private void addToSlot(TextMeshProUGUI slot, string newItemName) { slot.text = newItemName; }
 
     // core function for collecting items & clues
-    // checks & sets for any conditions being met (eg., all keys collected)
+    // checks & sets for any conditions being met (eg., are all keys collected)
     // sets booleans when items & clues are collected
     // adds collected items to inventory GUI
     public void addToInventory (GameObject item) {
@@ -198,7 +193,7 @@ public class PlayerInventory : MonoBehaviour
     public void checkIfSecretDoorUnlocked(){
         if (redLockOpened && greenLockOpened && blueLockOpened ){
             GameManager.manager.setSecretRoomUnlocked(true);
-            secretDoorUnlocked = true;
+            secretDoorOpened = true;
             // get secretDoor object & call open door script
         }
     }
