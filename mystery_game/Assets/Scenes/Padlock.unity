@@ -23039,7 +23039,7 @@ PrefabInstance:
     - target: {fileID: 3869658359069066290, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 33986972}
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658359069066290, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
