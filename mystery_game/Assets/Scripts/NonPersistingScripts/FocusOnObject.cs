@@ -8,7 +8,7 @@ public class FocusOnObject : MonoBehaviour
     private Dictionary<string, Vector3> playerEndPositions = new Dictionary<string, Vector3>() {
         {"ExitDoorFocus", new Vector3(-1.87f, 0.9f, 4f)},
         {"Radio", new Vector3(-3.75f, 0.9f, -3.5f)},
-        {"PictureColour", new Vector3(-4f, 1.2f, 2.7f)},
+        {"PictureColourFocus", new Vector3(-4f, 1.2f, 2.7f)},
         {"Desk", new Vector3(-3f, 1.6f, 2.8f)},
         {"ChestOfDrawersFocus", new Vector3(1f, 1.9f, 2.8f)},
         {"CrateFocus", new Vector3(3.3f, 1.1f, -4.8f)},
@@ -19,6 +19,8 @@ public class FocusOnObject : MonoBehaviour
     private void OnMouseDown() {
         if (gameObject.name == "ChestOfDrawers") {
             objectToFocusOn = transform.Find("ChestOfDrawersFocus").gameObject;
+        } else if (gameObject.name == "PictureColour") {
+            objectToFocusOn = transform.Find("PictureColourFocus").gameObject;
         } else if (gameObject.name == "SRChest" && !GameManager.manager.getPadlockUnlocked()) {
             objectToFocusOn = GameObject.Find("Padlock").gameObject;
         } else if (gameObject.name == "Padlock" && GameManager.manager.getPadlockUnlocked()) {

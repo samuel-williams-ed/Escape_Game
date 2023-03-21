@@ -19,7 +19,7 @@ public class ScenesManager : MonoBehaviour
         {"ExitDoorFocus", "ExitDoor"},
         {"SecretBookcaseGroup", "SecretDoor"},
         {"Radio", "Radio"},
-        {"PictureColour", "PictureColour"},
+        {"PictureColourFocus", "PictureColour"},
         {"Desk", "Desk"},
         {"ChestOfDrawersFocus", "ChestOfDrawers"},
         {"Padlock", "Padlock"},
