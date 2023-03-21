@@ -105,7 +105,6 @@ public class PlayerMove : MonoBehaviour {
         // Set end position for player:
         Vector3 playerEndPosition = new Vector3(transform.position.x - transform.forward.x, 1f, transform.position.z - transform.forward.z);
 
-        // Rotate player first to ensure backward movement is on the level:
         float timeElapsed = 0;
         while (timeElapsed < 1) {
             transform.position = Vector3.Lerp(transform.position, playerEndPosition, timeElapsed);
