@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpenExitDoor : MonoBehaviour
 {
@@ -18,10 +19,11 @@ public class OpenExitDoor : MonoBehaviour
 
 
     private void OnMouseDown() {
-        if (GameManager.manager.getExitDoorUnlocked()) {
+        if ( gameObject.tag == PlayerInventory.manager.getInventoryCurrentlySelected() ) {
             doorStartRotation = transform.rotation;
             doorEndRotation = Quaternion.FromToRotation(Vector3.forward, Vector3.right * 0.5f);
             doorOpening = true;
+            ScenesManager.manager.EndGame();
         } else {
             GameManager.manager.UpdateDialogue(exitDoorLockedText);
         }
