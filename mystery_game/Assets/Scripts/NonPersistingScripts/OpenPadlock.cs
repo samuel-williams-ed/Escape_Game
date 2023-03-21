@@ -10,7 +10,7 @@ public class OpenPadlock : MonoBehaviour
         {"Dial3", 4},
         {"Dial4", 0}
     };
-    private string correctCode = "2951";
+    private string correctCode = "8412";
     private List<string> padlockUnlockedText = new List<string>() {
         "*CLICK*",
         "Got it! Now let's see what's in here..."
