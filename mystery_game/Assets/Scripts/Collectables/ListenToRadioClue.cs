@@ -7,6 +7,7 @@ public class ListenToRadioClue : MonoBehaviour
 
     void OnMouseDown() {
         PlayerInventory.manager.hasFoundTitle = true;
+        Debug.Log("Title Found.");
     }
 
 }
