@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Children of the Books
+  m_text: Children of the Bookcase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dcb1110c11ea741b184057c80db3aef9, type: 2}
   m_sharedMaterial: {fileID: 6109845411090189539, guid: dcb1110c11ea741b184057c80db3aef9, type: 2}
