@@ -36,6 +36,7 @@ public class OpenPadlock : MonoBehaviour
         if (GameManager.manager.getPadlockUnlocked() && chestLid.transform.eulerAngles.z != -90f){
             chestLid.transform.eulerAngles = new Vector3(chestLid.transform.eulerAngles.x, chestLid.transform.eulerAngles.y, -90f);
         }
+
     }
 
     public string getCurrentCode() {
@@ -61,7 +62,7 @@ public class OpenPadlock : MonoBehaviour
         // Following moves player over time period of 1 second:
         float timeElapsed = 0;
         while (timeElapsed < 1) {
-            player.transform.position = Vector3.Lerp(transform.position, new Vector3(3.2f, 1.4f, -7.7f), timeElapsed);
+            player.transform.position = Vector3.Lerp(transform.position, new Vector3(2.8f, 1.4f, -7.5f), timeElapsed);
             player.transform.LookAt(chest.transform);
             Camera.main.transform.LookAt(chest.transform);
             timeElapsed += Time.deltaTime;
@@ -69,7 +70,6 @@ public class OpenPadlock : MonoBehaviour
         }
 
         ScenesManager.manager.LoadScene("Chest");
-
         gameObject.SetActive(false);
     }
 

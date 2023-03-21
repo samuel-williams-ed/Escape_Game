@@ -89,26 +89,8 @@ public class PlayerMove : MonoBehaviour {
             yield return null;
         }
 
-        // Assign object's parent name where applicable:
-        string objectParentName;
-        if (objectToFocusOn.transform.parent != null) {
-            objectParentName = objectToFocusOn.transform.parent.name;
-        } else {
-            objectParentName = "";
-        }
-
-        // Get scene name:
-        string sceneName;
-        if (objectParentName == "SRChestGroup" && !GameManager.manager.getPadlockUnlocked()) {
-            sceneName = "Padlock";
-        } else if (objectParentName == "SRChestGroup" && GameManager.manager.getPadlockUnlocked()) {
-            sceneName = "Chest";
-        } else {
-            sceneName = ScenesManager.manager.scenes[objectToFocusOn.name];
-        }
-
         // Load the required scene:
-        Debug.Log("Load scene " + sceneName);
+        string sceneName = ScenesManager.manager.scenes[objectToFocusOn.name];
         ScenesManager.manager.LoadScene(sceneName);
     }
 
@@ -123,7 +105,6 @@ public class PlayerMove : MonoBehaviour {
         // Set end position for player:
         Vector3 playerEndPosition = new Vector3(transform.position.x - transform.forward.x, 1f, transform.position.z - transform.forward.z);
 
-        // Rotate player first to ensure backward movement is on the level:
         float timeElapsed = 0;
         while (timeElapsed < 1) {
             transform.position = Vector3.Lerp(transform.position, playerEndPosition, timeElapsed);
