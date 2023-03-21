@@ -6,7 +6,7 @@ public class OpenSecretDoor : MonoBehaviour
 {
 
     void Start() {
-        if ( PlayerInventory.manager.askIfSecretDoorOpened() ){
+        if ( PlayerInventory.manager.getIfSecretDoorOpened() ){
             Debug.Log("Secret door has been opened!");
             
             gameObject.transform.Rotate(0, 90, 0);

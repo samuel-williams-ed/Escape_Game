@@ -47,8 +47,8 @@ public GameObject secret_door; // it receives the secret_door object as a parame
         Debug.Log("Trying to open door...");
         
         // check ready to be opened
-        if (PlayerInventory.manager.askIfSecretDoorOpened()){
-            Debug.Log("Door position being changed " + PlayerInventory.manager.askIfSecretDoorOpened());
+        if (PlayerInventory.manager.getIfSecretDoorOpened()){
+            Debug.Log("Door position being changed " + PlayerInventory.manager.getIfSecretDoorOpened());
 
             // position door
             secret_door.transform.Rotate(0, 90, 0);
