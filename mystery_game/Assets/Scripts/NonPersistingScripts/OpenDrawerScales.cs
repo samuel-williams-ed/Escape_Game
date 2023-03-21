@@ -13,9 +13,9 @@ public class OpenDrawerScales : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         topDrawerTwo = GameObject.FindGameObjectsWithTag("SecretDrawer")[0];
-        if (GameManager.manager.getSecretDrawerUnlocked() == true) {
-            drawerEndPosition = new Vector3(drawerStartPosition.x - 0.5f, drawerStartPosition.y, drawerStartPosition.z);
-        }
+        // if (GameManager.manager.getSecretDrawerUnlocked() == true) {
+        //     drawerEndPosition = new Vector3(drawerStartPosition.x - 0.5f, drawerStartPosition.y, drawerStartPosition.z);
+        // }
     }
 
     private void OnMouseDown() {
