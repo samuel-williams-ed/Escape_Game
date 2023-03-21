@@ -11,6 +11,10 @@ TagManager:
   - Letter
   - LetterClose
   - BackButton
+  - BlueKey
+  - RedKey
+  - GreenKey
+  - EscapeKey
   layers:
   - Default
   - TransparentFX
