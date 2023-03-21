@@ -6591,7 +6591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0297c1d9dc5137043b0bde39f96ff5b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.069
+      value: 1.048
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0297c1d9dc5137043b0bde39f96ff5b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22919,7 +22919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2271036430416539210, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.69
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2271036430416539210, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22927,7 +22927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2271036430416539210, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.149
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2271036430416539210, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -23124,7 +23124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176494, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.937
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176494, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -23183,11 +23183,39 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: hasFoundTitle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: redLockOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: blueLockOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: hasFoundAuthor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: canOpenBookcase
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: greenLockOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasFoundMonster
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: hasFoundTitleBook
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: hasFoundAuthorBook
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
