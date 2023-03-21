@@ -2769,6 +2769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 254218471}
+  - component: {fileID: 254218472}
   m_Layer: 0
   m_Name: BowlAndLittleAnchors
   m_TagString: Untagged
@@ -2795,6 +2796,22 @@ Transform:
   m_Father: {fileID: 600392645}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &254218472
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254218470}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &260242622
 GameObject:
   m_ObjectHideFlags: 0
@@ -4343,6 +4360,11 @@ Transform:
   m_Father: {fileID: 408738383}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &417446970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8788816896967473942, guid: 99503f72111b9dd4b910c8231e2e85eb, type: 3}
+  m_PrefabInstance: {fileID: 814948114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &426264804
 PrefabInstance:
   m_ObjectHideFlags: 0
