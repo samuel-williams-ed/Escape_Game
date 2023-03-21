@@ -2180,6 +2180,7 @@ GameObject:
   - component: {fileID: 2028603054}
   - component: {fileID: 2028603053}
   - component: {fileID: 2028603057}
+  - component: {fileID: 2028603058}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2289,3 +2290,15 @@ PlayableDirector:
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
+--- !u!114 &2028603058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028603052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d9762036d8b49faa5fad269d019381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
