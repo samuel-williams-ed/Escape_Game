@@ -6,11 +6,9 @@ public class OpenSecretDoor : MonoBehaviour
 {
 
     void Start() {
-        if ( PlayerInventory.manager.getIfSecretDoorOpened() ){
-            Debug.Log("Secret door has been opened!");
-            
-            gameObject.transform.Rotate(0, 90, 0);
-            gameObject.transform.position = new Vector3(1.01f, 0.085f, -3.678f);
+        if (PlayerInventory.manager.getIfSecretDoorOpened() ){            
+            gameObject.transform.Rotate(0, 270, 0);
+            gameObject.transform.position = new Vector3(1f, 0.085f, -3.7f);
         }
     }
 
