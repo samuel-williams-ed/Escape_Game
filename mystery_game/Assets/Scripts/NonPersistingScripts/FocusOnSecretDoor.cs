@@ -12,7 +12,7 @@ public class FocusOnSecretDoor : MonoBehaviour
 
     void Awake() {
         player = GameObject.Find("Player");
-        if (!GameManager.manager.getBookcaseUnlocked()) {
+        if (gameObject.name == "SecretBookcaseGroup" && !GameManager.manager.getBookcaseUnlocked()) {
             leftDoor = transform.Find("TopLeftDoor").gameObject;
             rightDoor = transform.Find("TopRightDoor").gameObject;
             leftDoorEndRotation = Quaternion.FromToRotation(Vector3.forward, new Vector3(1f, 0f, -1f));
@@ -39,7 +39,7 @@ public class FocusOnSecretDoor : MonoBehaviour
             player.transform.LookAt(objectToFocusOn.transform);
             Camera.main.transform.LookAt(objectToFocusOn.transform);
 
-            if (!GameManager.manager.getBookcaseUnlocked()) {
+            if (gameObject.name == "SecretBookcaseGroup" && !GameManager.manager.getBookcaseUnlocked()) {
                 // Rotate bookcase doors:
                 leftDoor.transform.rotation = Quaternion.Slerp(leftDoor.transform.rotation, leftDoorEndRotation, timeElapsed);
                 rightDoor.transform.rotation = Quaternion.Slerp(rightDoor.transform.rotation, rightDoorEndRotation, timeElapsed);
