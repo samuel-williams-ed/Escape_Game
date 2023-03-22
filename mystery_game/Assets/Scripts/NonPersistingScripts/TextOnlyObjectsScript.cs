@@ -150,9 +150,9 @@ public class TextOnlyObjectsScript : MonoBehaviour
             // {"", nail},
             {"RandomDecors", oldBucket},
             {"westWindow", windowPlanks},
-
             {"Paint_07", pictureByRadio},
             {"WastePaperBasket", wastePaperBasket},
+            
             // {"", rug},
             // {"", deskGlobe},
             // {"", blackBiro},
@@ -161,6 +161,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
             // {"", greenBiro},
             // {"", e62Note},
             // {"", ashtray},
+
             // {"", SRtableCrate},
             // {"", SRChair},
             // {"", SRAnchor1},
