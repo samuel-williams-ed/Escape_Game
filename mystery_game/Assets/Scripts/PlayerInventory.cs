@@ -280,28 +280,6 @@ public class PlayerInventory : MonoBehaviour
         Debug.Log("Err. Tried to remove " + name_to_remove + " from inventory but couldn't find it!");
     }
 
-    // Called by 'lock' gameObjects, when clicked each calls to their respective color
-    // locks handle check for correct key selected
-    // public void OpenRedLock(){
-    //     redLockOpened = true;
-    //     setInventoryCurrentlySelected("empty"); 
-    //     removeInventoryItem("RedKey");
-    //     checkIfSecretDoorUnlocked();
-    // }
-    // public void OpenGreenLock(){
-    //     greenLockOpened = true;
-    //     setInventoryCurrentlySelected("empty");
-    //     removeInventoryItem("GreenKey");
-    //     Debug.Log("Green lock opened!");
-    //     checkIfSecretDoorUnlocked();
-    // }
-    // public void OpenBlueLock(){
-    //     blueLockOpened = true;
-    //     setInventoryCurrentlySelected("empty");
-    //     removeInventoryItem("BlueKey");
-    //     checkIfSecretDoorUnlocked();
-    // }
-
     public void OpenLock(string lock_name){
         Debug.Log("Unlocking the lock... " + lock_name);
 
@@ -328,10 +306,10 @@ public class PlayerInventory : MonoBehaviour
         //remove item from GUI
         // find which slot has been selected
         // reset display to "empty"
-            if (slot1.text == SelectionText) { clearSlot(s1, slot1); return; }
-            else if (slot2.text == SelectionText) { clearSlot(s2, slot2); return; }
-            else if (slot3.text == SelectionText) { clearSlot(s3, slot3); return; }
-            else if (slot4.text == SelectionText) { clearSlot(s4, slot4); return; }
+        if (slot1.text == SelectionText) { clearSlot(s1, slot1); return; }
+        else if (slot2.text == SelectionText) { clearSlot(s2, slot2); return; }
+        else if (slot3.text == SelectionText) { clearSlot(s3, slot3); return; }
+        else if (slot4.text == SelectionText) { clearSlot(s4, slot4); return; }
     }
 
 
@@ -349,8 +327,5 @@ public class PlayerInventory : MonoBehaviour
 
         return dictKey;
     }
-
-    
-
 
 }
