@@ -107,7 +107,7 @@ public class ScenesManager : MonoBehaviour
         gameUICanvas.SetActive(false);
         
         // load credits scene and disable player
-        SceneManager.LoadScene("Credits"); // TODO - Indira please confirm credits scene name
+        SceneManager.LoadScene("EndOfAdventure");
         player.SetActive(false);
 
         yield return null;
