@@ -132,6 +132,9 @@ public class PlayerInventory : MonoBehaviour
     private void addToSlot(Button slot, TextMeshProUGUI slotText, Sprite new_image, GameObject item) { 
         // reset any text or images
         clearSlot(slot, slotText);
+
+        // set transparency
+        slot.GetComponent<Image>().color = new Color(255, 255, 255, 255);
         
         // attach sprite image
         slot.image.sprite = new_image; 
@@ -146,6 +149,9 @@ public class PlayerInventory : MonoBehaviour
 
         // remove image from slot (Button)
         slot.image.sprite = null;
+
+        // set transparancy of background:
+        slot.GetComponent<Image>().color = new Color(255, 255, 255, 45);
 
         // get child TextMeshProUGUI element from the slot
         // set to default value "empty"
