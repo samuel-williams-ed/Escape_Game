@@ -12,23 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/EscapeRoom.unity
     guid: 0bce5907d797a4cd8b0660dc119867e8
   - enabled: 1
-    path: Assets/Scenes/Chest.unity
-    guid: f0a0f4cad553d4f83b515005d0531f05
-  - enabled: 1
     path: Assets/Scenes/ChestOfDrawers.unity
     guid: 072988fbec19545d3ada82573032ddd4
   - enabled: 1
-    path: Assets/Scenes/Crate.unity
-    guid: 212d2c3e7cd7e4426b78811a81d31337
-  - enabled: 1
     path: Assets/Scenes/Desk.unity
     guid: 8996f5960e5ae4a789aede96ac8221de
-  - enabled: 1
-    path: Assets/Scenes/ExitDoor.unity
-    guid: ec01bd0d318094f4882424286886b57c
-  - enabled: 1
-    path: Assets/Scenes/Padlock.unity
-    guid: 41e72ac9264cb40d3a08691b6ca7ff6e
   - enabled: 1
     path: Assets/Scenes/PictureColour.unity
     guid: c92c0da0ed1da4f4784f0425ec16a808
@@ -38,6 +26,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecretDoor.unity
     guid: 1955066aa06f2447cb9555295a9fe48f
+  - enabled: 1
+    path: Assets/Scenes/Crate.unity
+    guid: 212d2c3e7cd7e4426b78811a81d31337
+  - enabled: 1
+    path: Assets/Scenes/Padlock.unity
+    guid: 41e72ac9264cb40d3a08691b6ca7ff6e
+  - enabled: 1
+    path: Assets/Scenes/Chest.unity
+    guid: f0a0f4cad553d4f83b515005d0531f05
+  - enabled: 1
+    path: Assets/Scenes/ExitDoor.unity
+    guid: ec01bd0d318094f4882424286886b57c
+  - enabled: 1
+    path: Assets/Scenes/EndOfAdventure.unity
+    guid: 454d1c5cad6324d93b7165371e9597c6
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 6779723ae0ee04fceab95a0a59905c9d
