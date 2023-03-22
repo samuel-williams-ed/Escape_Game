@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18371978, g: 0.22913499, b: 0.3047787, a: 1}
+  m_IndirectSpecularColor: {r: 0.18372005, g: 0.22913516, b: 0.30477905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1792,26 +1792,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
       objectReference: {fileID: 0}
+    - target: {fileID: 3869658357203660987, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -150
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658357357002094, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Color.a
-      value: 0.3372549
+      value: 0.6039216
       objectReference: {fileID: 0}
     - target: {fileID: 3869658357357002094, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Color.b
-      value: 0.29803923
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 3869658357357002094, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Color.g
-      value: 0.29803923
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 3869658357357002094, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Color.r
-      value: 0.29803923
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 3869658357357002094, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: ce4b77858ec6c0f469b07b034c21a85f, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658357541583441, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658357541583442, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -2128,9 +2136,21 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 3869658358833046015, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358833046015, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658359003648930, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359069066289, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3869658359069066290, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_TargetGraphic
@@ -2203,6 +2223,18 @@ PrefabInstance:
     - target: {fileID: 3869658359072968574, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359147982188, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359147982188, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359147982188, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 3869658359201630863, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_text
