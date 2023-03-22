@@ -39,7 +39,7 @@ public class MoveRug : MonoBehaviour {
             gameObject.transform.position = new Vector3(-1.5f, 0.15f, 3f);
 
             // Debug.Log("Moving rug " + gameObject.name);
-            GameManager.manager.UpdateDialogue(new List<string>(){"What's this image hidden under the rug... monsterClueText"});
+            GameManager.manager.UpdateDialogue(new List<string>(){"What's this image hidden under the rug..."});
 
             // set so rug moving will persist
             GameManager.manager.setRugMoved(true);
