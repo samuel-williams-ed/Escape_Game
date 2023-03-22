@@ -10,8 +10,6 @@ public class PlayerLook : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 1f;
     [SerializeField] private Transform playerBody;
     private float xAxisClamp;
-    private float xAxisUpperLimit = 20f;
-    private float xAxisLowerLimit = -45f;
     private bool m_cursorIsLocked = true;
     private bool playerCanMoveCamera = false;
 
@@ -25,8 +23,6 @@ public class PlayerLook : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        
-        xAxisClamp = 0.0f;
     }
 
     private void LockCursor() {
@@ -52,6 +48,7 @@ public class PlayerLook : MonoBehaviour
         // when player roaming can look around and mouse is stuck to reticle
         if (playerCanMoveCamera){
             LockCursor();
+            xAxisClamp = 0.0f; //TODO - check works
             CameraRotation();
         } else {
             Cursor.lockState = CursorLockMode.None;
@@ -63,16 +60,17 @@ public class PlayerLook : MonoBehaviour
         float mouseX = Input.GetAxis(mouseXInputName) * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis(mouseYInputName) * mouseSensitivity * Time.deltaTime;
 
-        // Set upper and lower limits on camera rotation around the x-axis:
         xAxisClamp += mouseY;
-        if (xAxisClamp > xAxisUpperLimit) {
-            xAxisClamp = xAxisUpperLimit;
+
+        if (xAxisClamp > 90.0f) {
+            xAxisClamp = 90.0f;
             mouseY = 0.0f;
-            ClampXAxisRotationToValue(360f - xAxisUpperLimit);
-        } else if (xAxisClamp < xAxisLowerLimit) {
-            xAxisClamp = xAxisLowerLimit;
+            ClampXAxisRotationToValue(270.0f);
+
+        } else if (xAxisClamp < -90.0f) {
+            xAxisClamp = -90.0f;
             mouseY = 0.0f;
-            ClampXAxisRotationToValue(-xAxisLowerLimit);
+            ClampXAxisRotationToValue(90.0f);
         }
 
         transform.Rotate(Vector3.left * mouseY);
