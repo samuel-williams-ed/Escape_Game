@@ -12,6 +12,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
 
         List<string> bathroomDoorText = new List<string>();
         bathroomDoorText.Add("It doesn't look like I need to go in here");
+        bathroomDoorText.Add("Which is good, because it smells kinda fishy...");
 
         List<string> radioText = new List<string>();
         string radio1 = " '...This is the Erebus calling the Moby Dick. Can you hear me? Come in Moby Dick...' ";
@@ -53,11 +54,11 @@ public class TextOnlyObjectsScript : MonoBehaviour
         drawersRedKeyCollection.Add("I better keep hold of this, this will be useful");
 
         List<string> greenKeyText = new List<string>(){"Oh, well look at that!", "...someone wanted to keep this hidden"};
-        List<string> blueKeyText = new List<string>(){"This looks old but well used, might be useful."};
+        List<string> blueKeyText = new List<string>(){"Ahh a blue key!", "My seasoned instincts tell me this must unlock something!"};
 
         List<string> teamPictureText = new List<string>();
-        string teamPicture1 = "mmh... this portrait reminds me of someone..";
-        string teamPicture2 = "Oh! I know. Captain Hook.";
+        string teamPicture1 = "Wow, these guys must really love themselves";
+        string teamPicture2 = "Remnds me of Captain Hook";
         teamPictureText.Add(teamPicture1);
         teamPictureText.Add(teamPicture2);
 
@@ -67,6 +68,46 @@ public class TextOnlyObjectsScript : MonoBehaviour
         List<string> decoyBook2Text = new List<string>(){"This book has a really cool cover.", "Someone must have spent ages making this."};
         // List<string> leverBookText = new List<string>(){"This book won't budge!"};
         List<string> monsterClueText = new List<string>(){"I feel like I've seen this before somewhere..."};
+
+       List<string> clockText = new List<string>(){"Oh, good! Time hasn't stopped..."};
+       List<string> pictureByClock = new List<string>(){"I think I saw the same picture at the Sunday market..."};
+       List<string> deskCandle = new List<string>(){"There are so many lights in this house", "It's almost like it's a...", "well, nevermind"};
+       List<string> candle = new List<string>(){"Who still uses candles?"};
+       List<string> stool = new List<string>(){"I wonder why this this place is so untidy?"};
+       List<string> planks = new List<string>(){"These look like the planks that cover the windows", "My detective skills proving themselves again"};
+       List<string> miniBoat = new List<string>(){"What a cute little boat"};
+       List<string> boots = new List<string>(){"Ugh, they smell", "Look at those mouldy soles..."};
+       List<string> windowPlanks = new List<string>(){"Windows are all boarded up", "Too dark to see anything outside"};
+       List<string> coatHooks = new List<string>(){"Hang in there buddy... heheheh"};
+       List<string> bearPicture = new List<string>(){"I think that's Louisiana, I can almost smell the salmon"};
+       List<string> pot = new List<string>(){"Nothing inside"};
+       List<string> shelf = new List<string>(){"Uhoh, looks like it's falling, I wouldn't get too close."};
+       List<string> sofa = new List<string>(){"Uuugh, I wouldn't sit here, my butt deserves better treatment"};
+       List<string> tiles = new List<string>(){"Wow, these tiles are hideous..."};
+       List<string> nail = new List<string>(){"Yup, that's a nail - looks well crafted"};
+       List<string> oldBucket = new List<string>(){"Ugh, these are all filthy... nothing inside anyway..."};
+       List<string> pictureByRadio = new List<string>(){"Huh, another picture of the seaside"};
+       List<string> wastePaperBascket = new List<string>(){"It's empty"};
+       List<string> rug = new List<string>(){"What an ugly carpet", "looks like it's caught on the floorboard"};
+       List<string> deskGlobe = new List<string>(){"The world is huge and full of possibilities!", "Good reminder globe, good reminder"};
+       List<string> blackBiro = new List<string>(){"This is a pen"};
+       List<string> blueBiro = new List<string>(){"Also, a pen"};
+       List<string> redBiro = new List<string>(){"Yup, pen here"};
+       List<string> greenBiro = new List<string>(){"Is it a bird? Is it a plane?", "No. No, it's a 3D modelled objbect with green pen mesh renderer."};
+       List<string> note = new List<string>(){"e62? Charlotte... Indira... Louise... Sam... they all sound nice"};
+       List<string> ashtray = new List<string>(){"oh, an ashtray.. but it's clean. Someone must have kicked their habit.", "Good job"};
+       List<string> SRtableCrate = new List<string>(){"Looks like this was a tasty drink... once..."};
+       List<string> SRChair = new List<string>(){"Pretty, yes. Accessible, not with those anchors."};
+       List<string> SRAnchor1 = new List<string>(){"Who keeps anchors in their house?"};
+       List<string> SRAnchor2 = new List<string>(){"Clunky"};
+       List<string> SRCandle = new List<string>(){"..."};
+       List<string> SRCandleSarcastic = new List<string>(){"I feel illuminated"};
+       List<string> SRCandlePositive = new List<string>(){"My mood feels brightened!"};
+       List<string> SRCrateBottom = new List<string>(){"These are heavy but I might be able one"};
+       List<string> SRBigBook = new List<string>(){"Looks old, chunky, wish I had time to read it all"};
+       List<string> SRMiniChest = new List<string>(){"A numismatic would love these"};
+       List<string> SRWindow = new List<string>(){"I can see out a little", "Can't really make out anything..."};
+       List<string> aaa = new List<string>(){""};
 
         // Key = object name, Value = list name
         dialogueDictionary = new Dictionary<string, List<string>>() {
