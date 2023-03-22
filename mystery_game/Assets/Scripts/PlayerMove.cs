@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour {
     public static PlayerMove manager;
+    public GameObject reticle;  // Assigned in heirarchy
     [SerializeField] private string horizontalInputName = "Horizontal";
     [SerializeField] private string verticalInputName = "Vertical";
     [SerializeField] private float movementSpeed = 2f;
@@ -71,6 +72,7 @@ public class PlayerMove : MonoBehaviour {
         // Remove player controls:
         PlayerMove.manager.setPlayerMoveable(false);
         PlayerLook.manager.setPlayerCanMoveCamera(false);
+        reticle.SetActive(false);
 
         // Get start position for player:
         Vector3 playerStartPosition = transform.position;
@@ -115,6 +117,7 @@ public class PlayerMove : MonoBehaviour {
         }
 
         // Turn player controls back on:
+        reticle.SetActive(true);
         PlayerMove.manager.setPlayerMoveable(true); 
         PlayerLook.manager.setPlayerCanMoveCamera(true);
     }

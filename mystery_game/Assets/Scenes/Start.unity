@@ -1344,6 +1344,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2271036430416539204, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
+      propertyPath: reticle
+      value: 
+      objectReference: {fileID: 1013279781}
+    - target: {fileID: 2271036430416539204, guid: d512ebcdf02532446b58dc05fc0f10d2, type: 3}
       propertyPath: jumpSpeed
       value: 2
       objectReference: {fileID: 0}
@@ -2087,6 +2091,18 @@ PrefabInstance:
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358416553484, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358416553484, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358416553715, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Name
+      value: reticle
       objectReference: {fileID: 0}
     - target: {fileID: 3869658359003648930, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_text
