@@ -12,7 +12,7 @@ public class OpenDrawerScales : MonoBehaviour
 
     private void OnMouseDown() {
         // If the secret drawer is unlocked it won't move when you click on the scales again:
-        if (GameManager.manager.getSecretDrawerUnlocked() == false) {
+        if (!GameManager.manager.getSecretDrawerUnlocked()) {
             StartCoroutine(SlideSecretDrawer());
         }
     }

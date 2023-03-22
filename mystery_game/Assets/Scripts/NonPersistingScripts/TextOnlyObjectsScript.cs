@@ -107,6 +107,8 @@ public class TextOnlyObjectsScript : MonoBehaviour
         List<string> SRBigBook = new List<string>(){"Looks old, chunky, wish I had time to read it all"};
         List<string> SRMiniChest = new List<string>(){"A numismatist would love these"};
         List<string> SRWindow = new List<string>(){"I can see out a little", "Can't really make anything out..."};
+        List<string> EscapeKey = new List<string>(){"This is a big old rusty key! I wonder what lock it fits..."};
+        List<string> lockedDrawerText = new List<string>() {"Hmm won't budge. There must be some way to open it..."};
 
         // Key = object name, Value = list name
         dialogueDictionary = new Dictionary<string, List<string>>() {
@@ -163,22 +165,31 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"NoteE62", e62Note},
             {"Ashtray", ashtray},
 
-            // {"", SRtableCrate},
-            // {"", SRChair},
-            // {"", SRAnchor1},
-            // {"", SRAnchor2},
+            {"CrateTable", SRtableCrate},
+            {"SRChair", SRChair},
+            {"SRAnchor1", SRAnchor1},
+            {"SRAnchor2", SRAnchor2},
             // {"", SRCandle},
             // {"", SRCandleSarcastic},
             // {"", SRCandlePositive},
-            // {"", SRCrateBottom},
-            // {"", SRBigBook},
-            // {"", SRMiniChest},
-            // {"", SRWindow}
+            {"BottomRightCrate", SRCrateBottom},
+            {"BottomLeftCrate", SRCrateBottom},
+            {"SRBigBook", SRBigBook},
+            {"SRMiniChest", SRMiniChest},
+            {"SRWindowPlanks", SRWindow},
+            {"EscapeKey", EscapeKey},
+            {"TopDrawer2", lockedDrawerText}
         };
     }
 
     private void OnMouseDown() {
-        GameManager.manager.UpdateDialogue(dialogueDictionary[gameObject.name]);
+        if (gameObject.name == "TopDrawer2") {
+            if (!GameManager.manager.getSecretDrawerUnlocked()) {
+                GameManager.manager.UpdateDialogue(dialogueDictionary[gameObject.name]);
+            }
+        } else {
+            GameManager.manager.UpdateDialogue(dialogueDictionary[gameObject.name]);
+        }
     }
 
 }
