@@ -9,8 +9,10 @@ public class ScenesManager : MonoBehaviour
     public static ScenesManager manager;
     public GameObject gameUICanvas;
     public Button backButton;
-    public GameObject player;
-    // public Button startGameButton;
+    private GameObject player;
+    private GameObject playerCamera;
+    private GameObject playerEffects;
+    
     private List<string> introText = new List<string>() {
         "Where am I?",
         "I need to get out of here..."
@@ -26,7 +28,6 @@ public class ScenesManager : MonoBehaviour
         {"SRChest", "Chest"},
         {"CrateFocus", "Crate"}
     };
-    // private GameObject bookcase;
 
     //  make me a singlton
     void Awake() {
@@ -38,6 +39,9 @@ public class ScenesManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        player = GameObject.Find("Player").gameObject;
+        playerCamera = player.transform.Find("Camera").gameObject;
+        playerEffects = player.transform.Find("Effects").gameObject;
     }
 
     public void LoadScene(string sceneName) {
@@ -55,17 +59,34 @@ public class ScenesManager : MonoBehaviour
         StartCoroutine(SetupGame());
     }
 
-    IEnumerator SetupGame() {
+IEnumerator SetupGame() {
         SceneManager.LoadScene("EscapeRoom");
-        player.SetActive(true);
 
+        // Make this longer, currently cuts out some of the intro stuff?
         while (SceneManager.GetActiveScene().buildIndex != 1) {
             yield return null;
         }
 
+        playerCamera.SetActive(true);
+        playerEffects.SetActive(true);
+
+        // Set player start position:
+        player.transform.position = new Vector3(-3f, 0.5f, -0.5f);
+        player.transform.eulerAngles = new Vector3(0f, 90f, 0f);
+        playerCamera.transform.localPosition = new Vector3(0f, 0.8f, 0f);
+
+        // Activate UI elements via canvas and run start dialogue:
         gameUICanvas.SetActive(true);
         removeBackButton();
         GameManager.manager.UpdateDialogue(introText);
+
+        // Add in player movement:
+        float timeElapsed = 0;
+        while (timeElapsed < 1) {
+            player.transform.position = Vector3.Lerp(player.transform.position, new Vector3(-2.5f, 1f, -0.5f), timeElapsed);
+            timeElapsed += (Time.deltaTime / 4f);
+            yield return null;
+        }
 
         PlayerMove.manager.setPlayerMoveable(true);
         PlayerLook.manager.setPlayerCanMoveCamera(true);
@@ -84,28 +105,28 @@ public class ScenesManager : MonoBehaviour
         gameUICanvas.SetActive(false);
         
         // load credits scene and disable player
-        SceneManager.LoadScene("Credits"); // TODO - Indira please confirm credits scene name
+        SceneManager.LoadScene("EndOfAdventure");
         player.SetActive(false);
 
         yield return null;
     }
 
      // Two returns deal with the player coming to the cabinet from different sides (finds the objects x position and the players x position and calculate the angle of rotation to do this)
-    public Quaternion FindPlayerEndRotation(Vector3 objectPosition, Vector3 playerPosition) {
-        if (objectPosition.x >= playerPosition.x) {
-            return Quaternion.FromToRotation(new Vector3(objectPosition.x, 0, 0), new Vector3(playerPosition.x, 0, 0));
-        } else {
-            return Quaternion.FromToRotation(new Vector3(objectPosition.x, 0, 0), new Vector3(-playerPosition.x, 0, 0));
-        }
-    }
+    // public Quaternion FindPlayerEndRotation(Vector3 objectPosition, Vector3 playerPosition) {
+    //     if (objectPosition.x >= playerPosition.x) {
+    //         return Quaternion.FromToRotation(new Vector3(objectPosition.x, 0, 0), new Vector3(playerPosition.x, 0, 0));
+    //     } else {
+    //         return Quaternion.FromToRotation(new Vector3(objectPosition.x, 0, 0), new Vector3(-playerPosition.x, 0, 0));
+    //     }
+    // }
 
-    public Quaternion OpenLeftDoorEndRotation() {
-        return Quaternion.FromToRotation(Vector3.forward, Vector3.right);
-    }
+    // public Quaternion OpenLeftDoorEndRotation() {
+    //     return Quaternion.FromToRotation(Vector3.forward, Vector3.right);
+    // }
 
-    public Quaternion OpenRightDoorEndRotation() {
-        return Quaternion.FromToRotation(Vector3.forward, Vector3.left);
-    }
+    // public Quaternion OpenRightDoorEndRotation() {
+    //     return Quaternion.FromToRotation(Vector3.forward, Vector3.left);
+    // }
 
     // add/remove button when changing scenes
     public void addBackButton(){
