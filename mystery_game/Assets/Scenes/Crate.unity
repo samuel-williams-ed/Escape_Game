@@ -11530,6 +11530,10 @@ PrefabInstance:
       value: PinLetter
       objectReference: {fileID: 0}
     - target: {fileID: 6213846163230460048, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6213846163230460048, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
       propertyPath: m_TagString
       value: Letter
       objectReference: {fileID: 0}
@@ -11543,7 +11547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213846163230460268, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.29
+      value: 4.372
       objectReference: {fileID: 0}
     - target: {fileID: 6213846163230460268, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11551,7 +11555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6213846163230460268, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.204
+      value: -4.231
       objectReference: {fileID: 0}
     - target: {fileID: 6213846163230460268, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11589,7 +11593,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6213846163230460271, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5df234d3519f44c8b06b68a4480398c, type: 3}
 --- !u!4 &1082983691 stripped
 Transform:
@@ -11625,8 +11630,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.564243, y: 0, z: 10}
-  m_Center: {x: 2.3510094, y: 0, z: 0.000015292655}
+  m_Size: {x: 9.420458, y: 0, z: 10}
+  m_Center: {x: 0.4229009, y: 0, z: 0.000015331549}
 --- !u!1001 &1099806359
 PrefabInstance:
   m_ObjectHideFlags: 0
