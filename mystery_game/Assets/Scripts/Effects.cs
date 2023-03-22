@@ -39,7 +39,7 @@ public class Effects : MonoBehaviour
             vignette.intensity.Override(1f - timeElapsed);
             grain.intensity.Override(1f - timeElapsed);
             chromaticAberration.intensity.Override(1f - timeElapsed);
-            timeElapsed += (Time.deltaTime / 4f);
+            timeElapsed += (Time.deltaTime / 10f);
             yield return null;
         }
 
