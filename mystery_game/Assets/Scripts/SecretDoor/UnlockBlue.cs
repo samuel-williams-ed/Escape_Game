@@ -47,20 +47,23 @@ public GameObject secret_door; // it receives the secret_door object as a parame
             // Debug.Log("Door Opened!");
             GameManager.manager.UpdateDialogue(new List<string>(){"The door opened...", "Look there's a secret room!"});
 
+            // load back into main 'EscapeRoom' scene
+            PlayerMove.manager.StepBackPlayer();
+
             // StartCoroutine(reorientatePlayer());
-
-            player = GameManager.manager.getPlayer();
-            player.transform.localRotation = new Quaternion(0f, 176f, 0f, 0f);
-
-            ScenesManager.manager.LoadMainRoom();
-            PlayerMove.manager.setPlayerMoveable(true);
-            PlayerLook.manager.setPlayerCanMoveCamera(true);
         }
     }
 
 
 
     private IEnumerator reorientatePlayer() {
+
+            // player = GameManager.manager.getPlayer();
+            // player.transform.localRotation = new Quaternion(0f, 176f, 0f, 0f);
+
+            // ScenesManager.manager.LoadMainRoom();
+            // PlayerMove.manager.setPlayerMoveable(true);
+            // PlayerLook.manager.setPlayerCanMoveCamera(true);
 
         player = GameManager.manager.getPlayer();
             
