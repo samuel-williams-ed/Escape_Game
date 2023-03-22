@@ -87,7 +87,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
         List<string> nail = new List<string>(){"Yup, that's a nail - looks well crafted"};
         List<string> oldBucket = new List<string>(){"Ugh, these are all filthy... nothing inside anyway..."};
         List<string> pictureByRadio = new List<string>(){"Huh, another picture of the seaside"};
-        List<string> wastePaperBascket = new List<string>(){"It's empty"};
+        List<string> wastePaperBasket = new List<string>(){"It's empty"};
         List<string> rug = new List<string>(){"What an ugly carpet", "Looks like it's caught on the floor board"};
         List<string> deskGlobe = new List<string>(){"The world is huge and full of possibilities!", "Good reminder globe, good reminder"};
         List<string> blackBiro = new List<string>(){"This is a pen"};
@@ -129,8 +129,50 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"MobyBook", titleBookText},
             {"DecoyBook1", decoyBook1Text},
             {"DecoyBook2", decoyBook2Text},
-            {"MonsterClue", monsterClueText}
+            {"MonsterClue", monsterClueText},
+            {"clock", clockText},
+            {"PictureByFireplace", pictureByClock},
+            // {"", deskCandle},
+            {"candleFireplace", candle},
+            {"northWallCandle", SRCandle},
+            {"stool", stool},
+            {"FloorPlanks", floorPlanks},
+            {"boat_1", miniBoat},
+            {"boots", boots},
+            {"northWindow", windowPlanks},
+            {"hanger", coatHooks},
+            {"floorPictures", bearPicture},
 
+            {"SpiceBox_1", pot},
+            {"Shelf1", shelf},
+            {"DoubleSeat2", sofa},
+            // {"", tiles},
+            // {"", nail},
+            {"RandomDecors", oldBucket},
+            {"westWindow", windowPlanks},
+            {"Paint_07", pictureByRadio},
+            {"WastePaperBasket", wastePaperBasket},
+            
+            // {"", rug},
+            // {"", deskGlobe},
+            // {"", blackBiro},
+            // {"", blueBiro},
+            // {"", redBiro},
+            // {"", greenBiro},
+            // {"", e62Note},
+            // {"", ashtray},
+
+            // {"", SRtableCrate},
+            // {"", SRChair},
+            // {"", SRAnchor1},
+            // {"", SRAnchor2},
+            // {"", SRCandle},
+            // {"", SRCandleSarcastic},
+            // {"", SRCandlePositive},
+            // {"", SRCrateBottom},
+            // {"", SRBigBook},
+            // {"", SRMiniChest},
+            // {"", SRWindow}
         };
     }
 
