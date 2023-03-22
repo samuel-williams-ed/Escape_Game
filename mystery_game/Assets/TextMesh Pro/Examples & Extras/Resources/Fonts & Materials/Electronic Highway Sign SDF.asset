@@ -751,16 +751,8 @@ MonoBehaviour:
     m_Height: 130
   m_FreeGlyphRects:
   - m_X: 0
-    m_Y: 998
-    m_Width: 1023
-    m_Height: 25
-  - m_X: 51
-    m_Y: 946
-    m_Width: 972
-    m_Height: 77
-  - m_X: 980
     m_Y: 0
-    m_Width: 43
+    m_Width: 1023
     m_Height: 1023
   - m_X: 98
     m_Y: 910
@@ -891,9 +883,9 @@ Texture2D:
   m_DownscaleFallback: 0
   m_IsAlphaChannelOptional: 0
   serializedVersion: 2
-  m_Width: 1024
-  m_Height: 1024
-  m_CompleteImageSize: 1048576
+  m_Width: 0
+  m_Height: 0
+  m_CompleteImageSize: 0
   m_MipsStripped: 0
   m_TextureFormat: 1
   m_MipCount: 1

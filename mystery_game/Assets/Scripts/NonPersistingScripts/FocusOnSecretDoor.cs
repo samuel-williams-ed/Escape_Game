@@ -14,8 +14,10 @@ public class FocusOnSecretDoor : MonoBehaviour
         player = GameObject.Find("Player");
         leftDoor = transform.Find("TopLeftDoor").gameObject;
         rightDoor = transform.Find("TopRightDoor").gameObject;
-        leftDoorEndRotation = Quaternion.FromToRotation(Vector3.forward, Vector3.right);
-        rightDoorEndRotation = Quaternion.FromToRotation(Vector3.forward, Vector3.left);
+        // leftDoorEndRotation = Quaternion.FromToRotation(Vector3.forward, Vector3.right);
+        // rightDoorEndRotation = Quaternion.FromToRotation(Vector3.forward, Vector3.left);
+        leftDoorEndRotation = Quaternion.FromToRotation(Vector3.forward, new Vector3(1f, 0f, -1f));
+        rightDoorEndRotation = Quaternion.FromToRotation(Vector3.forward, new Vector3(-1f, 0f, -1f));
     }
 
     private void OnMouseDown() {
