@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18372005, g: 0.22913516, b: 0.30477905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -308,6 +308,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &187123878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3869658358197669966, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+  m_PrefabInstance: {fileID: 1705689303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &191946158
@@ -1792,6 +1803,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
       objectReference: {fileID: 0}
+    - target: {fileID: 3869658357203660981, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.a
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658357203660981, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658357203660981, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658357203660981, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658357203660987, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -150
@@ -1892,9 +1919,41 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
       objectReference: {fileID: 0}
+    - target: {fileID: 3869658357541583443, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.a
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658357541583443, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658357541583443, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658357541583443, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658358034040381, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358034040381, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358034040381, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358034040381, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.21960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358034040381, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176493, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Name
@@ -2033,20 +2092,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 187123878}
+    - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Colors.m_FadeDuration
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.22459061
+      value: 0.22352941
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.9002046
+      value: 0.9019608
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.9716981
+      value: 0.972549
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
@@ -2107,7 +2170,7 @@ PrefabInstance:
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1705689312}
+      objectReference: {fileID: 1705689311}
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
@@ -2115,6 +2178,22 @@ PrefabInstance:
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358197669966, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.a
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358197669966, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358197669966, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358197669966, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358416553484, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2147,6 +2226,10 @@ PrefabInstance:
     - target: {fileID: 3869658359003648930, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359003648930, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3869658359069066289, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2216,6 +2299,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: TMPro.TextMeshProUGUI, Unity.TextMeshPro
       objectReference: {fileID: 0}
+    - target: {fileID: 3869658359069066291, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.a
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359069066291, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359069066291, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359069066291, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658359072968569, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2240,9 +2339,17 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3869658359201630863, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658359217804024, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658359217804024, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
@@ -2320,17 +2427,6 @@ MonoBehaviour:
 --- !u!114 &1705689311 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3869658359201630863, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
-  m_PrefabInstance: {fileID: 1705689303}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1705689312 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3869658358034040381, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
   m_PrefabInstance: {fileID: 1705689303}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
