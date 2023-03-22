@@ -7,26 +7,14 @@ public class UnlockBlue : MonoBehaviour {
 
 public GameObject secret_door; // it receives the secret_door object as a parameter (assigned in heirarchy)
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     void OnMouseDown() {
-        // string tagName = gameObject.tag
-        
-        // check its the right lock
-        // LOCK TAG NEEDS 
         Debug.Log("Lock tag = " + gameObject.tag + ", current key = " + PlayerInventory.manager.getInventoryCurrentlySelected());
         
+        // check currentlySelected Key is for this lock
         if (gameObject.tag == PlayerInventory.manager.getInventoryCurrentlySelected() ) {
 
-            // add conditions to allow opening ?
-
-
-            // set boolean for this lock in PlayerInventory
-            // remove item form inventory
+            // set the boolean for lock status in PlayerInventory
+            // remove item from inventory
             // remove item from GUI
             // check for all conditions to be true and update whether secret door is unlocked
             PlayerInventory.manager.OpenLock(gameObject.name);

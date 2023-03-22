@@ -129,24 +129,27 @@ public class PlayerInventory : MonoBehaviour
     
     // local helper function used by addToInventory()
     // clear inventory slot then add image
-    private void addToSlot(Button slot, Sprite new_image) { 
+    private void addToSlot(Button slot, TextMeshProUGUI slotText, Sprite new_image, GameObject item) { 
         // reset any text or images
-        clearSlot(slot);
+        clearSlot(slot, slotText);
+        
         // attach sprite image
         slot.image.sprite = new_image; 
+        // set inner text
+        slotText.text = KeyGUIText[item.name];
         }
     
     // local helper function used by addToInventory()
     // set image to null
     // set text to "empty"
-    private void clearSlot(Button slot){
+    private void clearSlot(Button slot, TextMeshProUGUI slotText){
 
         // remove image from slot (Button)
         slot.image.sprite = null;
 
         // get child TextMeshProUGUI element from the slot
         // set to default value "empty"
-        slot.GetComponent<TextMeshProUGUI>().text = "empty";
+        slotText.text = "empty";
     }
 
     // core function for collecting items & clues
@@ -224,10 +227,10 @@ public class PlayerInventory : MonoBehaviour
         
         if (displayOnGUI){
         // Find & add to inventory slot that is empty:
-            if (slot1.text == "empty") { addToSlot(s1, imgToDisplay); return; }
-            if (slot2.text == "empty") { addToSlot(s2, imgToDisplay); return; }
-            if (slot3.text == "empty") { addToSlot(s3, imgToDisplay); return; }
-            if (slot4.text == "empty") { addToSlot(s4, imgToDisplay); return; }
+            if (slot1.text == "empty") { addToSlot(s1, slot1, imgToDisplay, item); return; }
+            if (slot2.text == "empty") { addToSlot(s2, slot2, imgToDisplay, item); return; }
+            if (slot3.text == "empty") { addToSlot(s3, slot3, imgToDisplay, item); return; }
+            if (slot4.text == "empty") { addToSlot(s4, slot4, imgToDisplay, item); return; }
         }
     }
 
@@ -325,10 +328,10 @@ public class PlayerInventory : MonoBehaviour
         //remove item from GUI
         // find which slot has been selected
         // reset display to "empty"
-            if (slot1.text == SelectionText) { clearSlot(s1); return; }
-            else if (slot2.text == SelectionText) { clearSlot(s2); return; }
-            else if (slot3.text == SelectionText) { clearSlot(s3); return; }
-            else if (slot4.text == SelectionText) { clearSlot(s4); return; }
+            if (slot1.text == SelectionText) { clearSlot(s1, slot1); return; }
+            else if (slot2.text == SelectionText) { clearSlot(s2, slot2); return; }
+            else if (slot3.text == SelectionText) { clearSlot(s3, slot3); return; }
+            else if (slot4.text == SelectionText) { clearSlot(s4, slot4); return; }
     }
 
 
