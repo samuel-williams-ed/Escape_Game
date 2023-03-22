@@ -10,6 +10,8 @@ public class ScenesManager : MonoBehaviour
     public GameObject gameUICanvas;
     public Button backButton;
     public GameObject player;
+    public GameObject playerCamera;
+    public GameObject playerEffects;
     public bool runEffects = false;
     // public Button startGameButton;
     private List<string> introText = new List<string>() {
@@ -40,6 +42,9 @@ public class ScenesManager : MonoBehaviour
             }
         }
 
+        player = GameObject.Find("Player").gameObject;
+        playerCamera = player.transform.Find("Camera").gameObject;
+        playerEffects = player.transform.Find("Effects").gameObject;
     }
 
     public void LoadScene(string sceneName) {
@@ -58,37 +63,30 @@ public class ScenesManager : MonoBehaviour
 
     IEnumerator SetupGame() {
         SceneManager.LoadScene("EscapeRoom");
-        player.SetActive(true);
+
+        // Make this longer, currently cuts out some of the intro stuff?
+        while (SceneManager.GetActiveScene().buildIndex != 1) {
+            yield return null;
+        }
+
+        playerCamera.SetActive(true);
+        playerEffects.SetActive(true);
 
         // Set player start position:
         player.transform.position = new Vector3(-3f, 0.5f, -0.5f);
-        player.transform.eulerAngles = new Vector3(0f, 90f, -45f);
-        Camera.main.transform.position = new Vector3(0f, 0.8f, 0f);
+        player.transform.eulerAngles = new Vector3(0f, 90f, 0f);
+        playerCamera.transform.localPosition = new Vector3(0f, 0.8f, 0f);
 
-        yield return new WaitForSeconds(1.5f);
-        // Make this longer, currently cuts out some of the intro stuff?
-        // while (SceneManager.GetActiveScene().buildIndex != 1) {
-        //     yield return null;
-        // }
-
-        // Add blur / vignette effect to screen and gradually remove??
-        // runEffects = true;
-        // float timeElapsed = 0;
-        // while (timeElapsed < 5) {
-        //     yield return null;
-        // }
-        // runEffects = false;
-
+        // Activate UI elements via canvas and run start dialogue:
         gameUICanvas.SetActive(true);
         removeBackButton();
         GameManager.manager.UpdateDialogue(introText);
 
-        // Add in player movement: CURRENTLY NOT SMOOTH, NEED TO FIX!!!
+        // Add in player movement:
         float timeElapsed = 0;
-        while (timeElapsed < 2) {
-            player.transform.position = Vector3.Lerp(player.transform.position, new Vector3(-2.5f, 1f, -0.5f), timeElapsed / 2);
-            player.transform.eulerAngles = new Vector3(0f, 90f, 0f);
-            timeElapsed += Time.deltaTime;
+        while (timeElapsed < 1) {
+            player.transform.position = Vector3.Lerp(player.transform.position, new Vector3(-2.5f, 1f, -0.5f), timeElapsed);
+            timeElapsed += (Time.deltaTime / 4f);
             yield return null;
         }
 
