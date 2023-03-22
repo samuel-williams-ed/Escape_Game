@@ -87,7 +87,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
         List<string> nail = new List<string>(){"Yup, that's a nail - looks well crafted"};
         List<string> oldBucket = new List<string>(){"Ugh, these are all filthy... nothing inside anyway..."};
         List<string> pictureByRadio = new List<string>(){"Huh, another picture of the seaside"};
-        List<string> wastePaperBascket = new List<string>(){"It's empty"};
+        List<string> wastePaperBasket = new List<string>(){"It's empty"};
         List<string> rug = new List<string>(){"What an ugly carpet", "Looks like it's caught on the floor board"};
         List<string> deskGlobe = new List<string>(){"The world is huge and full of possibilities!", "Good reminder globe, good reminder"};
         List<string> blackBiro = new List<string>(){"This is a pen"};
@@ -150,9 +150,9 @@ public class TextOnlyObjectsScript : MonoBehaviour
             // {"", nail},
             {"RandomDecors", oldBucket},
             {"westWindow", windowPlanks},
-            
-            // {"", pictureByRadio},
-            // {"", wastePaperBascket},
+
+            {"Paint_07", pictureByRadio},
+            {"WastePaperBasket", wastePaperBasket},
             // {"", rug},
             // {"", deskGlobe},
             // {"", blackBiro},

@@ -1093,7 +1093,7 @@ Transform:
   - {fileID: 1345596388}
   - {fileID: 582350751}
   m_Father: {fileID: 128224376}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &112183886
 BoxCollider:
@@ -1376,8 +1376,8 @@ Transform:
   - {fileID: 1511552973}
   - {fileID: 1052093800}
   - {fileID: 643304755}
-  - {fileID: 1789552032}
   - {fileID: 112183885}
+  - {fileID: 1789552032}
   - {fileID: 573401409}
   m_Father: {fileID: 1374655738}
   m_RootOrder: 0
@@ -8442,8 +8442,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10845,8 +10845,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.007996
       objectReference: {fileID: 0}
+    - target: {fileID: 65771513682377926, guid: 1906dcb2568c13f4c962c7e0c0d82ac3, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1906dcb2568c13f4c962c7e0c0d82ac3, type: 3}
+--- !u!1 &1016353135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1715623319360768, guid: 1906dcb2568c13f4c962c7e0c0d82ac3, type: 3}
+  m_PrefabInstance: {fileID: 1016353134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1016353136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016353135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49152749a1e794a3ab48f82f501153b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1021579028
 GameObject:
   m_ObjectHideFlags: 0
@@ -18208,6 +18229,7 @@ GameObject:
   - component: {fileID: 1716076356}
   - component: {fileID: 1716076355}
   - component: {fileID: 1716076359}
+  - component: {fileID: 1716076360}
   m_Layer: 0
   m_Name: WastePaperBasket
   m_TagString: Untagged
@@ -18223,7 +18245,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716076354}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -18310,6 +18332,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1716076360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716076354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49152749a1e794a3ab48f82f501153b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1721327626
 PrefabInstance:
   m_ObjectHideFlags: 0
