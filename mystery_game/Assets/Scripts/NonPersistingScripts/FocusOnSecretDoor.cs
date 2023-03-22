@@ -30,6 +30,7 @@ public class FocusOnSecretDoor : MonoBehaviour
         // Remove player controls:
         PlayerMove.manager.setPlayerMoveable(false);
         PlayerLook.manager.setPlayerCanMoveCamera(false);
+        PlayerMove.manager.setReticleStatus(false);
 
         // Following moves player over time period of 1 second:
         float timeElapsed = 0;

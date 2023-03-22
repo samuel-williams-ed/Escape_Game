@@ -70,7 +70,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
 
         List<string> clockText = new List<string>(){"Oh, good! Time hasn't stopped..."};
         List<string> pictureByClock = new List<string>(){"I think I saw the same picture at the Sunday market..."};
-        List<string> deskCandle = new List<string>(){"There are so many lights in this house", "It's almost like it's a...", "Well, never mind"};
+        List<string> westWallCandle = new List<string>(){"There are so many lights in this house", "It's almost like it's a...", "Well, never mind"};
         List<string> candle = new List<string>(){"Who still uses candles?"};
         List<string> stool = new List<string>(){"I wonder why this place is so untidy?"};
         List<string> floorPlanks = new List<string>(){"These look like the planks that cover the windows",
@@ -156,7 +156,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"WastePaperBasket", wastePaperBasket},
             
             // {"", rug},
-            {"DeskCandle", deskCandle},
+            {"westWallCandle", westWallCandle},
             {"Globe", deskGlobe},
             {"Pen black", blackBiro},
             {"Pen blue", blueBiro},

@@ -64,6 +64,10 @@ public class PlayerMove : MonoBehaviour {
         return playerMoveAllowed;
     }
 
+    public void setReticleStatus(bool trueFalse) {
+        reticle.SetActive(trueFalse);
+    }
+
     public void FocusPlayer(GameObject objectToFocusOn, Vector3 playerEndPosition) {
         StartCoroutine(Focus(objectToFocusOn, playerEndPosition));
     }
@@ -72,7 +76,7 @@ public class PlayerMove : MonoBehaviour {
         // Remove player controls:
         PlayerMove.manager.setPlayerMoveable(false);
         PlayerLook.manager.setPlayerCanMoveCamera(false);
-        reticle.SetActive(false);
+        setReticleStatus(false);
 
         // Get start position for player:
         Vector3 playerStartPosition = transform.position;
@@ -117,7 +121,7 @@ public class PlayerMove : MonoBehaviour {
         }
 
         // Turn player controls back on:
-        reticle.SetActive(true);
+        setReticleStatus(true);
         PlayerMove.manager.setPlayerMoveable(true); 
         PlayerLook.manager.setPlayerCanMoveCamera(true);
     }
