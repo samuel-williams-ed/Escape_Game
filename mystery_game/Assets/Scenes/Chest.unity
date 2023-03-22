@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0124045005, g: 0.026181633, b: 0.026869707, a: 1}
+  m_IndirectSpecularColor: {r: 0.18372016, g: 0.22913551, b: 0.3047796, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22927,6 +22927,10 @@ PrefabInstance:
       propertyPath: AuthorBook
       value: 
       objectReference: {fileID: 1194971763}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: canOpenBookcase
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3869658358197669965, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Colors.m_FadeDuration
       value: 0.3

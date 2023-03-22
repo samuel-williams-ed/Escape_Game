@@ -25,7 +25,7 @@ public class OpenBookcase : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        if (PlayerInventory.manager.askIfCanOpenBookcase()){
+        if (PlayerInventory.manager.getIfCanOpenBookcase()){
             bookSliding = true;
             GameManager.manager.UpdateDialogue(new List<string>(){"It's opened! I can hear it moving..."});
         }

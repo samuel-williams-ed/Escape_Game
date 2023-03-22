@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System;
 using System.Linq;
@@ -13,11 +14,18 @@ public class PlayerInventory : MonoBehaviour
     // #####
 
     public static PlayerInventory manager;
+    public Button s1;
+    public Button s2;
+    public Button s3;
+    public Button s4;
     public TextMeshProUGUI slot1;
     public TextMeshProUGUI slot2;
     public TextMeshProUGUI slot3;
     public TextMeshProUGUI slot4; 
-    public TextMeshProUGUI slot5;
+    public Sprite BlueKeyImg;
+    public Sprite GreenKeyImg;
+    public Sprite RedKeyImg;
+    public Sprite EscapeKeyImg; 
 
     private string[] allItems; // should be name (string) of each item as GameObjects won't persist across scenes!
     
@@ -45,7 +53,7 @@ public class PlayerInventory : MonoBehaviour
     private bool hasAllKeys = false; // allows player to try to open secret door locks
     public bool hasEscapeKey = false; // allows player to exit final door
     
-    public Dictionary<string, string> KeyGUIName = new Dictionary<string, string>(){
+    public Dictionary<string, string> KeyGUIText = new Dictionary<string, string>(){
         {"RedKey", "A red key"},
         {"GreenKey", "A green key"},
         {"BlueKey", "A blue key"},
@@ -80,65 +88,69 @@ public class PlayerInventory : MonoBehaviour
         allItems = new String[10]{"empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"};
         slot1.text = allItems[0];
         slot2.text = allItems[1];
-        // slot1.text = "RedKey"; // for testing
-        // slot2.text = "BlueKey"; // for testing
         slot3.text = allItems[2];
         slot4.text = allItems[3];
-        slot5.text = allItems[4];
-        // inventoryCurrentlySelected = slot1.text;
     }
 
     // #####
-    // ##### setters, getters
+    // ##### Set & Get Currently Selected Inventory
     // #####
 
-    // Only for use in resetting the value to empty;
-    private void setInventoryCurrentlySelected(string item_name){ 
-        inventoryCurrentlySelected = item_name; 
-        }
-    public void setInvenotryCurrentlySelected(TextMeshProUGUI item){ 
-        Debug.Log("trying to set currently selected from item_name: " + item.text);
+    // invoked by Inventory GUI Button onclick methods
+    public void setInventoryCurrentlySelected(TextMeshProUGUI item){ 
+        Debug.Log("trying to set currentlySelected from item_name: " + item.text);
 
-        // assign equal to key
-        inventoryCurrentlySelected = getDictKeyFromValue(item.text);
-        }
-
-    private string getDictKeyFromValue(string value){
-        string dictKey = "";
-
-        // get key attached to text
-        foreach ( KeyValuePair<string, string> pair in KeyGUIName ) {
-            if ( pair.Value == value ) {
-                dictKey = pair.Key;
-                break;
-            }
+        // from the name of the item given
+        // lookup the associated text from keyGUIText (getDictKeyFromValue())
+        // ( item.text is the text displayed on GUI )
+        string key_name = getDictKeyFromValue(item.text);
+        inventoryCurrentlySelected = key_name;
         }
 
-        return dictKey;
-    }
-
+    // Resets value to "empty"
+    private void resetCurrentlySelected(){ 
+        inventoryCurrentlySelected = "empty"; 
+        }
+    
+    // returns name (string) of the item currently selected by user
     public string getInventoryCurrentlySelected(){ 
         return inventoryCurrentlySelected; 
         }
 
-    // #####
-    // ##### adders & askers
-    // #####
-
-    // gives public access to boolean if bookcase is openeable 
-    // this is set privately to protect clauses that need to be met
-    public bool askIfCanOpenBookcase() { return canOpenBookcase; }
+    // public access to if bookcase can now be opened by leverBook
+    // N.B. 'canOpenBookcase' is set privately to protect clauses that need to be met
+    public bool getIfCanOpenBookcase() { return canOpenBookcase; }
     
     // gives public access to boolean if player has all keys
-    // this is set privately to protect clauses that need to be met
-    public bool askIfHasAllKeys() { return hasAllKeys; }
+    // N.B. 'hasAllKeys' is set privately to protect clauses that need to be met
+    public bool getIfHasAllKeys() { return hasAllKeys; }
 
-    public bool askIfSecretDoorOpened(){
-        return secretDoorOpened;
-    }
+    public bool getIfSecretDoorOpened(){ return secretDoorOpened; }
     
     // local helper function used by addToInventory()
-    private void addToSlot(TextMeshProUGUI slot, string newItemName) { slot.text = newItemName; }
+    // clear inventory slot then add image
+    private void addToSlot(Button slot, TextMeshProUGUI slotText, Sprite new_image, GameObject item) { 
+        // reset any text or images
+        clearSlot(slot, slotText);
+        
+        // attach sprite image
+        slot.image.sprite = new_image; 
+        // set inner text
+        slotText.text = KeyGUIText[item.name];
+        }
+    
+    // local helper function used by addToInventory()
+    // set image to null
+    // set text to "empty"
+    private void clearSlot(Button slot, TextMeshProUGUI slotText){
+
+        // remove image from slot (Button)
+        slot.image.sprite = null;
+
+        // get child TextMeshProUGUI element from the slot
+        // set to default value "empty"
+        slotText.text = "empty";
+    }
 
     // core function for collecting items & clues
     // checks & sets for any conditions being met (eg., are all keys collected)
@@ -166,27 +178,32 @@ public class PlayerInventory : MonoBehaviour
         allItems[index] = item.name; // add item to found space
 
         bool displayOnGUI = false;
+        Sprite imgToDisplay = null;
         // check for keys & clues
         switch(item.name){
             case "RedKey":
                 hasRedKey = true;
                 displayOnGUI = true;
-                checkIfAllKeysCollected();
+                imgToDisplay = RedKeyImg;
+                testIfAllKeysCollected();
                 break;
             case "BlueKey":
                 hasBlueKey = true;
                 displayOnGUI = true;
-                checkIfAllKeysCollected();
+                imgToDisplay = BlueKeyImg;
+                testIfAllKeysCollected();
                 break;
             case "GreenKey":
                 hasGreenKey = true;
                 displayOnGUI = true;
-                checkIfAllKeysCollected();
-                checkIfCanOpenBookcase();
+                imgToDisplay = GreenKeyImg;
+                testIfAllKeysCollected();
+                tryToOpenBookcase();
                 break;
             case "EscapeKey":
                 hasEscapeKey = true;
                 displayOnGUI = true;
+                imgToDisplay = EscapeKeyImg;
                 break;
             case "AuthorClue":
                 hasFoundAuthor = true;
@@ -196,34 +213,33 @@ public class PlayerInventory : MonoBehaviour
                 break;
             case "MonsterClue":
                 hasFoundMonster = true;
-                checkIfCanOpenBookcase();
+                tryToOpenBookcase();
                 break;
             case "AgathaBook":
                 hasFoundAuthorBook = true;
-                checkIfCanOpenBookcase();
+                tryToOpenBookcase();
                 break;
             case "MobyBook":
                 hasFoundTitleBook = true;
-                checkIfCanOpenBookcase();
+                tryToOpenBookcase();
                 break;
         }
         
         if (displayOnGUI){
         // Find & add to inventory slot that is empty:
-            if (slot1.text == "empty") { addToSlot(slot1, KeyGUIName[item.name]); return; }
-            if (slot2.text == "empty") { addToSlot(slot2, KeyGUIName[item.name]); return; }
-            if (slot3.text == "empty") { addToSlot(slot3, KeyGUIName[item.name]); return; }
-            if (slot4.text == "empty") { addToSlot(slot4, KeyGUIName[item.name]); return; }
-            if (slot5.text == "empty") { addToSlot(slot5, KeyGUIName[item.name]); return; }
+            if (slot1.text == "empty") { addToSlot(s1, slot1, imgToDisplay, item); return; }
+            if (slot2.text == "empty") { addToSlot(s2, slot2, imgToDisplay, item); return; }
+            if (slot3.text == "empty") { addToSlot(s3, slot3, imgToDisplay, item); return; }
+            if (slot4.text == "empty") { addToSlot(s4, slot4, imgToDisplay, item); return; }
         }
     }
 
 
     // #####
-    // ##### conditional checks
+    // ##### Test for conditions
     // #####
 
-    public void checkIfAllKeysCollected() {
+    public void testIfAllKeysCollected() {
         if (hasRedKey && hasBlueKey && hasGreenKey) {
             hasAllKeys = true;
             Debug.Log("All keys collected");
@@ -232,22 +248,21 @@ public class PlayerInventory : MonoBehaviour
 
     // if both two other books and the green key are collected & the monster image is found
     // the bookcase is now openable by clicking on the Monster book
-    public void checkIfCanOpenBookcase(){
+    public void tryToOpenBookcase(){
         if (hasFoundAuthorBook && hasFoundTitleBook && hasGreenKey && hasFoundMonster){
             canOpenBookcase = true;
             Debug.Log("Bookcase can now be opened...");
         }
     }
 
-    public void checkIfSecretDoorUnlocked(){
-        Debug.Log("PlayerInventory.CheckIfSecretDoor() run...");
+    public void tryToUnlockSecretDoor(){
+        Debug.Log("PlayerInventory.tryToUnlockSecretDoor() trying...");
 
         if (allUnlockables["RedLock"] && allUnlockables["GreenLock"] && allUnlockables["BlueLock"] ){
 
             Debug.Log("Secret door being set to unlocked...");
             GameManager.manager.setSecretRoomUnlocked(true);
             secretDoorOpened = true;
-            // get secretDoor object & call open door script
         }
     }
 
@@ -299,27 +314,43 @@ public class PlayerInventory : MonoBehaviour
         string currentSelection = getInventoryCurrentlySelected();
         Debug.Log("currentlySelected key = " + currentSelection);
 
-        string SelectionText = KeyGUIName[currentSelection];
+        string SelectionText = KeyGUIText[currentSelection];
         Debug.Log("currentlySelected value = " + SelectionText);
 
         // remove key from full inventory list
         removeInventoryItem(currentSelection);
         // unselect
-        setInventoryCurrentlySelected("empty");
+        resetCurrentlySelected();
 
         // set booleans
-        checkIfSecretDoorUnlocked();
+        tryToUnlockSecretDoor();
 
         //remove item from GUI
         // find which slot has been selected
         // reset display to "empty"
-            if (slot1.text == SelectionText) { slot1.text = "empty"; return; }
-            else if (slot2.text == SelectionText) { slot2.text = "empty"; return; }
-            else if (slot3.text == SelectionText) { slot3.text = "empty"; return; }
-            else if (slot4.text == SelectionText) { slot4.text = "empty"; return; }
-            else if (slot5.text == SelectionText) { slot5.text = "empty"; return; }
+            if (slot1.text == SelectionText) { clearSlot(s1, slot1); return; }
+            else if (slot2.text == SelectionText) { clearSlot(s2, slot2); return; }
+            else if (slot3.text == SelectionText) { clearSlot(s3, slot3); return; }
+            else if (slot4.text == SelectionText) { clearSlot(s4, slot4); return; }
     }
 
+
+    // local helper function
+    private string getDictKeyFromValue(string value){
+        string dictKey = "";
+
+        // get key attached to text
+        foreach ( KeyValuePair<string, string> pair in KeyGUIText ) {
+            if ( pair.Value == value ) {
+                dictKey = pair.Key;
+                break;
+            }
+        }
+
+        return dictKey;
+    }
+
+    
 
 
 }
