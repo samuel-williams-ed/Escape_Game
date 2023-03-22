@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18371978, g: 0.22913499, b: 0.3047787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1962,7 +1962,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 16f7a8387c00845f5979b74fe7bda94f, type: 3}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasRedKey
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: AuthorBook
@@ -1974,7 +1974,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e10ba75c9c7d14076b784eb4bc7b35b5, type: 3}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasBlueKey
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: GreenKeyImg
@@ -1982,7 +1982,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 8f12bff1dadaa4970acf51ee898a8c0a, type: 3}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasGreenKey
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: EscapeKeyImg
@@ -1990,31 +1990,35 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0dd9ff36697e245ba8a2564a0cede11a, type: 3}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasEscapeKey
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasFoundTitle
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasFoundAuthor
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: canOpenBookcase
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasFoundMonster
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: secretDoorOpened
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: hasFoundTitleBook
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: hasFoundAuthorBook
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3869658358138176495, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: secretDoorUnlocked
@@ -2115,6 +2119,14 @@ PrefabInstance:
     - target: {fileID: 3869658358416553715, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_Name
       value: reticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358833046008, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869658358833046008, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 3869658359003648930, guid: bf097f98206e347bba891c2d086c61a7, type: 3}
       propertyPath: m_text
