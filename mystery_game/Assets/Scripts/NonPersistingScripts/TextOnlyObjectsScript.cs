@@ -129,7 +129,8 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"MobyBook", titleBookText},
             {"DecoyBook1", decoyBook1Text},
             {"DecoyBook2", decoyBook2Text},
-            {"MonsterClue", monsterClueText}
+            {"MonsterClue", monsterClueText},
+            {"clock", clockText}
 
         };
     }
