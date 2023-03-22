@@ -134,8 +134,9 @@ public class TextOnlyObjectsScript : MonoBehaviour
             {"PictureByFireplace", pictureByClock},
             // {"", deskCandle},
             {"candleFireplace", candle},
+            {"northWallCandle", SRCandle},
             {"stool", stool},
-            
+
             {"FloorPlanks", floorPlanks},
             {"boat_1", miniBoat},
             {"boots", boots},
