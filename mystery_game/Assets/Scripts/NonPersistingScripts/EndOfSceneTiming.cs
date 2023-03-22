@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndOfSceneTiming : MonoBehaviour
 
 {
-    public float waitTime = 20f;
+    public float waitTime = 20000000000f;
 
     IEnumerator Start()
     {
