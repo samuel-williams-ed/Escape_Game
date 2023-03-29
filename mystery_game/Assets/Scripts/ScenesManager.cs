@@ -18,11 +18,12 @@ public class ScenesManager : MonoBehaviour
         "I need to get out of here..."
     };
     public Dictionary<string, string> scenes = new Dictionary<string, string>() {
+        // {"key = object to focus on", "value = scene name"}
         {"ExitDoorFocus", "ExitDoor"},
         {"SecretBookcaseGroup", "SecretDoor"},
         {"Radio", "Radio"},
         {"PictureColourFocus", "PictureColour"},
-        {"Desk", "Desk"},
+        {"WeeDesk", "Desk"},
         {"ChestOfDrawersFocus", "ChestOfDrawers"},
         {"Padlock", "Padlock"},
         {"SRChest", "Chest"},
