@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpCloseLetters : MonoBehaviour
 
 { 
-    public GameObject altLetter; 
+    private GameObject altLetter; 
     
     public void OnMouseDown() {
         if (gameObject.tag == "Letter") {
