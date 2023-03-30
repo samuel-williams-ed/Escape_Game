@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.012425082, g: 0.026350444, b: 0.027056295, a: 1}
+  m_IndirectSpecularColor: {r: 0.18372016, g: 0.22913551, b: 0.3047796, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5978910447518482905, guid: f7d49d5d637949741803377a17232282, type: 3}
       propertyPath: m_Name
-      value: Pen red (1)
+      value: Pen red
       objectReference: {fileID: 0}
     - target: {fileID: 6458161794608450097, guid: f7d49d5d637949741803377a17232282, type: 3}
       propertyPath: m_RootOrder
@@ -303,7 +303,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4917387778864392608, guid: f7d49d5d637949741803377a17232282, type: 3}
+    - {fileID: 4917387778864392609, guid: f7d49d5d637949741803377a17232282, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7d49d5d637949741803377a17232282, type: 3}
 --- !u!4 &37614184 stripped
 Transform:
@@ -8864,7 +8866,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6266086264383613275, guid: fb3e220f766859947b81df91ed527f96, type: 3}
       propertyPath: m_Name
-      value: Pen green (1)
+      value: Pen green
       objectReference: {fileID: 0}
     - target: {fileID: 7576404032510074757, guid: fb3e220f766859947b81df91ed527f96, type: 3}
       propertyPath: m_UseGravity
@@ -8876,7 +8878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7889252507155606644, guid: fb3e220f766859947b81df91ed527f96, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7889252507155606644, guid: fb3e220f766859947b81df91ed527f96, type: 3}
       propertyPath: m_LocalScale.x
@@ -8930,7 +8932,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -7.102
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7576404032510074758, guid: fb3e220f766859947b81df91ed527f96, type: 3}
+    - {fileID: 7576404032510074759, guid: fb3e220f766859947b81df91ed527f96, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fb3e220f766859947b81df91ed527f96, type: 3}
 --- !u!1 &836307693
 GameObject:
@@ -9710,7 +9714,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pen black
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7302555634527748852, guid: 83042a5eb5c40da4197716921b77d573, type: 3}
+    - {fileID: 7302555634527748853, guid: 83042a5eb5c40da4197716921b77d573, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83042a5eb5c40da4197716921b77d573, type: 3}
 --- !u!1 &947407839
 GameObject:
@@ -17192,7 +17198,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -17577,7 +17583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
       propertyPath: m_LocalScale.x
@@ -17643,7 +17649,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pen blue
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6204051434897261052, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
+    - {fileID: 6204051434897261053, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
 --- !u!1 &1661794260 stripped
 GameObject:
@@ -19338,7 +19346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1874099224}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -12.355, z: 0}
 --- !u!64 &1817148023
 MeshCollider:
@@ -19807,6 +19815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 676743552}
     m_Modifications:
+    - target: {fileID: 320583171657534462, guid: ac0642c42bc5d424d95e8aba018555e8, type: 3}
+      propertyPath: m_Name
+      value: Frame
+      objectReference: {fileID: 0}
     - target: {fileID: 407562712143694903, guid: ac0642c42bc5d424d95e8aba018555e8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -22308,83 +22320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49152749a1e794a3ab48f82f501153b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &2036299434
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1874099224}
-    m_Modifications:
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 49.78413
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 38.146404
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 51.992847
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.2078347
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.5537715
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.8100524
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.45864856
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.002069514
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.88861537
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.00023354896
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -125.201
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465363850002572106, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6204051434897261051, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6204051434897261051, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7242734902216313324, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
-      propertyPath: m_Name
-      value: Pen blue (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 205900fadbb091d4bb74b3a6253cfbdc, type: 3}
 --- !u!1 &2045536744
 GameObject:
   m_ObjectHideFlags: 0
