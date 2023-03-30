@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnlockBlue : MonoBehaviour {
+public class UnlockSecretDoor : MonoBehaviour {
 
-    public GameObject player;
+    // public GameObject player;
 
-
-public GameObject secret_door; // it receives the secret_door object as a parameter (assigned in heirarchy)
+    public GameObject secret_door; // it receives the secret_door object as a parameter (assigned in heirarchy)
 
     void OnMouseDown() {
         Debug.Log("Lock tag = " + gameObject.tag + ", current key = " + PlayerInventory.manager.getInventoryCurrentlySelected());

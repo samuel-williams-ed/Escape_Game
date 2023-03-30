@@ -25,8 +25,7 @@ public class AuthorBook_ShowOrHide : MonoBehaviour
             PlayerInventory.manager.addToInventory(this.gameObject);
             gameObject.SetActive(false);
             GameManager.manager.UpdateDialogue(new List<string>(){
-                "Aha!", 
-                "This must be the book Agatha Christe gifted the owner of that note...", 
+                "Aha! This must be the book Agatha Christe gifted the owner of that note...", 
                 "And look at whats behind... an Agatha Christ-key you might say..."
             });
 
