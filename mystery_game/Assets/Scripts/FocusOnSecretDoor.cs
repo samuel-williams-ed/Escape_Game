@@ -22,7 +22,8 @@ public class FocusOnSecretDoor : MonoBehaviour
 
     private void OnMouseDown() {
         GameObject objectToFocusOn = GameObject.Find("SecretDoorFocus").gameObject;
-        Vector3 playerEndPosition = new Vector3(0.4f, 1f, -1.3f);
+        // Vector3 playerEndPosition = new Vector3(0.4f, 1f, -1.3f);
+        Vector3 playerEndPosition = new Vector3(0.4f, 1f, -1.75f);
         StartCoroutine(Focus(objectToFocusOn, playerEndPosition));
     }
 
