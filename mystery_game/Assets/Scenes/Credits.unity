@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -410,7 +410,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420895742}
   m_LocalRotation: {x: -0, y: -0.0075879074, z: -0, w: 0.9999713}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5007856}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -420,7 +420,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 19.996185, y: -3567}
-  m_SizeDelta: {x: 450, y: 400}
+  m_SizeDelta: {x: 314, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420895744
 MonoBehaviour:
@@ -539,7 +539,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "presented by \nnamelessGames "
+  m_text: 'presented by
+
+    namelessGames '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5c42ab4fd8ea4fc5b9c4b5cfb32e219, type: 2}
   m_sharedMaterial: {fileID: -5774870565434288308, guid: a5c42ab4fd8ea4fc5b9c4b5cfb32e219, type: 2}
@@ -1833,7 +1835,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956850938}
   m_LocalRotation: {x: -0, y: -0.0075879074, z: -0, w: 0.9999713}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1889,7 +1891,7 @@ MonoBehaviour:
 
 
 
-    Capstone project 2022 - 2023
+    Capstone Project March 2023
 
     Built using
     Unity Engine
