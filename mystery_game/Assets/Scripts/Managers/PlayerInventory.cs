@@ -30,7 +30,7 @@ public class PlayerInventory : MonoBehaviour
     private string[] allItems; // should be name (string) of each item as GameObjects won't persist across scenes!
     
     // dictionary 'key' (from KeyGUIName) associated with inventory GUI item selected
-    public string inventoryCurrentlySelected;
+    private string inventoryCurrentlySelected = "";
 
     // #####
     // ##### conditional properties for recording current game state 
@@ -63,7 +63,7 @@ public class PlayerInventory : MonoBehaviour
     // public bool greenLockOpened = false;
     // public bool blueLockOpened = false;
     public bool secretDoorOpened = false; //TODO - set to private once finished testing
-    public Dictionary<string, bool> allUnlockables = new Dictionary<string, bool>(){
+    private Dictionary<string, bool> allUnlockables = new Dictionary<string, bool>(){
         {"RedLock", false},
         {"GreenLock", false},
         {"BlueLock", false},
@@ -105,12 +105,12 @@ public class PlayerInventory : MonoBehaviour
         // ( item.text is the text displayed on GUI )
         string key_name = getDictKeyFromValue(item.text);
         inventoryCurrentlySelected = key_name;
-        }
+    }
 
     // Resets value to "empty"
-    private void resetCurrentlySelected(){ 
-        inventoryCurrentlySelected = "empty"; 
-        }
+    public void resetCurrentlySelected() { 
+        inventoryCurrentlySelected = ""; 
+    }
     
     // returns name (string) of the item currently selected by user
     public string getInventoryCurrentlySelected(){ 
@@ -140,7 +140,7 @@ public class PlayerInventory : MonoBehaviour
         slot.image.sprite = new_image; 
         // set inner text
         slotText.text = KeyGUIText[item.name];
-        }
+    }
     
     // local helper function used by addToInventory()
     // set image to null
@@ -151,7 +151,8 @@ public class PlayerInventory : MonoBehaviour
         slot.image.sprite = null;
 
         // set transparancy of background:
-        slot.GetComponent<Image>().color = new Color(255, 255, 255, 45);
+        // slot.GetComponent<Image>().color = new Color(255, 255, 255, 45);
+        slot.GetComponent<Image>().color = new Color(0, 0, 0, 45);
 
         // get child TextMeshProUGUI element from the slot
         // set to default value "empty"
@@ -287,19 +288,19 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void OpenLock(string lock_name){
-        Debug.Log("Unlocking the lock... " + lock_name);
+        // Debug.Log("Unlocking the lock... " + lock_name);
 
         // update dictionary of booleans for if lock has been unlocked
-        Debug.Log("setting lock status to open");
+        // Debug.Log("setting lock status to open");
         allUnlockables[lock_name] = true;
-        Debug.Log("Status of " + lock_name + " = " + allUnlockables[lock_name]);
+        // Debug.Log("Status of " + lock_name + " = " + allUnlockables[lock_name]);
 
         // key associated with value in GUI
         string currentSelection = getInventoryCurrentlySelected();
-        Debug.Log("currentlySelected key = " + currentSelection);
+        // Debug.Log("currentlySelected key = " + currentSelection);
 
         string SelectionText = KeyGUIText[currentSelection];
-        Debug.Log("currentlySelected value = " + SelectionText);
+        // Debug.Log("currentlySelected value = " + SelectionText);
 
         // remove key from full inventory list
         removeInventoryItem(currentSelection);
@@ -318,6 +319,9 @@ public class PlayerInventory : MonoBehaviour
         else if (slot4.text == SelectionText) { clearSlot(s4, slot4); return; }
     }
 
+    public bool GetLockStatus(String lockName) {
+        return allUnlockables[lockName];
+    }
 
     // local helper function
     private string getDictKeyFromValue(string value){
