@@ -18,6 +18,7 @@ public class OpenExitDoor : MonoBehaviour
                 ScenesManager.manager.EndGame();
             } else {
                 GameManager.manager.UpdateDialogue(exitDoorWrongKey);
+                PlayerInventory.manager.resetCurrentlySelected();
             }
         } else {
             GameManager.manager.UpdateDialogue(exitDoorLockedText);

@@ -151,8 +151,7 @@ public class PlayerInventory : MonoBehaviour
         slot.image.sprite = null;
 
         // set transparancy of background:
-        // slot.GetComponent<Image>().color = new Color(255, 255, 255, 45);
-        slot.GetComponent<Image>().color = new Color(0, 0, 0, 45);
+        slot.GetComponent<Image>().color = new Color32(0, 0, 0, 45);  // Needs to be Color32 to use 0-255 value range. Using "new Color(" would require range 0-1.
 
         // get child TextMeshProUGUI element from the slot
         // set to default value "empty"
