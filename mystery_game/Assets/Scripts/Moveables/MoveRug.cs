@@ -23,8 +23,8 @@ public class MoveRug : MonoBehaviour {
 
     public void moveRug(GameObject rug_to_move){
 
-        // only allow if player position.z is > 2.2 (closer than edge of rug):
-        if (GameManager.manager.getPlayer().transform.position.z > 2.2 ){
+        // only allow if player position.z is > 2 (closer than edge of rug):
+        if (GameManager.manager.getPlayer().transform.position.z > 2 ){
 
             // Don't allow rug to move more than once - exit function if already moved!
             if ( GameManager.manager.getrugMoved() ) { return; }
