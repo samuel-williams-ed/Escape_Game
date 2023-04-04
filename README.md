@@ -25,19 +25,17 @@ Whilst we're really proud of how much we achieved in such a short time, there's 
 - and of course develop Chapter 2: The Quaternion Cave!!
 <br><br>
 
-<!-- ## Play the Game
-The game can be played at [Unity Play](https://play.unity.com/).
-<br>
-If you would prefer to download the game to play it, you can clone this repository and, within the play_game folder, open either the windows or mac build depending on your operating system.
+## Play the Game
+The game can be played at [Unity Play](https://play.unity.com/p/children-of-the-bookcase/).
 <br>
 
 ### Controls
-W,A,S,D or Arrow keys: Move forward, left, back, right respectively. <br>
+W,A,S,D or Arrow keys: Move forward, left, back, right. <br>
 Space bar: Jump. <br>
 Mouse movement: In main room, cursor is locked and movement makes the player look around. When focused on a specific object, cursor is not locked and can be freely moved to investigate objects in view. <br>
-Left mouse click: Investigate an object, including selecting an object from the inventory. Note, whem the player has free movement the cursor is locked to the white reticle in the centre of the screen. <br>
+Left mouse click: Investigate an object, including selecting an object from the inventory. Note, when the player has free movement the cursor is locked to the white reticle in the centre of the screen. <br>
 Right mouse click: Will auto-complete any dialogue currently being output.
-<br><br> -->
+<br><br>
 
 ## Software Information
 This game was developed using Unity v2021.3.19f1. We used Visual Studio Code to write the C# scripts and manage merge conflicts.
