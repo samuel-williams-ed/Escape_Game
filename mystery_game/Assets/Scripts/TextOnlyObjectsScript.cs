@@ -62,7 +62,7 @@ public class TextOnlyObjectsScript : MonoBehaviour
         teamPictureText.Add(teamPicture1);
         teamPictureText.Add(teamPicture2);
 
-        List<string> authorBookText = new List<string>(){"Aha!", "This must be the book Agatha Christe gifted the owner of that note...", "And look at whats behind... an Agatha Christ-key you might say..."};
+        List<string> authorBookText = new List<string>(){"Aha!", "This must be the book Agatha Christie gifted the owner of that note...", "And look at what's behind... an Agatha Christ-key you might say..."};
         List<string> titleBookText = new List<string>(){"Moby Dick eh... looks like I found my white whale."};
         List<string> decoyBook1Text = new List<string>(){"The cover of this is really ornate,", "Judging by the dust on top it hasn't been used for many years..."};
         List<string> decoyBook2Text = new List<string>(){"This book has a really cool cover.", "Someone must have spent ages making this."};
