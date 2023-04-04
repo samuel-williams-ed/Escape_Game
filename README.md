@@ -13,7 +13,7 @@ To learn C# & Unity in order to build a desktop game that we would want to play 
 - contain collectable items that are available in an on-screen inventory once collected;
 - deliver narrative / clues to the player via a dynamic on-screen dialogue box;
 - have a start menu and end credits.
-<br>
+
 Within the timeframe of the project, we were also able to incorporate additional dialogue prompts for non-key objects; background music and some effects at the start of the game.
 <br>
 
@@ -23,7 +23,6 @@ Whilst we're really proud of how much we achieved in such a short time, there's 
 - increasing interactions with objects (e.g. including small movements in non-key objects when investigated) and complexity of the puzzles (e.g. a slider to "tune" the radio);
 - make the dialogue links flow better ("stack" dialogue from clicks) and incorporate different dialogue when the same object is clicked multiple times;
 - and of course develop Chapter 2: The Quaternion Cave!!
-
 <br><br>
 
 <!-- ## Play the Game
