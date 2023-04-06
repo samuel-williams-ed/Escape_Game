@@ -49,12 +49,11 @@ As part of our CodeClan Capstone project we created a brief, outlining our game 
 > Build a desktop game that we would want to play ourselves. To be designed as the first chapter of a larger story.
 
 <br>
+
 To achieve this, the game should:
-
-<br> 
-
+> 
 > - Be built on the Unity platform (in C#), we had to learn this platform and language from scratch!
-> - Be a 3D, first-person escape-room style game where the player has free movement to explore the room;
+> - Be a 3D, first-person, escape-room style game where the player has free movement to explore the room;
 > - Allow interaction with key objects in the room that focuses the player's view and allows further interactions with objects / puzzles;
 > - Contain collectable items that are available in an on-screen inventory once collected;
 > - Deliver narrative and clues to the player via a dynamic, on-screen dialogue box;
