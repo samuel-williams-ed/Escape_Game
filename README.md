@@ -1,41 +1,89 @@
-# Children of the Bookcase
+# [Children of the Bookcase](https://play.unity.com/p/children-of-the-bookcase/)
 
-A 3D, first-person escape room style puzzle game, built using C# and Unity for our CodeClan 2 week Capstone project.
-<br>
-<img src="images/startScreen.png" width=320 />
-<img src="images/room.png" width=320 />
-<br><br>
-
-## Brief
-To learn C# & Unity in order to build a desktop game that we would want to play ourselves. To be designed as the first chapter of a larger story, the game should:
-- be a 3D first-person escape room style game where the player has free movement to explore the room;
-- allow interaction with key objects in the room that focuses the player's view and allows further interactions with objects / puzzles;
-- contain collectable items that are available in an on-screen inventory once collected;
-- deliver narrative / clues to the player via a dynamic on-screen dialogue box;
-- have a start menu and end credits.
-
-Within the timeframe of the project, we were also able to incorporate additional dialogue prompts for non-key objects; background music and some effects at the start of the game.
 <br>
 
-### Future Plans
-Whilst we're really proud of how much we achieved in such a short time, there's still so much we would love to expand on in this game. Potential future work includes:
-- improving the player experience by adding a guide to player controls, a button for optional hints, a pause menu and a 'Play Again' button at the end of the credits;
-- increasing interactions with objects (e.g. including small movements in non-key objects when investigated) and complexity of the puzzles (e.g. a slider to "tune" the radio);
-- make the dialogue links flow better ("stack" dialogue from clicks) and incorporate different dialogue when the same object is clicked multiple times;
-- and of course develop Chapter 2: The Quaternion Cave!!
-<br><br>
+You find yourself alone and disorientated in a mysterious room... use your detective skills to uncover your means of escape!
+
+<br>
+
+<p align="center">
+  <img src="images/startScreen.png" width=80% />
+</p>
+
+<br>
+
+Children of the Bookcase is a 3D, first-person, escape-room style detective puzzle game. Built by **_namelessGamesInc_** in under two weeks for our CodeClan Capstone project, in March 2023.
+
+<br>
+
+To play our game click below - to see how we built it, take a look at our repo!
+
+<br>
 
 ## Play the Game
-The game can be played at [Unity Play](https://play.unity.com/p/children-of-the-bookcase/).
+Play here: [Children of the Bookcase](https://play.unity.com/p/children-of-the-bookcase/)
 <br>
 
 ### Controls
-W,A,S,D or Arrow keys: Move forward, left, back, right. <br>
-Space bar: Jump. <br>
-Mouse movement: In main room, cursor is locked and movement makes the player look around. When focused on a specific object, cursor is not locked and can be freely moved to investigate objects in view. <br>
-Left mouse click: Investigate an object, including selecting an object from the inventory. Note, when the player has free movement the cursor is locked to the white reticle in the centre of the screen. <br>
-Right mouse click: Will auto-complete any dialogue currently being output.
+- W,A,S,D (or Arrow keys): Move forward, left, back, right. <br>
+- Space bar: Jump. <br>
+- Mouse movement: In main room, cursor is locked and movement makes the player look around. When focused on a specific object, cursor is not locked and can be freely moved to investigate objects in view. <br>
+- Left mouse click: Investigate an object, including selecting an object from the inventory. Note, when the player has free movement the cursor is locked to the white reticle in the centre of the screen. <br>
+- Right mouse click: Will auto-complete any dialogue currently being output.
+
+<br>
+<br>
+<br> 
+
+<p align="center">
+  <img src="images/room.png" width=80% />
+</p> 
+
+<br>
+<br>
+
+## Our Brief
+
+As part of our CodeClan Capstone project we created a brief, outlining our game concept and targets. 
+
+> Build a desktop game that we would want to play ourselves. To be designed as the first chapter of a larger story.
+
+<br>
+To achieve this, the game should:
+
+<br> 
+
+> - Be built on the Unity platform (in C#), we had to learn this platform and language from scratch!
+> - Be a 3D, first-person escape-room style game where the player has free movement to explore the room;
+> - Allow interaction with key objects in the room that focuses the player's view and allows further interactions with objects / puzzles;
+> - Contain collectable items that are available in an on-screen inventory once collected;
+> - Deliver narrative and clues to the player via a dynamic, on-screen dialogue box;
+> - Have a start menu and end credits.
+
+<br>
+
+Within the timeframe of the project, we were also able to:
+- Incorporate additional dialogue prompts, for non-key objects
+- Add background music
+- Add visual effects to the main camera.
+
+
+<br>
+
+### Future Plans
+We're really proud of how much we achieved (and in such a short time!) but we're just getting started. There is so much more that we can't wait to build into this game. Here are some of our future objectives:
+- Adding an in-game guide to player controls
+- An option for hints
+- Pause menu, including current hints and found clues/ objects
+- A 'Play Again' button at the end of the credits (we know you'll want to!)
+- More interactions with objects (including small animations to non-key objects when investigated)
+- Increasing the complexity of the puzzles (e.g. a slider to "tune" the radio, and other secrets...)
+- Improve dialogue flow ("stack" dialogue from multiple clicks)
+- Dynamic interactions, (eg. different dialogue when the same object is clicked multiple times)
+- Chapter 2: The Quaternion Cave!!
 <br><br>
+
+
 
 ## Software Information
 This game was developed using Unity v2021.3.19f1. We used Visual Studio Code to write the C# scripts and manage merge conflicts.
